@@ -4,7 +4,7 @@
 
 This work item belongs to TC FREEBUSY.
 
-image:https://travis-ci.com/CalConnect/csd-subscription-upgrades.svg?branch=master["Build Status", link="https://travis-ci.com/calconnect/csd-subscription-upgrades"]
+image:https://travis-ci.com/CalConnect/csd-subscription-upgrades.svg?branch=master["Build Status", link="https://travis-ci.com/CalConnect/csd-subscription-upgrades"]
 
 This document is available in its rendered forms here:
 
