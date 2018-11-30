@@ -1,24 +1,24 @@
-:repo-name: csd-subscription-upgrades
+:repo-name: csd-subscription-upgrade
 
 = CalConnect Standard: Calendaring and scheduling -- Calendar subscription upgrades
 
 This work item belongs to TC FREEBUSY.
 
-image:https://travis-ci.com/CalConnect/csd-subscription-upgrades.svg?branch=master["Build Status", link="https://travis-ci.com/CalConnect/csd-subscription-upgrades"]
+image:https://travis-ci.com/CalConnect/csd-subscription-upgrade.svg?branch=master["Build Status", link="https://travis-ci.com/CalConnect/csd-subscription-upgrade"]
 
 This document is available in its rendered forms here:
 
-* https://calconnect.github.io/csd-subscription-upgrades/[CalConnect Standard: Calendaring and scheduling -- Calendar subscription upgrades (HTML)]
-* https://calconnect.github.io/csd-subscription-upgrades/csd-subscription-upgrades.pdf[PDF]
-* https://calconnect.github.io/csd-subscription-upgrades/csd-subscription-upgrades.xml[Metanorma XML]
-* https://calconnect.github.io/csd-subscription-upgrades/csd-subscription-upgrades.rxl[Relaton XML (Bibliographic item)]
+* https://calconnect.github.io/csd-subscription-upgrade/[CalConnect Standard: Calendaring and scheduling -- Calendar subscription upgrades (HTML)]
+* https://calconnect.github.io/csd-subscription-upgrade/csd-subscription-upgrade.pdf[PDF]
+* https://calconnect.github.io/csd-subscription-upgrade/csd-subscription-upgrade.xml[Metanorma XML]
+* https://calconnect.github.io/csd-subscription-upgrade/csd-subscription-upgrade.rxl[Relaton XML (Bibliographic item)]
 
 
 == Fetching the document
 
 [source,sh]
 ----
-git clone https://github.com/CalConnect/csd-subscription-upgrades/
+git clone https://github.com/CalConnect/csd-subscription-upgrade/
 ----
 
 == Installing Build Tools
