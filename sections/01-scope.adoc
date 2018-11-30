@@ -1,0 +1,5 @@
+
+== Scope
+
+This document provides a mechanism to allow subscribers to
+calendar feeds to upgrade to a more performant protocol.

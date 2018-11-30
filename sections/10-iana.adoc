@@ -1,0 +1,19 @@
+
+[#iana]
+== IANA Considerations
+
+=== Link Relation Registrations
+
+This document defines the following new iCalendar properties to be
+added to the registry defined in <<RFC5545,section=8.2.3>>:
+
+[cols="a,a,a",options=header]
+|===
+| Relation Name          | Description | Reference
+
+| subscribe-caldav       | Current     | <<la-subscribe-caldav>>
+| subscribe-caldav_auth  | Current     | <<la-subscribe-caldav_auth>>
+| subscribe-webdav-sync  | Current     | <<la-subscribe-webdav-sync>>
+| subscribe-enhanced_get | Current     | <<la-subscribe-enhanced_get>>
+
+|===
