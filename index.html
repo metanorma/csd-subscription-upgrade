@@ -1,0 +1,1313 @@
+<?xml version="1.0"?>
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:epub="http://www.idpf.org/2007/ops">
+  <head><style>
+  <!--
+/*
+    0 CSS RESET
+*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font-size: 100%; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  vertical-align: baseline; }
+
+html, body, div, span, applet, object, iframe,
+p, blockquote,
+a, abbr, acronym, address, big, cite,
+del, dfn, em, img, ins, q, s,
+small, strike, strong, sub, sup, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: "Overpass", sans-serif; }
+
+code, pre, tt, kbd, samp {
+  font-family: "Space Mono", monospace; }
+
+h1, h2, h3, h4, h5, h6, .h2Annex {
+  font-family: "Overpass", sans-serif; }
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto; }
+
+dt {
+  grid-column-start: 1; }
+
+dd {
+  grid-column-start: 2; }
+
+dd p, dt p {
+  margin-top: 0px; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+    1. HTML & Body
+*/
+body {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  color: #1d1d1d;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.4em;
+  background-color: #ffffff; }
+
+main {
+  margin: 0 3em 0 6em; }
+
+#toc {
+  font-family: "Overpass", sans-serif;
+  font-weight: 400; }
+
+/*
+    2. Responsive navigation layout
+*/
+@media screen and (min-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 323px;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0 0 0 45px;
+    margin-right: 30px;
+    background-color: #f7f7f7; }
+  #toggle {
+    position: fixed;
+    height: 100%;
+    width: 30px;
+    background-color: #1d1d1d;
+    color: white !important;
+    cursor: pointer;
+    z-index: 100; }
+  #toggle span {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%); }
+  .container {
+    padding-left: 360px; }
+  .rule.toc {
+    display: none; }
+  h1.toc-contents {
+    margin-top: 1em; }
+  ul#toc-list {
+    padding: 0;
+    margin: 0; } }
+
+@media screen and (max-width: 768px) {
+  #toc {
+    padding: 0 1.5em 0 1.5em;
+    overflow: visible; } }
+
+@media screen {
+  img {
+    width: 100%;
+    height: auto; } }
+
+#toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+#toc li {
+  padding: 5px 10px; }
+
+#toc a {
+  color: #485094;
+  text-decoration: none;
+  display: block; }
+
+#toc a:hover {
+  color: white; }
+
+#toc .h2 {
+  padding-left: 30px; }
+
+#toc .h3 {
+  padding-left: 50px; }
+
+#toc .toc-active a {
+  color: white; }
+
+#toc .toc-active, #toc li:hover {
+  background: #1d1d1d;
+  box-shadow: inset -5px 0px 10px -5px #1d1d1d !important; }
+
+#toc li:hover a {
+  color: white; }
+
+/*
+    Document types + stages
+*/
+.document-type-band {
+  left: 0;
+  top: 180px;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 99;
+  /*box-shadow: -5px 0px 10px #1d1d1d*/ }
+
+.document-stage-band {
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 98;
+  box-shadow: -5px 0px 10px #1d1d1d; }
+
+.document-type {
+  position: relative;
+  width: 25px; }
+
+.document-stage {
+  position: relative;
+  width: 25px; }
+
+p.document-type, p.document-stage {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0; }
+
+p.document-type {
+  font-weight: 400;
+  height: 210px; }
+
+#governance-band p.document-type {
+  font-weight: 400;
+  height: 230px !important; }
+
+p.document-stage {
+  font-weight: 300;
+  height: 160px; }
+
+#standard-band {
+  background-color: #0AC442; }
+
+#standard {
+  border-bottom: solid 3px #0AC442; }
+
+#directive-band {
+  background-color: #540D6E; }
+
+#directive {
+  border-bottom: solid 3px #540D6E; }
+
+#guide-band {
+  background-color: #D183C9; }
+
+#guide {
+  border-bottom: solid 3px #D183C9; }
+
+#specification-band {
+  background-color: #65AFFF; }
+
+#specification {
+  border-bottom: solid 3px #65AFFF; }
+
+#report-band {
+  background-color: #3A405A; }
+
+#report {
+  border-bottom: solid 3px #3A405A; }
+
+#amendment-band {
+  background-color: #F26430; }
+
+#amendment {
+  border-bottom: solid 3px #F26430; }
+
+#corrigendum-band {
+  background-color: #C84630; }
+
+#corrigendum {
+  border-bottom: solid 3px #C84630; }
+
+#administrative-band {
+  background-color: #BFAE48; }
+
+#administrative {
+  border-bottom: solid 3px #BFAE48; }
+
+#advisory-band {
+  background-color: #BD9391; }
+
+#advisory {
+  border-bottom: solid 3px #BD9391; }
+
+#proposal-band {
+  background-color: #39A0ED; }
+
+#proposal {
+  border-bottom: solid 3px #39A0ED; }
+
+#working-draft-band {
+  background-color: #2D7393; }
+
+#working-draft {
+  border-bottom: solid 3px #2D7393; }
+
+#committee-draft-band {
+  background-color: #2A6B7C; }
+
+#committee-draft {
+  border-bottom: solid 3px #2A6B7C; }
+
+#draft-standard-band {
+  background-color: #1C7F7A; }
+
+#draft-standard {
+  border-bottom: solid 3px #1C7F7A; }
+
+#final-draft-band {
+  background-color: #53C170; }
+
+#final-draft {
+  border-bottom: solid 3px #53C170; }
+
+#published-band {
+  background-color: #069E2D; }
+
+#published {
+  border-bottom: solid 3px #069E2D; }
+
+#withdrawn-band {
+  background-color: #004E64; }
+
+#withdrawn {
+  border-bottom: solid 3px #004E64; }
+
+#cancelled-band {
+  background-color: #2E382E; }
+
+#cancelled {
+  border-bottom: solid 3px #2E382E; }
+
+.coverpage-maturity {
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0 0 2em 0;
+  text-transform: uppercase; }
+
+/*
+    3. TYPOGRAPHY
+*/
+/*
+    3.1 Titles
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Overpass", sans-serif;
+  color: #0e1a85;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 0.3em; }
+
+h1 {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  margin-top: 2em; }
+
+h1#content {
+  margin-top: 2em; }
+
+h2 {
+  font-size: 1.3em;
+  font-weight: 400; }
+
+h3 {
+  font-size: 1.1em;
+  font-weight: 400; }
+
+/*
+  span[id^="toc"]:after {
+    float: left;
+    padding-right: 4px;
+    margin-left: -20px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 0.8em;
+    color: #cfcfcf;
+    content: "\f0c1";
+  }
+  */
+.TermNum, .Terms, .AltTerms {
+  color: #485094;
+  font-weight: 400; }
+
+p.TermNum {
+  font-size: 0.9em;
+  line-height: 1em;
+  margin: 0;
+  margin-top: 2em; }
+
+p.Terms {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  margin: 0; }
+
+/*
+  p.AltTerms {
+    font-style: italic;
+    margin: 0;
+  }
+  */
+span.obligation {
+  font-weight: 400; }
+
+/*
+    3.2 Links
+*/
+a, a:visited {
+  text-decoration: none;
+  color: #485094; }
+
+a:hover {
+  color: white;
+  background: #1d1d1d;
+  box-shadow: 3px 0 0 #1d1d1d, -3px 0 0 #1d1d1d;
+  /* padding: 2px 0 2px 0; */ }
+
+::selection {
+  background: #1d1d1d;
+  /* WebKit/Blink Browsers */
+  color: white; }
+
+::-moz-selection {
+  background: #1d1d1d;
+  /* Gecko Browsers */
+  color: white; }
+
+.contact-info a:hover {
+  color: #485094;
+  text-decoration: underline;
+  background: none;
+  box-shadow: 0 0 0 0; }
+
+/*
+    3.3 Lists
+*/
+ul {
+  margin-left: 1.2em; }
+
+ol {
+  margin-left: 1.2em; }
+
+ul > li {
+  list-style: none; }
+
+ul > li:before {
+  content: "\2014";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.2em; }
+
+li p:first-child {
+  display: inline; }
+
+li:first-child {
+  margin-top: 1em; }
+
+#toc ul {
+  margin-bottom: 0.25em; }
+
+#toc li {
+  list-style-type: none; }
+
+#toc li:before {
+  content: " ";
+  display: none; }
+
+/*
+    3.4 Rules
+*/
+.rule {
+  width: 100%;
+  height: 1px;
+  background-color: #0e1a85;
+  margin: 2em 0; }
+
+h2 p {
+  display: inline; }
+
+/*
+    3.5 Bibliograhy
+*/
+p.Biblio, p.NormRef {
+  margin-top: 1em;
+  margin-left: 2em;
+  text-indent: -2em; }
+
+/*
+    3.6 Source Code + figures
+*/
+.figure, .Sourcecode {
+  font-family: "Space Mono", monospace;
+  background-color: #f7f7f7;
+  font-size: 0.8em;
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto; }
+
+.FigureTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+/*
+    3.7 Notes
+*/
+.Note {
+  background-color: #fff495;
+  color: #47430c;
+  padding: 1.2em;
+  margin: 2em 0 1em 0; }
+
+/*
+    3.8 Examples
+*/
+table.example {
+  background-color: #e1eef1; }
+
+td.example {
+  padding: 0 1em 0 1em;
+  margin: 2em 0 1em 0; }
+
+.example .example-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0; }
+
+/*
+    3.9 Tables
+*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em; }
+
+table, th, td {
+  border: 1px solid black;
+  font-size: 0.95em; }
+
+td, th {
+  padding: 1em; }
+
+td.header {
+  font-weight: 400; }
+
+p.TableTitle {
+  text-align: center;
+  margin-top: 2.5em;
+  font-weight: 400; }
+
+/*
+  3.10 Footnotes
+*/
+a.footnote-number {
+  vertical-align: super;
+  font-size: 0.8em; }
+
+.footnote {
+  font-size: 0.9em; }
+
+/*
+    3.11 Blockquotes
+*/
+.Quote {
+  background-color: #f7f7f7;
+  font-style: italic;
+  width: 80%;
+  padding: 1.5em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto; }
+
+.QuoteAttribution {
+  text-align: right; }
+
+/*
+    3.12 Formulas
+*/
+.formula, .Formula {
+  background-color: #f7f7f7;
+  padding: 1.5em;
+  margin-top: 2em;
+  text-align: center; }
+
+/*
+    3.13 Contact Info
+*/
+.contact-info {
+  background-color: #f7f7f7;
+  padding: 2em;
+  margin-top: 5em;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; }
+
+.contact-info p, .contact-info a {
+  font-family: "Space Mono", monospace;
+  font-weight: 400; }
+
+.contact-info .name {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0; }
+
+.contact-info .address {
+  font-size: 1em;
+  line-height: 1.3em;
+  margin-top: 0; }
+
+/*
+    Keywords
+*/
+span.keyword {
+  font-weight: 600; }
+
+/*
+    Paragraphs
+*/
+p {
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+/* Admonitions */
+.Admonition, .admonition {
+  background-color: #ffb3b3;
+  /* color: #47430c;*/
+  padding: 0.5em;
+  margin: 1.5em 0 1.5em 0;
+  text-align: left; }
+
+.Admonition p, .admonition p {
+  margin: 0; }
+
+/*
+    4.0 Page header
+*/
+/*
+    4.1 Top Logo
+*/
+.wrapper-top {
+  background-color: #0e1a85;
+  /* background-image: url("img/dots@2x.png"); */
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAACXBIWXMAABYlAAAWJQFJUiTwAAADwUlEQVR4nO3YgQ2AMAwDwcAiWZ1NizrH30lIeIEq9nPOGSDqPgC7+93v/suy3Mmvhx+6VAAIcwFAmc4nyzYAIMgGAGEuACirdyBZtgEASTYACHMBQFm9A8myDQBIsgFAmAsAyuodSJZtAECSDQDCXABQVu9AsmwDAJJsABDmAoCyegeSZRsAkGQDgDAXAJTVO5As2wCAJBsAhLkAoKzegWTZBgAk2QAgzAUAZfUOJMs2ACDJBgBhLgAoq3cgWbYBAEk2AAhzAUBZvQPJsg0ASLIBQJgLAMrqHUiWbQBAkg0AwlwAUFbvQLJsAwCSbAAQ5gKAsnoHkmUbAJBkA4AwFwCU1TuQLNsAgCQbAIS5AKCs3oFk2QYAJNkAIMwFAGX1DiTLNgAgyQYAYS4AKKt3IFm2AQBJNgAIcwFAWb0DybINAEiyAUCYCwDK6h1Ilm0AQJINAMJcAFBW70CybAMAkmwAEOYCgLJ6B5JlGwCQZAOAMBcAlNU7kCzbAIAkGwCEuQCgrN6BZNkGACTZACDMBQBl9Q4kyzYAIMkGAGEuACirdyBZtgEASTYACHMBQFm9A8myDQBIsgFAmAsAyuodSJZtAECSDQDCXABQVu9AsmwDAJJsABDmAoCyegeSZRsAkGQDgDAXAJTVO5As2wCAJBsAhLkAoKzegWTZBgAk2QAgzAUAZfUOJMs2ACDJBgBhLgAoq3cgWbYBAEk2AAhzAUBZvQPJsg0ASLIBQJgLAMrqHUiWbQBAkg0AwlwAUFbvQLJsAwCSbAAQ5gKAsnoHkmUbAJBkA4AwFwCU1TuQLNsAgCQbAIS5AKCs3oFk2QYAJNkAIMwFAGX1DiTLNgAgyQYAYS4AKKt3IFm2AQBJNgAIcwFAWb0DybINAEiyAUCYCwDK6h1Ilm0AQJINAMJcAFBW70CybAMAkmwAEOYCgLJ6B5JlGwCQZAOAMBcAlNU7kCzbAIAkGwCEuQCgrN6BZNkGACTZACDMBQBl9Q4kyzYAIMkGAGEuACirdyBZtgEASTYACHMBQFm9A8myDQBIsgFAmAsAyuodSJZtAECSDQDCXABQVu9AsmwDAJJsABDmAoCyegeSZRsAkGQDgDAXAJTVO5As2wCAJBsAhLkAoKzegWTZBgAk2QAgzAUAZfUOJMs2ACDJBgBhLgAoq3cgWbYBAEk2AAhzAUBZvQPJsg0ASLIBQJgLAMrqHUiWbQBAkg0AwlwAUFbvQLJsAwCSbAAQ5gKAsnoHkmUbAJBkA4AwFwCU1TuQLNsAgCQbAFTNzA9ggAr9aahO8QAAAABJRU5ErkJggg==");
+  color: #ffffff;
+  padding: 2em 0; }
+
+.doc-number {
+  font-size: 0.5em;
+  font-family: "Overpass", sans-serif; }
+
+.coverpage-title {
+  padding-bottom: 0.5em;
+  font-family: "Overpass", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  font-weight: 900;
+  padding-left: 1em;
+  padding-right: 1em; }
+
+.title-section1 {
+  padding: 0 2em 0 3em; }
+
+.prefatory-section {
+  padding: 0 3em 0 6em; }
+
+.zzSTDTitle1, .MsoCommentText {
+  display: none; }
+
+.coverpage {
+  text-align: center;
+  padding-left: 1.5em; }
+
+.coverpage-logo span, .coverpage-tc-name span {
+  font-family: "Overpass", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600; }
+
+.coverpage-tc-name {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin: 0.25em 0; }
+
+/*
+    4.2 Document Identity
+*/
+.coverpage-doc-identity {
+  font-size: 2em;
+  line-height: 2em; }
+
+.coverpage-title .title-second {
+  display: none; }
+
+.coverpage-stage-block {
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-size: 1.25em;
+  margin: 2em 0em 2em 0em;
+  text-transform: uppercase; }
+
+/*
+    4.3 Draft Warning
+*/
+.coverpage-warning {
+  border-top: solid 1px #f36f36;
+  border-bottom: solid 1px #f36f36;
+  margin: 1em 2em;
+  color: #485094;
+  padding: 1em; }
+
+.coverpage-warning .title {
+  color: #f36f36;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.2em; }
+
+/*
+    4.4 Copyright
+*/
+.copyright {
+  padding: 1em;
+  font-size: 0.8em;
+  text-align: left; }
+
+.copyright .name, .copyright .address {
+  color: #485094; }
+
+/*
+    5.0 Other styles
+*/
+/*
+To top button
+*/
+#myBtn {
+  font-family: "Space Mono", monospace;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  background-color: #1d1d1d;
+  opacity: 0.15;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px 10px 15px;
+  border-radius: 4px; }
+
+#myBtn:hover {
+  opacity: 1; }
+
+a.anchorjs-link:hover {
+  background: none;
+  color: #485094;
+  box-shadow: none; }
+
+@page {
+  margin: 2cm 1cm 2cm 1cm; }
+
+@media print {
+  h1, .title-section1 {
+    page-break-before: always; }
+  #toggle, .document-stage-band,
+  .document-type-band, #myBtn {
+    display: none; }
+  .container {
+    padding-left: 0; }
+  nav {
+    position: relative;
+    width: auto;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0;
+    margin-right: 0;
+    background-color: white; }
+  #toc .toc-active a {
+    color: #485094; }
+  #toc .toc-active, #toc li:hover {
+    background: white;
+    box-shadow: none !important; }
+  #toc li:hover a {
+    color: black; }
+  h1.toc-contents {
+    margin-top: 2em; } }
+
+-->
+</style><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        <title>Calendaring and scheduling&#x2009;&#x2014;&#x2009;Calendar subscription upgrades</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--TOC script import-->
+    <script type="text/javascript" src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
+
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
+    <!--Font awesome import for the link icon-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
+<style class="anchorjs"></style>
+</head>
+  <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
+    <div class="title-section"><div class="document-stage-band" id="committee-draft-band">
+    <p class="document-stage">Committee Draft</p>
+</div>
+
+<div class="document-type-band" id="standard-band">
+    <p class="document-type">CalConnect Standard</p>
+</div>
+
+
+
+  <div id="toggle"> <span>&#x2022;</span> </div>
+
+  <header>
+
+<!--<div class="WordSection1">-->
+  <div class="coverpage">
+    <div class="wrapper-top">
+
+  <div class="coverpage-doc-identity">
+    <div class="doc-number">
+      <span class="docnumber">CC/CD 51004:2018</span>
+      <!-- <span class="docnumber-separator">:</span>
+      <span class="docyear">2018</span> -->
+    </div>
+
+    <div class="coverpage-title">
+      <span class="title-first">Calendaring and scheduling&#x2009;&#x2014;&#x2009;Calendar subscription upgrades</span>
+      <!--<span class="title-second"></span>-->
+    </div>
+  </div>
+
+  <div class="coverpage-logo">
+    <span>The Calendaring and Scheduling Consortium</span>
+  </div>
+
+  <div class="coverpage-tc-name">
+    <span>TC CALENDAR</span>
+  </div>
+
+  
+  <div class="coverpage-tc-name">
+    <span>Editors: </span>
+  </div>
+  
+  
+  <div class="coverpage-tc-name">
+    <span>Authors: Michael Douglass</span>
+  </div>
+  
+  </div>
+
+  <div class="title-section1">
+  <div class="coverpage-stage-block">
+    <span class="coverpage-stage" id="standard">CalConnect Standard</span>
+  </div>
+
+  <div class="coverpage-stage-block">
+    <span class="coverpage-maturity" id="committee-draft"></span>
+</div>
+
+
+
+<div class="copyright">
+  <p class="year">
+    &#xA9; 2018 The Calendaring and Scheduling Consortium, Inc.
+  </p>
+
+  <p class="message">
+    All rights reserved. Unless otherwise specified, no part of this
+    publication may be reproduced or utilized otherwise in any form or by any
+    means, electronic or mechanical, including photocopying, or posting on the
+    internet or an intranet, without prior written permission. Permission can
+    be requested from the address below.
+  </p>
+
+<div class="contact-info">
+  <p class="name">The Calendaring and Scheduling Consortium, Inc.</p>
+  <p class="address">
+    4390 Chaffin Lane<br />
+    McKinleyville<br />
+    California 95519<br />
+    United States of America<br />
+    <br />
+    <a href="mailto:copyright@calconnect.org">copyright@calconnect.org</a><br />
+    <a href="www.calconnect.org">www.calconnect.org</a>
+  </p>
+</div>
+</div>
+
+<div class="rule"></div>
+</div>
+
+
+
+</div></header>
+      <p>&#xA0;</p>
+    </div>
+    <br />
+    <div class="prefatory-section"><nav>
+  <h1 id="content">Contents</h1>
+  <div id="toc"></div>
+
+</nav>
+
+
+<div class="rule toc"></div>
+
+      <p>&#xA0;</p>
+    </div>
+    <br />
+    <main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      <br />
+      <div>
+        <h1 class="ForewordTitle">Foreword</h1>
+        <p id="_73b71b5a-a83b-4f98-8830-1b4a78fc272e">The Calendaring and Scheduling Consortium ("CalConnect") is global
+non-profit organization with the aim to facilitate interoperability of
+collaborative technologies and tools through open standards.</p>
+        <p id="_67c01bb4-4136-4b20-beac-3b07668c35f8">CalConnect works closely with international and regional partners,
+of which the full list is available on our website
+(<a href="https://www.calconnect.org/about/liaisons-and-relationships">https://www.calconnect.org/about/liaisons-and-relationships</a>).</p>
+        <p id="_35416e9e-50db-4f9e-9436-d14581c76be1">The procedures used to develop this document and those intended for its
+further maintenance are described in the CalConnect Directives.</p>
+        <p id="_78e19e6c-314d-4135-9ec3-e88664846971">In particular the different approval criteria needed for the different
+types of CalConnect documents should be noted. This document was drafted in
+accordance with the editorial rules of the CalConnect Directives.</p>
+        <p id="_1db3682c-2f1c-4abb-8b46-01cae5e6c052">Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be
+held responsible for identifying any or all such patent rights. Details
+of any patent rights identified during the development of the document
+will be provided in the Introduction.</p>
+        <p id="_f46e4c19-e1f5-4194-91f1-1d141214f787">Any trade name used in this document is information given for the
+convenience of users and does not constitute an endorsement.</p>
+        <p id="_75614a8e-27c2-476b-b74f-b58b8a8e622d">This document was prepared by Technical Committee
+<i>CALENDAR</i>.</p>
+      </div>
+      <br />
+      <div class="Section3" id="introduction">
+        <h1 class="IntroTitle">Introduction</h1>
+        <p id="_0b63d13c-80ce-4321-938b-28b4d78c125e">Currently clients subscribe to calendar feeds as an ics file which is
+often published as a resource accessible using the unofficial
+'webcal' scheme.</p>
+        <p id="_21c811c4-8ebc-4e3e-8ba2-9f14e8270891">The only available option for updating that resource is the usual
+HTTP polling of cached resources using Etags.</p>
+        <p id="_26b862ed-9be2-476d-8b9d-ab790f1ea895">There is the usual tension between clients wishing to see a timely
+response to changes and servers not wishing to be overloaded by
+frequent requests for possibly large amounts of data.</p>
+        <p id="_458b2973-9fa9-4162-b232-e027689afc9e">This specification introduces an approach whereby clients can
+discover a more performant access method.  Given the location of the
+resource as an ics file, the client can perform an OPTIONS request on
+the resource and inspect the returned headers which will offer a
+number of alternative access methods.</p>
+        <p id="_f33f0ee4-2093-415e-a63d-58c188041c94">Given that many clients already support CalDAV this provides an easy
+upgrade path for those clients.  CalDAV and DAV subsets are specified
+here to allow lighter weight implementations.</p>
+      </div>
+      <p class="zzSTDTitle1">Calendaring and scheduling&#x2009;&#x2014;&#x2009;Calendar subscription upgrades</p>
+      <div id="_scope">
+        <h1>1.&#xA0; Scope</h1>
+        <p id="_8b4a4822-9f6c-4d64-990a-0368b50c1b26">This document provides a mechanism to allow subscribers to
+calendar feeds to upgrade to a more performant protocol.</p>
+      </div>
+      <div>
+        <h1>2.&#xA0; Normative references</h1>
+        <p>The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+        <p id="RFC2518" class="NormRef">IETF RFC 2518, HTTP Extensions for Distributed Authoring&#x2009;&#x2014;&#x2009;WEBDAV</p>
+        <p id="RFC3986" class="NormRef">IETF RFC 3986, Uniform Resource Identifier (URI): Generic Syntax</p>
+        <p id="RFC4791" class="NormRef">IETF RFC 4791, Calendaring Extensions to WebDAV (CalDAV)</p>
+        <p id="RFC5545" class="NormRef">IETF RFC 5545, Internet Calendaring and Scheduling Core Object Specification (iCalendar)</p>
+        <p id="RFC5546" class="NormRef">IETF RFC 5546, iCalendar Transport-Independent Interoperability Protocol (iTIP)</p>
+        <p id="RFC6047" class="NormRef">IETF RFC 6047, iCalendar Message-Based Interoperability Protocol (iMIP)</p>
+        <p id="RFC6638" class="NormRef">IETF RFC 6638, Scheduling Extensions to CalDAV</p>
+        <p id="RFC5988" class="NormRef">IETF RFC 5988, Web Linking</p>
+      </div>
+      <div id="terms"><h1>3.&#xA0; Terms and definitions</h1><p>No terms and definitions are listed in this document.</p>
+</div>
+      <div id="enhanced-get">
+        <h1>4.&#xA0; Enhanced GET</h1>
+        <div id="_general"><h2>4.1. General</h2><p id="_754b45f4-0068-4696-af24-afa8b8195f00">This is a lightweight protocol which allows simple clients to
+efficiently discover and download changes in the targeted resource.</p>
+<p id="_d0ad2ed7-dd3c-4e71-b6ad-5ed7986f9df1">It has many similarities to WebDAV sync and for a server could be
+implemented as an extension of the specification.</p>
+<p id="_2aeec03c-7148-4e8a-a9dd-41d6c36c7223">In this protocol the Etag is used as the sync change token.  By
+adding the If-None-Match header field to the vary header field we can
+ensure intermediate caching proxies will be able to cache different
+versions of the data.</p>
+<p id="_57a48654-561b-4250-84c0-4ab14c9f4708">The resource is treated as a set of individual events each of which
+may be updated or deleted separately.  The client will first fetch
+the entire ics file.  On subsequent requests it uses the Prefer
+header with a value of "return=minimal" to indicate that it wants a
+set of changes since the last fetch.</p></div>
+        <div id="_deletions"><h2>4.2. Deletions</h2><p id="_cecca48b-6b1e-4b2e-9644-4853252caafa">When an entity (VEVENT, VTODO or other valid top-level component) is
+deleted from the source data the server needs to be able to inform a
+client of the deletion.  This specification introduces a new value
+for the STATUS property of DELETED.</p>
+<p id="_23c76086-2625-47c0-b020-5ef936555d22">On the first conditional GET after the entity has been deleted a
+skeleton, but valid, entity will be returned with STATUS: DELETED.
+The receiving client is free to remove the entity or update it&#x2019;s
+STATUS property.</p>
+<p id="_ab094cac-5f03-468a-b00a-b8aadbc8059e">On subsequent conditional fetches the entity will not be returned.</p>
+<table id="_e8bdf94b-920f-4403-aa39-89c63012b246" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  1</td><td valign="top" class="example"><p id="_df88cccb-a13d-47db-91ee-80f0de66b61f" class="example">This is an example of the initial request and response from a server
+that supports the extended GET protocol.</p>
+<p id="_811e085d-dfd6-4b08-94d0-a25c2435f435" class="Sourcecode">&gt;&gt;&#xA0;Request&#xA0;&lt;&lt;<br /><br />GET&#xA0;/events.ics&#xA0;HTTP/1.1<br />Host:&#xA0;example.com<br />Accept:&#xA0;text/calendar<br /><br />&gt;&gt;&#xA0;Response&#xA0;&lt;&lt;<br /><br />HTTP/1.1&#xA0;200&#xA0;OK<br />Content-Length:&#xA0;xxxx<br />ETag:&#xA0;"1234"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;current&#xA0;ETag&#xA0;(for&#xA0;conditional&#xA0;GET)<br />Vary:&#xA0;Prefer,&#xA0;If-None-Match&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;so&#xA0;caching&#xA0;proxy&#xA0;can&#xA0;key&#xA0;off&#xA0;of&#xA0;client's&#xA0;ETag&#xA0;(sync&#xA0;token)&#xA0;and&#xA0;preference<br /><br />BEGIN:VCALENDAR:<br />?&#xA0;&#xA0;/*&#xA0;full&#xA0;feed&#xA0;*/<br />END:VCALENDAR</p></td></tr></table>
+<table id="_0df297d7-f23d-415e-908f-a5fb91efffb8" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  2</td><td valign="top" class="example"><p id="_2596f20f-5b2e-4c8f-be38-24d9cbb8b795" class="example">This is an example of the subsequent request and response when no
+changes have occurred.  The Accept header field indicates that a
+VPATCH format is most desirable but simple text/calendar is
+acceptable.</p>
+<p id="_3bf3a575-52f8-4734-afd4-ac95a9a268ad" class="Sourcecode">&gt;&gt;&#xA0;Request&#xA0;&lt;&lt;<br /><br />GET&#xA0;/events.ics&#xA0;HTTP/1.1<br />Host:&#xA0;example.com<br />Accept:&#xA0;text/calendar;&#xA0;q=0.5,&#xA0;component=VPATCH,&#xA0;text/calendar;<br />If-None-Match:&#xA0;?1234?&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;conditional&#xA0;request<br />Prefer:&#xA0;return=minimal<br /><br />&gt;&gt;&#xA0;Response&#xA0;&lt;&lt;<br /><br />HTTP/1.1&#xA0;304&#xA0;Not&#xA0;Modified<br />Content-Length:&#xA0;0<br />ETag:&#xA0;?1234?<br />Vary:&#xA0;Prefer,&#xA0;If-None-Match</p></td></tr></table>
+<table id="_e8bf979b-29a1-4611-9c65-9288c0dd8561" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  3</td><td valign="top" class="example"><p id="_03159b35-ca94-46a2-8566-722f510c7d6f" class="example">This is an example of the subsequent request and response when no
+changes have occurred.  The Accept header field indicates that a
+VPATCH format is most desirable but simple text/calendar is
+acceptable.</p>
+<p id="_c1153986-ad5e-4b6f-b378-f516186c5324" class="Sourcecode">&gt;&gt;&#xA0;Request&#xA0;&lt;&lt;<br /><br />GET&#xA0;/events.ics&#xA0;HTTP/1.1<br />Host:&#xA0;example.com<br />Accept:&#xA0;text/calendar;&#xA0;q=0.5,&#xA0;component=VPATCH,&#xA0;text/calendar;<br />If-None-Match:&#xA0;"1234"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;conditional&#xA0;request<br />Prefer:&#xA0;return=minimal<br /><br />&gt;&gt;&#xA0;Response&#xA0;&lt;&lt;<br /><br />HTTP/1.1&#xA0;304&#xA0;Not&#xA0;Modified<br />Content-Length:&#xA0;0<br />ETag:&#xA0;"1234"<br />Vary:&#xA0;Prefer,&#xA0;If-None-Match</p></td></tr></table>
+<table id="_49367d02-b487-4db3-8353-0cb79c995f38" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  4</td><td valign="top" class="example"><p id="_24843675-1f27-458f-b043-48d3154e1d38" class="example">This is an example of the subsequent request and response when
+changes have occurred and the server can create the minimal format.</p>
+<p id="_6be72689-d6e5-4f66-a758-766032ddd574" class="Sourcecode">&gt;&gt;&#xA0;Request&#xA0;&lt;&lt;<br /><br />GET&#xA0;/events.ics&#xA0;HTTP/1.1<br />Host:&#xA0;example.com<br />Accept:&#xA0;text/calendar;&#xA0;q=0.5,&#xA0;component=VPATCH,&#xA0;text/calendar;<br />If-None-Match:&#xA0;"1234"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;conditional&#xA0;request<br />Prefer:&#xA0;return=minimal<br /><br />&gt;&gt;&#xA0;Response&#xA0;&lt;&lt;<br /><br />HTTP/1.1&#xA0;200&#xA0;OK<br />Content-Type:&#xA0;text/calendar<br />Content-Length:&#xA0;xxxx<br />ETag:&#xA0;"5678"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;current&#xA0;ETag&#xA0;(for&#xA0;conditional&#xA0;GET)<br />Preference-Applied:&#xA0;return=minimal&#xA0;&#xA0;&#xA0;&#xA0;signals&#xA0;to&#xA0;client&#xA0;that&#xA0;stream&#xA0;is&#xA0;changes&#xA0;&#xA0;only<br />Vary:&#xA0;Prefer,&#xA0;If-None-Match&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;so&#xA0;caching&#xA0;proxy&#xA0;can&#xA0;key&#xA0;off&#xA0;of&#xA0;client?s&#xA0;&#xA0;ETag&#xA0;(sync&#xA0;token)&#xA0;and&#xA0;preference<br /><br />BEGIN:VCALENDAR:<br />...&#xA0;&#xA0;only&#xA0;new/changed&#xA0;events<br />...&#xA0;&#xA0;when&#xA0;not&#xA0;returning&#xA0;VPATCH,&#xA0;deleted&#xA0;events&#xA0;have&#xA0;STATUS:DELETED<br />END:VCALENDAR</p></td></tr></table>
+<table id="_8f15541e-172f-4c7d-a2b0-dccb4bc9214e" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  5</td><td valign="top" class="example"><p id="_435eb9b5-fe21-4c29-bd60-b2f2e42be458" class="example">This is an example of the subsequent request and response when
+changes have occurred and the server cannot create the minimal format
+- perhaps because of an old or invalid token.  Note there is no
+Preference-Applied header field.</p>
+<p id="_28e72fba-1d41-4fc9-94aa-ad22ef099e05" class="Sourcecode">&gt;&gt;&#xA0;Request&#xA0;&lt;&lt;<br /><br />GET&#xA0;/events.ics&#xA0;HTTP/1.1<br />Host:&#xA0;example.com<br />Accept:&#xA0;text/calendar;&#xA0;q=0.5,&#xA0;component=VPATCH,&#xA0;text/calendar;<br />If-None-Match:&#xA0;"1234"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;conditional&#xA0;request<br />Prefer:&#xA0;return=minimal<br /><br />&gt;&gt;&#xA0;Response&#xA0;&lt;&lt;<br /><br />HTTP/1.1&#xA0;200&#xA0;OK<br />Content-Type:&#xA0;text/calendar<br />Content-Length:&#xA0;xxxx<br />ETag:&#xA0;"5678"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;current&#xA0;ETag&#xA0;(for&#xA0;conditional&#xA0;GET)<br />Vary:&#xA0;Prefer,&#xA0;If-None-Match&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;so&#xA0;caching&#xA0;proxy&#xA0;can&#xA0;key&#xA0;off&#xA0;of&#xA0;client?s&#xA0;&#xA0;ETag&#xA0;(sync&#xA0;token)&#xA0;and&#xA0;preference<br /><br />BEGIN:VCALENDAR:<br />...&#xA0;&#xA0;full&#xA0;set&#xA0;of&#xA0;data<br />END:VCALENDAR</p></td></tr></table></div>
+      </div>
+      <div id="_changes_to_the_icalendar_specifications">
+        <h1>5.&#xA0; Changes to the iCalendar specifications</h1>
+        <p id="_d14d1378-bf12-4f95-98a1-f8a71db3d0cc">This specification does not require any changes to <a href="#RFC5545">RFC 5545</a> or its
+extensions.  However it does introduce the use of some properties to
+provide more information about the resource, for example the time
+range it covers.
+Unresolved directive in csd-subscription-upgrade.adoc - include::sections/05-discovering.adoc[]</p>
+      </div>
+      <div id="_discovering_alternative_access_methods">
+        <h1>6.&#xA0; Discovering alternative access methods</h1>
+        <p id="_74625240-0d3e-4b5a-8093-6f4bd9be4274">The advertising of other access points is achieved through the use of
+the LINK header as defined in <a href="#RFC5988">RFC 5988</a>.  New link relation types are
+defined in this specification - each being associated with a protocol
+or protocol subset.</p>
+        <p id="_346dfb48-e1a6-4074-82f5-154c34c9fa99">These LINK headers will be delivered when a client carries out an
+OPTIONS request targeting the URL of the resource.
+== Link relations</p>
+        <div id="_general_2"><h2>6.1. General</h2>
+
+  <p id="_7f015522-dd1f-49dd-adc4-fdd0dd1b7907">This clause defines a number of new link relations required to
+facilitate subscription upgrades.</p>
+</div>
+        <div id="la-subscribe-caldav"><h2>6.2. subscribe-caldav</h2><p id="_10858631-654f-4677-b266-f70936992fd6">This specifies an access point which is a full implementation of
+caldav but requires no authentication.  The end point allows the full
+range of reports as defined by the CalDAV specification.</p>
+<p id="_5a648888-6da9-4a8b-820f-0d3dd4b4599f">The client <b>MUST</b> follow the specification to determine exactly what
+operations are allowed on the access point - for example to determine
+if sync-report is supported.</p>
+<p id="_5f512e23-06c4-4206-a854-85a5b39df0d8">The URL <b>MAY</b> include some form of token to allow write access to the
+targeted collection.  The client must check it&#x2019;s permissions to
+determine whether or not it has been granted write access.</p></div>
+        <div id="la-subscribe-caldav-auth"><h2>6.3. subscribe-caldav-auth</h2><p id="_1cb36392-9c0e-438b-9236-b3da90bb7ac8">This specifies an access point which is a full implementation of
+caldav and requires authentication.  This may allow read-write access
+to the resource.</p>
+<p id="_454910e7-0815-451c-9d32-40f459cac244">The client <b>MUST</b> follow the specification to determine exactly what
+operations are allowed on the access point - for example to determine
+if sync-report is supported.</p></div>
+        <div id="la-subscribe-webdav-sync"><h2>6.4. subscribe-webdav-sync</h2><p id="_3c663f53-7af7-4053-b182-eb171063b217">This specifies an access point which supports only webdav sync.</p>
+<p id="_b59385d8-b25f-451f-99d3-81bbd0457cee">This allows the client to issue a sync-report on the resource to
+obtain updates.<div id="_386f619a-188c-4fe5-bcaf-6cd0419a05bd" class="Note"><p><span class="note_label">NOTE</span>&#xA0; say something about initial startup - use ics to populate?
+Initial token?</p></div></p>
+
+<p id="_97be61c8-9ff1-4072-a89d-394f83cd5443">The client <b>MUST</b> follow that specification.</p></div>
+        <div id="la-subscribe-enhanced-get"><h2>6.5. subscribe-enhanced-get</h2><p id="_f2c3283b-7969-4229-ab0c-ec2e448d6e6b">This specifies an access point which supports something new.</p>
+<p id="_fb7f79fc-20c5-421f-ab61-cd3e6bbca93e">The client <b>MUST</b> follow that specification.</p></div>
+      </div>
+      <div id="security">
+        <h1>7.&#xA0; Security Considerations</h1>
+        <p id="_73d58ea3-c544-4d14-8ff7-debb48ec0b6d">Applications using these properties need to be aware of the risks
+entailed in using the URIs provided as values.  See <a href="#RFC3986">RFC 3986</a> for a
+discussion of the security considerations relating to URIs.
+= Privacy Considerations</p>
+        <p id="_5f02709c-3d3c-49f0-9c24-8357185e224d">Properties with a "URI" value type can expose their users to privacy
+leaks as any network access of the URI data can be tracked.  Clients
+<b>SHOULD NOT</b> automatically download data referenced by the URI without
+explicit instruction from users.  This specification does not
+introduce any additional privacy concerns beyond those described in
+<a href="#RFC5545">RFC 5545</a>.</p>
+      </div>
+      <div id="iana">
+        <h1>8.&#xA0; IANA Considerations</h1>
+        <div id="_link_relation_registrations"><h2>8.1. Link Relation Registrations</h2><p id="_f1b822e4-d82b-4b1d-8b68-91d2d0cbe809">This document defines the following new iCalendar properties to be
+added to the registry defined in <a href="#RFC5545">RFC 5545, Section 8.2.3</a>:</p>
+<p class="TableTitle" align="center">Table 1</p><table id="_fc54d13f-d2ea-4098-9eae-c73433da9818" class="MsoISOTable" border="1" cellspacing="0" cellpadding="0"><thead><tr><th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Relation Name</th><th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Description</th><th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Reference</th></tr></thead><tbody><tr><td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">
+        <p id="_665bd33b-253e-4869-a9c1-b404e8bf723c">subscribe-caldav</p>
+      </td><td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">
+        <p id="_2e9c04f7-6fb3-4e1d-8d63-88a547d39ba1">Current</p>
+      </td><td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">
+        <p id="_3612a178-2026-4958-a956-2cbaf4bf95e2">
+  <a href="#la-subscribe-caldav">Clause 6.2</a>
+</p>
+      </td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">
+        <p id="_dbc41275-f733-4582-a11e-9944d78a7e96">subscribe-caldav_auth</p>
+      </td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">
+        <p id="_40bba546-c564-43e1-bbff-fd6025628fb1">Current</p>
+      </td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">
+        <p id="_951a4344-0ed9-4fa6-b2bd-c916d06c21cb">
+  <a href="#la-subscribe-caldav_auth">la-subscribe-caldav_auth</a>
+</p>
+      </td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">
+        <p id="_ca602271-d877-42dc-83e4-38b76ce298cf">subscribe-webdav-sync</p>
+      </td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">
+        <p id="_837e2bbb-8564-48de-9e6f-40907b808a83">Current</p>
+      </td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">
+        <p id="_5081788d-8f6f-4717-bb09-df3f63a87af9">
+  <a href="#la-subscribe-webdav-sync">Clause 6.4</a>
+</p>
+      </td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">
+        <p id="_dbfc7401-f1e0-4031-9844-a6cedcf9f67c">subscribe-enhanced_get</p>
+      </td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">
+        <p id="_a2e6649b-9d13-456c-abb1-2ba073f38144">Current</p>
+      </td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">
+        <p id="_cb892500-0036-4041-964a-34707af4fcdf">
+  <a href="#la-subscribe-enhanced_get">la-subscribe-enhanced_get</a>
+</p>
+      </td></tr></tbody></table></div>
+      </div>
+      <div id="acknowledgements">
+        <h1>9.&#xA0; Acknowledgements</h1>
+        <p id="_c0792514-a920-453a-9d26-422be3c1fa51">The author would also like to thank the members of the Calendaring
+and Scheduling Consortium Calendar Sharing technical committee and
+the following individuals for contributing their ideas and support:</p>
+        <p id="_53d201f8-a9e0-48b9-ac58-e95ad4a1390b">&#x2026;&#x200B;</p>
+        <p id="_cda8a3c1-c11c-4ca6-9b65-433881a7341e">The authors would also like to thank the Calendaring and Scheduling
+Consortium for advice with this specification.</p>
+      </div>
+      <br />
+      <div id="appendix-a" class="Section3">
+        <h1 class="Annex"><b>Appendix A</b><br />(informative) <br /><b>Open issues</b></h1>
+        <dl id="_09a2ee72-3955-4c03-b1c4-080a30eaeb0c">
+          <dt>
+            <p>restype values</p>
+          </dt>
+          <dd>
+    <p id="_ad6f1700-7e90-4157-bad7-de5ee6bd319a">Need to determine what if any registry of resource
+types already exists and use that.</p>
+  </dd>
+        </dl>
+      </div>
+      <br />
+      <div id="appendix-b" class="Section3">
+        <h1 class="Annex"><b>Appendix B</b><br />(informative) <br /><b>Change log</b></h1>
+        <p id="_f37b91e4-5891-4679-8038-2f236bea5d5d">v01 2017-07-28 MD</p>
+        <ul id="_fe98ff76-c4fc-4273-8aa0-0a990fa3becc">
+  <li>
+    <p id="_abea595b-2e0b-4732-86ab-e8c2f2559fc5">Examples</p>
+  </li>
+  <li>
+    <p id="_e2ef4120-d137-4f59-bbe3-89ef575afc00">More text for extended get.  Talk about deletions.</p>
+  </li>
+</ul>
+        <p id="_68b98ddd-4d9a-4289-9b42-f55bc0c9bebf">v01 2017-02-17 MD</p>
+        <ul id="_48776051-34e1-46e8-8b68-4df435284120">
+  <li>
+    <p id="_1dd4047b-9f34-4dcc-ba31-73e4e93c26ec">Add text about OPTIONS</p>
+  </li>
+  <li>
+    <p id="_b80ebfba-be5d-4fb4-821d-373f1f3fb3b0">Add text abut read/write CalDAV</p>
+  </li>
+</ul>
+        <p id="_f8cc77f7-39b1-4f26-804d-2fbbb8109476">v00 2017-02-15 MD</p>
+        <ul id="_857fa33c-f809-4423-946c-967f7c4b0c14">
+  <li>
+    <p id="_6d3a325f-f748-4e82-9837-081d39a4304c">First pass</p>
+  </li>
+</ul>
+      </div>
+      <br />
+      <div>
+        <h1 class="Section3">Bibliography</h1>
+      </div>
+    </main>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    asciimath2jax: {
+      delimiters: [['(#(', ')#)']]
+    }
+ });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_HTMLorMML"></script>
+<script>
+    //TOC generation
+      $('#toc').toc({
+          'selectors': 'h1,h2:not(.TermNum)', //elements to use as headings
+          'container': 'main', //element to find all selectors in
+          'smoothScrolling': true, //enable or disable smooth scrolling on click
+          'prefix': 'toc', //prefix for anchor tags and class names
+          'onHighlight': function(el) {}, //called when a new section is highlighted 
+          'highlightOnScroll': true, //add class to heading that is currently in focus
+          'highlightOffset': 100, //offset to trigger the next headline
+          'anchorName': function(i, heading, prefix) { //custom function for anchor name
+              return prefix+i;
+          },
+          'headerText': function(i, heading, $heading) { //custom function building the header-item text
+              return $heading.text();
+          },
+      'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+        return $heading[0].tagName.toLowerCase();
+      }
+      });
+      
+  </script>
+
+<script>
+  //TOC toggle animation
+$('#toggle').on('click', function(){
+    if( $('nav').is(':visible') ) {
+        $('nav').animate({ 'left': '-353px' }, 'slow', function(){
+            $('nav').hide();
+        });
+        $('.container').animate({ 'padding-left': '31px' }, 'slow');
+    }
+    else {
+        $('nav').show();
+        $('nav').animate({ 'left': '0px' }, 'slow');
+        $('.container').animate({ 'padding-left': '360px' }, 'slow');
+    }
+});
+</script>
+
+<script>
+    // Scroll to top button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+  <script>
+/**
+ * AnchorJS - v4.1.0 - 2017-09-20
+ * https://github.com/bryanbraun/anchorjs
+ * Copyright (c) 2017 Bryan Braun; Licensed MIT
+ */
+!function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function e(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64}function t(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}function i(){if(null===document.head.querySelector("style.anchorjs")){var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"], style'))?document.head.appendChild(e):document.head.insertBefore(e,A),e.sheet.insertRule(" .anchorjs-link {   opacity: 0;   text-decoration: none;   -webkit-font-smoothing: antialiased;   -moz-osx-font-smoothing: grayscale; }",e.sheet.cssRules.length),e.sheet.insertRule(" *:hover > .anchorjs-link, .anchorjs-link:focus  {   opacity: 1; }",e.sheet.cssRules.length),e.sheet.insertRule(" [data-anchorjs-icon]::after {   content: attr(data-anchorjs-icon); }",e.sheet.cssRules.length),e.sheet.insertRule(' @font-face {   font-family: "anchorjs-icons";   src: url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype"); }',e.sheet.cssRules.length)}}this.options=A||{},this.elements=[],e(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var n,o,s,a,r,c,h,l,u,d,f,p=[];if(e(this.options),"touch"===(f=this.options.visible)&&(f=this.isTouchDevice()?"always":"hover"),A||(A="h2, h3, h4, h5, h6"),0===(n=t(A)).length)return this;for(i(),o=document.querySelectorAll("[id]"),s=[].map.call(o,function(A){return A.id}),r=0;r<n.length;r++)if(this.hasAnchorJSLink(n[r]))p.push(r);else{if(n[r].hasAttribute("id"))a=n[r].getAttribute("id");else if(n[r].hasAttribute("data-anchor-id"))a=n[r].getAttribute("data-anchor-id");else{u=l=this.urlify(n[r].textContent),h=0;do{void 0!==c&&(u=l+"-"+h),c=s.indexOf(u),h+=1}while(-1!==c);c=void 0,s.push(u),n[r].setAttribute("id",u),a=u}a.replace(/-/g," "),(d=document.createElement("a")).className="anchorjs-link "+this.options.class,d.href="#"+a,d.setAttribute("aria-label",this.options.ariaLabel),d.setAttribute("data-anchorjs-icon",this.options.icon),"always"===f&&(d.style.opacity="1"),""===this.options.icon&&(d.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(d.style.lineHeight="inherit")),"left"===this.options.placement?(d.style.position="absolute",d.style.marginLeft="-1em",d.style.paddingRight="0.5em",n[r].insertBefore(d,n[r].firstChild)):(d.style.paddingLeft="0.375em",n[r].appendChild(d))}for(r=0;r<p.length;r++)n.splice(p[r]-r,1);return this.elements=this.elements.concat(n),this},this.remove=function(A){for(var e,i,n=t(A),o=0;o<n.length;o++)(i=n[o].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(n[o]))&&this.elements.splice(e,1),n[o].removeChild(i));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){var t=/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\]/g;return this.options.truncate||e(this.options),A.trim().replace(/\'/gi,"").replace(t,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&(" "+A.firstChild.className+" ").indexOf(" anchorjs-link ")>-1,t=A.lastChild&&(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ")>-1;return e||t||!1}}});  </script>
+
+  <script>
+  $(document).ready(function() {
+          $('[id^=toc]').each(function ()
+          {
+             var currentToc = $(this);
+       var url = window.location.href;
+             currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "' </a>");
+          });
+});
+  anchors.options = {
+  placement: 'left'
+};
+anchors.add('h1, h2, h3, h4');
+</script></body>
+</html>
