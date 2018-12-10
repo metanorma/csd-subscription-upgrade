@@ -962,51 +962,51 @@ a.anchorjs-link:hover {
       <br />
       <div>
         <h1 class="ForewordTitle">Foreword</h1>
-        <p id="_73b71b5a-a83b-4f98-8830-1b4a78fc272e">The Calendaring and Scheduling Consortium ("CalConnect") is global
+        <p id="_5a8fc1b0-6a14-4780-9ede-356eda3aa259">The Calendaring and Scheduling Consortium ("CalConnect") is global
 non-profit organization with the aim to facilitate interoperability of
 collaborative technologies and tools through open standards.</p>
-        <p id="_67c01bb4-4136-4b20-beac-3b07668c35f8">CalConnect works closely with international and regional partners,
+        <p id="_98055356-8800-4a05-8f50-6a811d5f5999">CalConnect works closely with international and regional partners,
 of which the full list is available on our website
 (<a href="https://www.calconnect.org/about/liaisons-and-relationships">https://www.calconnect.org/about/liaisons-and-relationships</a>).</p>
-        <p id="_35416e9e-50db-4f9e-9436-d14581c76be1">The procedures used to develop this document and those intended for its
+        <p id="_34661ac9-3d94-427c-b285-4b04f2520bcb">The procedures used to develop this document and those intended for its
 further maintenance are described in the CalConnect Directives.</p>
-        <p id="_78e19e6c-314d-4135-9ec3-e88664846971">In particular the different approval criteria needed for the different
+        <p id="_569f5e4b-793e-4c2a-8174-bd5993262b8c">In particular the different approval criteria needed for the different
 types of CalConnect documents should be noted. This document was drafted in
 accordance with the editorial rules of the CalConnect Directives.</p>
-        <p id="_1db3682c-2f1c-4abb-8b46-01cae5e6c052">Attention is drawn to the possibility that some of the elements of this
+        <p id="_6482b10d-9333-4c2d-99c1-1a717e8d2e82">Attention is drawn to the possibility that some of the elements of this
 document may be the subject of patent rights. CalConnect shall not be
 held responsible for identifying any or all such patent rights. Details
 of any patent rights identified during the development of the document
 will be provided in the Introduction.</p>
-        <p id="_f46e4c19-e1f5-4194-91f1-1d141214f787">Any trade name used in this document is information given for the
+        <p id="_ee9753fb-5467-430e-8990-8db2ae486972">Any trade name used in this document is information given for the
 convenience of users and does not constitute an endorsement.</p>
-        <p id="_75614a8e-27c2-476b-b74f-b58b8a8e622d">This document was prepared by Technical Committee
+        <p id="_8d3ec62c-ce5f-42ae-add3-790a5cc87167">This document was prepared by Technical Committee
 <i>CALENDAR</i>.</p>
       </div>
       <br />
       <div class="Section3" id="introduction">
         <h1 class="IntroTitle">Introduction</h1>
-        <p id="_0b63d13c-80ce-4321-938b-28b4d78c125e">Currently clients subscribe to calendar feeds as an ics file which is
+        <p id="_c970588a-254a-481a-ae05-4bb24db9123b">Currently clients subscribe to calendar feeds as an ics file which is
 often published as a resource accessible using the unofficial
 'webcal' scheme.</p>
-        <p id="_21c811c4-8ebc-4e3e-8ba2-9f14e8270891">The only available option for updating that resource is the usual
+        <p id="_61997fd4-a4de-4d35-87de-45f8ae579c28">The only available option for updating that resource is the usual
 HTTP polling of cached resources using Etags.</p>
-        <p id="_26b862ed-9be2-476d-8b9d-ab790f1ea895">There is the usual tension between clients wishing to see a timely
+        <p id="_f7c6b54b-2728-4f3e-aa09-7178a2990bce">There is the usual tension between clients wishing to see a timely
 response to changes and servers not wishing to be overloaded by
 frequent requests for possibly large amounts of data.</p>
-        <p id="_458b2973-9fa9-4162-b232-e027689afc9e">This specification introduces an approach whereby clients can
+        <p id="_89376f75-2904-427f-943b-c146f1d92d48">This specification introduces an approach whereby clients can
 discover a more performant access method.  Given the location of the
 resource as an ics file, the client can perform an OPTIONS request on
 the resource and inspect the returned headers which will offer a
 number of alternative access methods.</p>
-        <p id="_f33f0ee4-2093-415e-a63d-58c188041c94">Given that many clients already support CalDAV this provides an easy
+        <p id="_aa0edb32-31c2-467d-9127-619adbae40f8">Given that many clients already support CalDAV this provides an easy
 upgrade path for those clients.  CalDAV and DAV subsets are specified
 here to allow lighter weight implementations.</p>
       </div>
       <p class="zzSTDTitle1">Calendaring and scheduling&#x2009;&#x2014;&#x2009;Calendar subscription upgrades</p>
       <div id="_scope">
         <h1>1.&#xA0; Scope</h1>
-        <p id="_8b4a4822-9f6c-4d64-990a-0368b50c1b26">This document provides a mechanism to allow subscribers to
+        <p id="_8f317de5-254f-4377-925e-0b1e8b0f02ed">This document provides a mechanism to allow subscribers to
 calendar feeds to upgrade to a more performant protocol.</p>
       </div>
       <div>
@@ -1025,53 +1025,53 @@ calendar feeds to upgrade to a more performant protocol.</p>
 </div>
       <div id="enhanced-get">
         <h1>4.&#xA0; Enhanced GET</h1>
-        <div id="_general"><h2>4.1. General</h2><p id="_754b45f4-0068-4696-af24-afa8b8195f00">This is a lightweight protocol which allows simple clients to
+        <div id="_general"><h2>4.1. General</h2><p id="_c441ec03-30d6-47bc-8175-c35d7b72a63d">This is a lightweight protocol which allows simple clients to
 efficiently discover and download changes in the targeted resource.</p>
-<p id="_d0ad2ed7-dd3c-4e71-b6ad-5ed7986f9df1">It has many similarities to WebDAV sync and for a server could be
+<p id="_e3c547ef-fef4-4301-ae47-d6bb89a92c55">It has many similarities to WebDAV sync and for a server could be
 implemented as an extension of the specification.</p>
-<p id="_2aeec03c-7148-4e8a-a9dd-41d6c36c7223">In this protocol the Etag is used as the sync change token.  By
+<p id="_723da868-aa4a-4376-ad43-2e6e7fef8961">In this protocol the Etag is used as the sync change token.  By
 adding the If-None-Match header field to the vary header field we can
 ensure intermediate caching proxies will be able to cache different
 versions of the data.</p>
-<p id="_57a48654-561b-4250-84c0-4ab14c9f4708">The resource is treated as a set of individual events each of which
+<p id="_c8ae26b3-6d61-4178-8060-51f24c470290">The resource is treated as a set of individual events each of which
 may be updated or deleted separately.  The client will first fetch
 the entire ics file.  On subsequent requests it uses the Prefer
 header with a value of "return=minimal" to indicate that it wants a
 set of changes since the last fetch.</p></div>
-        <div id="_deletions"><h2>4.2. Deletions</h2><p id="_cecca48b-6b1e-4b2e-9644-4853252caafa">When an entity (VEVENT, VTODO or other valid top-level component) is
+        <div id="_deletions"><h2>4.2. Deletions</h2><p id="_4056b457-8a7e-49ae-b738-67d630c3682b">When an entity (VEVENT, VTODO or other valid top-level component) is
 deleted from the source data the server needs to be able to inform a
 client of the deletion.  This specification introduces a new value
 for the STATUS property of DELETED.</p>
-<p id="_23c76086-2625-47c0-b020-5ef936555d22">On the first conditional GET after the entity has been deleted a
+<p id="_cfefb8c6-402c-4c32-a877-6a0c5de70ca1">On the first conditional GET after the entity has been deleted a
 skeleton, but valid, entity will be returned with STATUS: DELETED.
 The receiving client is free to remove the entity or update it&#x2019;s
 STATUS property.</p>
-<p id="_ab094cac-5f03-468a-b00a-b8aadbc8059e">On subsequent conditional fetches the entity will not be returned.</p>
-<table id="_e8bdf94b-920f-4403-aa39-89c63012b246" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  1</td><td valign="top" class="example"><p id="_df88cccb-a13d-47db-91ee-80f0de66b61f" class="example">This is an example of the initial request and response from a server
+<p id="_dc7fdee5-2f7d-4cf2-8f60-7f6f4967217d">On subsequent conditional fetches the entity will not be returned.</p>
+<table id="_c4e746bb-78fb-4652-bdc4-f6acbbbd92e2" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  1</td><td valign="top" class="example"><p id="_3b0f05ff-438c-4f09-9691-5df3e1473cd9" class="example">This is an example of the initial request and response from a server
 that supports the extended GET protocol.</p>
-<p id="_811e085d-dfd6-4b08-94d0-a25c2435f435" class="Sourcecode">&gt;&gt;&#xA0;Request&#xA0;&lt;&lt;<br /><br />GET&#xA0;/events.ics&#xA0;HTTP/1.1<br />Host:&#xA0;example.com<br />Accept:&#xA0;text/calendar<br /><br />&gt;&gt;&#xA0;Response&#xA0;&lt;&lt;<br /><br />HTTP/1.1&#xA0;200&#xA0;OK<br />Content-Length:&#xA0;xxxx<br />ETag:&#xA0;"1234"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;current&#xA0;ETag&#xA0;(for&#xA0;conditional&#xA0;GET)<br />Vary:&#xA0;Prefer,&#xA0;If-None-Match&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;so&#xA0;caching&#xA0;proxy&#xA0;can&#xA0;key&#xA0;off&#xA0;of&#xA0;client's&#xA0;ETag&#xA0;(sync&#xA0;token)&#xA0;and&#xA0;preference<br /><br />BEGIN:VCALENDAR:<br />?&#xA0;&#xA0;/*&#xA0;full&#xA0;feed&#xA0;*/<br />END:VCALENDAR</p></td></tr></table>
-<table id="_0df297d7-f23d-415e-908f-a5fb91efffb8" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  2</td><td valign="top" class="example"><p id="_2596f20f-5b2e-4c8f-be38-24d9cbb8b795" class="example">This is an example of the subsequent request and response when no
+<p id="_c63c3190-bab5-4646-971a-20825cd4086b" class="Sourcecode">&gt;&gt;&#xA0;Request&#xA0;&lt;&lt;<br /><br />GET&#xA0;/events.ics&#xA0;HTTP/1.1<br />Host:&#xA0;example.com<br />Accept:&#xA0;text/calendar<br /><br />&gt;&gt;&#xA0;Response&#xA0;&lt;&lt;<br /><br />HTTP/1.1&#xA0;200&#xA0;OK<br />Content-Length:&#xA0;xxxx<br />ETag:&#xA0;"1234"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;current&#xA0;ETag&#xA0;(for&#xA0;conditional&#xA0;GET)<br />Vary:&#xA0;Prefer,&#xA0;If-None-Match&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;so&#xA0;caching&#xA0;proxy&#xA0;can&#xA0;key&#xA0;off&#xA0;of&#xA0;client's&#xA0;ETag&#xA0;(sync&#xA0;token)&#xA0;and&#xA0;preference<br /><br />BEGIN:VCALENDAR:<br />?&#xA0;&#xA0;/*&#xA0;full&#xA0;feed&#xA0;*/<br />END:VCALENDAR</p></td></tr></table>
+<table id="_1b7aae86-cb4e-4b69-bdcf-8caa825606f4" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  2</td><td valign="top" class="example"><p id="_583ee943-e259-4256-9403-aae065d4de5e" class="example">This is an example of the subsequent request and response when no
 changes have occurred.  The Accept header field indicates that a
 VPATCH format is most desirable but simple text/calendar is
 acceptable.</p>
-<p id="_3bf3a575-52f8-4734-afd4-ac95a9a268ad" class="Sourcecode">&gt;&gt;&#xA0;Request&#xA0;&lt;&lt;<br /><br />GET&#xA0;/events.ics&#xA0;HTTP/1.1<br />Host:&#xA0;example.com<br />Accept:&#xA0;text/calendar;&#xA0;q=0.5,&#xA0;component=VPATCH,&#xA0;text/calendar;<br />If-None-Match:&#xA0;?1234?&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;conditional&#xA0;request<br />Prefer:&#xA0;return=minimal<br /><br />&gt;&gt;&#xA0;Response&#xA0;&lt;&lt;<br /><br />HTTP/1.1&#xA0;304&#xA0;Not&#xA0;Modified<br />Content-Length:&#xA0;0<br />ETag:&#xA0;?1234?<br />Vary:&#xA0;Prefer,&#xA0;If-None-Match</p></td></tr></table>
-<table id="_e8bf979b-29a1-4611-9c65-9288c0dd8561" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  3</td><td valign="top" class="example"><p id="_03159b35-ca94-46a2-8566-722f510c7d6f" class="example">This is an example of the subsequent request and response when no
+<p id="_914bbefe-f4b7-4f0d-b627-0b444e3ec16d" class="Sourcecode">&gt;&gt;&#xA0;Request&#xA0;&lt;&lt;<br /><br />GET&#xA0;/events.ics&#xA0;HTTP/1.1<br />Host:&#xA0;example.com<br />Accept:&#xA0;text/calendar;&#xA0;q=0.5,&#xA0;component=VPATCH,&#xA0;text/calendar;<br />If-None-Match:&#xA0;?1234?&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;conditional&#xA0;request<br />Prefer:&#xA0;return=minimal<br /><br />&gt;&gt;&#xA0;Response&#xA0;&lt;&lt;<br /><br />HTTP/1.1&#xA0;304&#xA0;Not&#xA0;Modified<br />Content-Length:&#xA0;0<br />ETag:&#xA0;?1234?<br />Vary:&#xA0;Prefer,&#xA0;If-None-Match</p></td></tr></table>
+<table id="_a103994d-863a-4716-acd8-e9ed4c8c04c4" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  3</td><td valign="top" class="example"><p id="_e41bc3a6-a04b-41d5-b8ab-0afe1d0519a1" class="example">This is an example of the subsequent request and response when no
 changes have occurred.  The Accept header field indicates that a
 VPATCH format is most desirable but simple text/calendar is
 acceptable.</p>
-<p id="_c1153986-ad5e-4b6f-b378-f516186c5324" class="Sourcecode">&gt;&gt;&#xA0;Request&#xA0;&lt;&lt;<br /><br />GET&#xA0;/events.ics&#xA0;HTTP/1.1<br />Host:&#xA0;example.com<br />Accept:&#xA0;text/calendar;&#xA0;q=0.5,&#xA0;component=VPATCH,&#xA0;text/calendar;<br />If-None-Match:&#xA0;"1234"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;conditional&#xA0;request<br />Prefer:&#xA0;return=minimal<br /><br />&gt;&gt;&#xA0;Response&#xA0;&lt;&lt;<br /><br />HTTP/1.1&#xA0;304&#xA0;Not&#xA0;Modified<br />Content-Length:&#xA0;0<br />ETag:&#xA0;"1234"<br />Vary:&#xA0;Prefer,&#xA0;If-None-Match</p></td></tr></table>
-<table id="_49367d02-b487-4db3-8353-0cb79c995f38" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  4</td><td valign="top" class="example"><p id="_24843675-1f27-458f-b043-48d3154e1d38" class="example">This is an example of the subsequent request and response when
+<p id="_2ab2aee0-15f5-4141-bbdb-dd70b131ae2c" class="Sourcecode">&gt;&gt;&#xA0;Request&#xA0;&lt;&lt;<br /><br />GET&#xA0;/events.ics&#xA0;HTTP/1.1<br />Host:&#xA0;example.com<br />Accept:&#xA0;text/calendar;&#xA0;q=0.5,&#xA0;component=VPATCH,&#xA0;text/calendar;<br />If-None-Match:&#xA0;"1234"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;conditional&#xA0;request<br />Prefer:&#xA0;return=minimal<br /><br />&gt;&gt;&#xA0;Response&#xA0;&lt;&lt;<br /><br />HTTP/1.1&#xA0;304&#xA0;Not&#xA0;Modified<br />Content-Length:&#xA0;0<br />ETag:&#xA0;"1234"<br />Vary:&#xA0;Prefer,&#xA0;If-None-Match</p></td></tr></table>
+<table id="_6577bc6b-bab5-4f9b-bdad-1bf37172b3ff" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  4</td><td valign="top" class="example"><p id="_bbf225a3-1f52-4c46-9bb9-a7c16353388b" class="example">This is an example of the subsequent request and response when
 changes have occurred and the server can create the minimal format.</p>
-<p id="_6be72689-d6e5-4f66-a758-766032ddd574" class="Sourcecode">&gt;&gt;&#xA0;Request&#xA0;&lt;&lt;<br /><br />GET&#xA0;/events.ics&#xA0;HTTP/1.1<br />Host:&#xA0;example.com<br />Accept:&#xA0;text/calendar;&#xA0;q=0.5,&#xA0;component=VPATCH,&#xA0;text/calendar;<br />If-None-Match:&#xA0;"1234"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;conditional&#xA0;request<br />Prefer:&#xA0;return=minimal<br /><br />&gt;&gt;&#xA0;Response&#xA0;&lt;&lt;<br /><br />HTTP/1.1&#xA0;200&#xA0;OK<br />Content-Type:&#xA0;text/calendar<br />Content-Length:&#xA0;xxxx<br />ETag:&#xA0;"5678"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;current&#xA0;ETag&#xA0;(for&#xA0;conditional&#xA0;GET)<br />Preference-Applied:&#xA0;return=minimal&#xA0;&#xA0;&#xA0;&#xA0;signals&#xA0;to&#xA0;client&#xA0;that&#xA0;stream&#xA0;is&#xA0;changes&#xA0;&#xA0;only<br />Vary:&#xA0;Prefer,&#xA0;If-None-Match&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;so&#xA0;caching&#xA0;proxy&#xA0;can&#xA0;key&#xA0;off&#xA0;of&#xA0;client?s&#xA0;&#xA0;ETag&#xA0;(sync&#xA0;token)&#xA0;and&#xA0;preference<br /><br />BEGIN:VCALENDAR:<br />...&#xA0;&#xA0;only&#xA0;new/changed&#xA0;events<br />...&#xA0;&#xA0;when&#xA0;not&#xA0;returning&#xA0;VPATCH,&#xA0;deleted&#xA0;events&#xA0;have&#xA0;STATUS:DELETED<br />END:VCALENDAR</p></td></tr></table>
-<table id="_8f15541e-172f-4c7d-a2b0-dccb4bc9214e" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  5</td><td valign="top" class="example"><p id="_435eb9b5-fe21-4c29-bd60-b2f2e42be458" class="example">This is an example of the subsequent request and response when
+<p id="_8a14daa5-3b8a-4449-a038-99919823fb6c" class="Sourcecode">&gt;&gt;&#xA0;Request&#xA0;&lt;&lt;<br /><br />GET&#xA0;/events.ics&#xA0;HTTP/1.1<br />Host:&#xA0;example.com<br />Accept:&#xA0;text/calendar;&#xA0;q=0.5,&#xA0;component=VPATCH,&#xA0;text/calendar;<br />If-None-Match:&#xA0;"1234"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;conditional&#xA0;request<br />Prefer:&#xA0;return=minimal<br /><br />&gt;&gt;&#xA0;Response&#xA0;&lt;&lt;<br /><br />HTTP/1.1&#xA0;200&#xA0;OK<br />Content-Type:&#xA0;text/calendar<br />Content-Length:&#xA0;xxxx<br />ETag:&#xA0;"5678"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;current&#xA0;ETag&#xA0;(for&#xA0;conditional&#xA0;GET)<br />Preference-Applied:&#xA0;return=minimal&#xA0;&#xA0;&#xA0;&#xA0;signals&#xA0;to&#xA0;client&#xA0;that&#xA0;stream&#xA0;is&#xA0;changes&#xA0;&#xA0;only<br />Vary:&#xA0;Prefer,&#xA0;If-None-Match&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;so&#xA0;caching&#xA0;proxy&#xA0;can&#xA0;key&#xA0;off&#xA0;of&#xA0;client?s&#xA0;&#xA0;ETag&#xA0;(sync&#xA0;token)&#xA0;and&#xA0;preference<br /><br />BEGIN:VCALENDAR:<br />...&#xA0;&#xA0;only&#xA0;new/changed&#xA0;events<br />...&#xA0;&#xA0;when&#xA0;not&#xA0;returning&#xA0;VPATCH,&#xA0;deleted&#xA0;events&#xA0;have&#xA0;STATUS:DELETED<br />END:VCALENDAR</p></td></tr></table>
+<table id="_641b7b1f-5b5e-4109-8a87-a80e4f158e1d" class="example" cellspacing="0" cellpadding="0" style="border-collapse:collapse"><tr><td valign="top" class="example_label" style="width:82.8pt;padding:0 0 0 1em;margin-left:0pt">EXAMPLE  5</td><td valign="top" class="example"><p id="_1b4b614f-994a-4671-9ae4-c41996d97ed1" class="example">This is an example of the subsequent request and response when
 changes have occurred and the server cannot create the minimal format
 - perhaps because of an old or invalid token.  Note there is no
 Preference-Applied header field.</p>
-<p id="_28e72fba-1d41-4fc9-94aa-ad22ef099e05" class="Sourcecode">&gt;&gt;&#xA0;Request&#xA0;&lt;&lt;<br /><br />GET&#xA0;/events.ics&#xA0;HTTP/1.1<br />Host:&#xA0;example.com<br />Accept:&#xA0;text/calendar;&#xA0;q=0.5,&#xA0;component=VPATCH,&#xA0;text/calendar;<br />If-None-Match:&#xA0;"1234"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;conditional&#xA0;request<br />Prefer:&#xA0;return=minimal<br /><br />&gt;&gt;&#xA0;Response&#xA0;&lt;&lt;<br /><br />HTTP/1.1&#xA0;200&#xA0;OK<br />Content-Type:&#xA0;text/calendar<br />Content-Length:&#xA0;xxxx<br />ETag:&#xA0;"5678"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;current&#xA0;ETag&#xA0;(for&#xA0;conditional&#xA0;GET)<br />Vary:&#xA0;Prefer,&#xA0;If-None-Match&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;so&#xA0;caching&#xA0;proxy&#xA0;can&#xA0;key&#xA0;off&#xA0;of&#xA0;client?s&#xA0;&#xA0;ETag&#xA0;(sync&#xA0;token)&#xA0;and&#xA0;preference<br /><br />BEGIN:VCALENDAR:<br />...&#xA0;&#xA0;full&#xA0;set&#xA0;of&#xA0;data<br />END:VCALENDAR</p></td></tr></table></div>
+<p id="_dc0f6ca9-80ae-4943-ac66-bdd1cf0e2472" class="Sourcecode">&gt;&gt;&#xA0;Request&#xA0;&lt;&lt;<br /><br />GET&#xA0;/events.ics&#xA0;HTTP/1.1<br />Host:&#xA0;example.com<br />Accept:&#xA0;text/calendar;&#xA0;q=0.5,&#xA0;component=VPATCH,&#xA0;text/calendar;<br />If-None-Match:&#xA0;"1234"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;conditional&#xA0;request<br />Prefer:&#xA0;return=minimal<br /><br />&gt;&gt;&#xA0;Response&#xA0;&lt;&lt;<br /><br />HTTP/1.1&#xA0;200&#xA0;OK<br />Content-Type:&#xA0;text/calendar<br />Content-Length:&#xA0;xxxx<br />ETag:&#xA0;"5678"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;current&#xA0;ETag&#xA0;(for&#xA0;conditional&#xA0;GET)<br />Vary:&#xA0;Prefer,&#xA0;If-None-Match&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;so&#xA0;caching&#xA0;proxy&#xA0;can&#xA0;key&#xA0;off&#xA0;of&#xA0;client?s&#xA0;&#xA0;ETag&#xA0;(sync&#xA0;token)&#xA0;and&#xA0;preference<br /><br />BEGIN:VCALENDAR:<br />...&#xA0;&#xA0;full&#xA0;set&#xA0;of&#xA0;data<br />END:VCALENDAR</p></td></tr></table></div>
       </div>
       <div id="_changes_to_the_icalendar_specifications">
         <h1>5.&#xA0; Changes to the iCalendar specifications</h1>
-        <p id="_d14d1378-bf12-4f95-98a1-f8a71db3d0cc">This specification does not require any changes to <a href="#RFC5545">RFC 5545</a> or its
+        <p id="_00ed4e29-1ef8-418e-a143-f1f87ac928f2">This specification does not require any changes to <a href="#RFC5545">RFC 5545</a> or its
 extensions.  However it does introduce the use of some properties to
 provide more information about the resource, for example the time
 range it covers.
@@ -1079,49 +1079,49 @@ Unresolved directive in csd-subscription-upgrade.adoc - include::sections/05-dis
       </div>
       <div id="_discovering_alternative_access_methods">
         <h1>6.&#xA0; Discovering alternative access methods</h1>
-        <p id="_74625240-0d3e-4b5a-8093-6f4bd9be4274">The advertising of other access points is achieved through the use of
+        <p id="_273ae3c1-15ec-4bed-bba6-817cd2030f0e">The advertising of other access points is achieved through the use of
 the LINK header as defined in <a href="#RFC5988">RFC 5988</a>.  New link relation types are
 defined in this specification - each being associated with a protocol
 or protocol subset.</p>
-        <p id="_346dfb48-e1a6-4074-82f5-154c34c9fa99">These LINK headers will be delivered when a client carries out an
+        <p id="_9a61d9c7-afa0-44b4-aecc-403975eb3ad5">These LINK headers will be delivered when a client carries out an
 OPTIONS request targeting the URL of the resource.
 == Link relations</p>
         <div id="_general_2"><h2>6.1. General</h2>
 
-  <p id="_7f015522-dd1f-49dd-adc4-fdd0dd1b7907">This clause defines a number of new link relations required to
+  <p id="_3fc16a39-5fac-4939-bb19-a5210eb6b4a5">This clause defines a number of new link relations required to
 facilitate subscription upgrades.</p>
 </div>
-        <div id="la-subscribe-caldav"><h2>6.2. subscribe-caldav</h2><p id="_10858631-654f-4677-b266-f70936992fd6">This specifies an access point which is a full implementation of
+        <div id="la-subscribe-caldav"><h2>6.2. subscribe-caldav</h2><p id="_f048de84-b7ac-4b09-baea-4642063d8a81">This specifies an access point which is a full implementation of
 caldav but requires no authentication.  The end point allows the full
 range of reports as defined by the CalDAV specification.</p>
-<p id="_5a648888-6da9-4a8b-820f-0d3dd4b4599f">The client <b>MUST</b> follow the specification to determine exactly what
+<p id="_b092a961-d5cd-45d2-a954-3c19ba760a08">The client <b>MUST</b> follow the specification to determine exactly what
 operations are allowed on the access point - for example to determine
 if sync-report is supported.</p>
-<p id="_5f512e23-06c4-4206-a854-85a5b39df0d8">The URL <b>MAY</b> include some form of token to allow write access to the
+<p id="_6735ac08-31d8-41c4-a3a0-eb57fdc0b635">The URL <b>MAY</b> include some form of token to allow write access to the
 targeted collection.  The client must check it&#x2019;s permissions to
 determine whether or not it has been granted write access.</p></div>
-        <div id="la-subscribe-caldav-auth"><h2>6.3. subscribe-caldav-auth</h2><p id="_1cb36392-9c0e-438b-9236-b3da90bb7ac8">This specifies an access point which is a full implementation of
+        <div id="la-subscribe-caldav-auth"><h2>6.3. subscribe-caldav-auth</h2><p id="_722ca739-d330-42ac-9d0e-11e4acb7bb86">This specifies an access point which is a full implementation of
 caldav and requires authentication.  This may allow read-write access
 to the resource.</p>
-<p id="_454910e7-0815-451c-9d32-40f459cac244">The client <b>MUST</b> follow the specification to determine exactly what
+<p id="_36d0c226-a27e-4f6f-91ad-725578a4b098">The client <b>MUST</b> follow the specification to determine exactly what
 operations are allowed on the access point - for example to determine
 if sync-report is supported.</p></div>
-        <div id="la-subscribe-webdav-sync"><h2>6.4. subscribe-webdav-sync</h2><p id="_3c663f53-7af7-4053-b182-eb171063b217">This specifies an access point which supports only webdav sync.</p>
-<p id="_b59385d8-b25f-451f-99d3-81bbd0457cee">This allows the client to issue a sync-report on the resource to
-obtain updates.<div id="_386f619a-188c-4fe5-bcaf-6cd0419a05bd" class="Note"><p><span class="note_label">NOTE</span>&#xA0; say something about initial startup - use ics to populate?
+        <div id="la-subscribe-webdav-sync"><h2>6.4. subscribe-webdav-sync</h2><p id="_895303ed-0b02-4375-8274-af4d4f1d28d5">This specifies an access point which supports only webdav sync.</p>
+<p id="_b4597f91-3fea-4b09-b81d-f29e13d470f6">This allows the client to issue a sync-report on the resource to
+obtain updates.<div id="_c2774018-7a2a-4afe-8fcd-7f397d61bdf3" class="Note"><p><span class="note_label">NOTE</span>&#xA0; say something about initial startup - use ics to populate?
 Initial token?</p></div></p>
 
-<p id="_97be61c8-9ff1-4072-a89d-394f83cd5443">The client <b>MUST</b> follow that specification.</p></div>
-        <div id="la-subscribe-enhanced-get"><h2>6.5. subscribe-enhanced-get</h2><p id="_f2c3283b-7969-4229-ab0c-ec2e448d6e6b">This specifies an access point which supports something new.</p>
-<p id="_fb7f79fc-20c5-421f-ab61-cd3e6bbca93e">The client <b>MUST</b> follow that specification.</p></div>
+<p id="_10f84bba-7287-48e3-8d65-95cca19b0d00">The client <b>MUST</b> follow that specification.</p></div>
+        <div id="la-subscribe-enhanced-get"><h2>6.5. subscribe-enhanced-get</h2><p id="_7e5f225e-6850-4c3f-bcd1-4c0739d752cd">This specifies an access point which supports something new.</p>
+<p id="_5dbec068-6bf8-49fa-95c3-983bd2ebd941">The client <b>MUST</b> follow that specification.</p></div>
       </div>
       <div id="security">
         <h1>7.&#xA0; Security Considerations</h1>
-        <p id="_73d58ea3-c544-4d14-8ff7-debb48ec0b6d">Applications using these properties need to be aware of the risks
+        <p id="_5e71b31e-c6e5-47a7-ba32-c3499cdad866">Applications using these properties need to be aware of the risks
 entailed in using the URIs provided as values.  See <a href="#RFC3986">RFC 3986</a> for a
 discussion of the security considerations relating to URIs.
 = Privacy Considerations</p>
-        <p id="_5f02709c-3d3c-49f0-9c24-8357185e224d">Properties with a "URI" value type can expose their users to privacy
+        <p id="_6fe93879-62a9-4923-b11e-89ce97b283fd">Properties with a "URI" value type can expose their users to privacy
 leaks as any network access of the URI data can be tracked.  Clients
 <b>SHOULD NOT</b> automatically download data referenced by the URI without
 explicit instruction from users.  This specification does not
@@ -1130,60 +1130,60 @@ introduce any additional privacy concerns beyond those described in
       </div>
       <div id="iana">
         <h1>8.&#xA0; IANA Considerations</h1>
-        <div id="_link_relation_registrations"><h2>8.1. Link Relation Registrations</h2><p id="_f1b822e4-d82b-4b1d-8b68-91d2d0cbe809">This document defines the following new iCalendar properties to be
+        <div id="_link_relation_registrations"><h2>8.1. Link Relation Registrations</h2><p id="_8fbbbcf3-04ab-425b-820c-c83380e04656">This document defines the following new iCalendar properties to be
 added to the registry defined in <a href="#RFC5545">RFC 5545, Section 8.2.3</a>:</p>
-<p class="TableTitle" align="center">Table 1</p><table id="_fc54d13f-d2ea-4098-9eae-c73433da9818" class="MsoISOTable" border="1" cellspacing="0" cellpadding="0"><thead><tr><th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Relation Name</th><th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Description</th><th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Reference</th></tr></thead><tbody><tr><td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">
-        <p id="_665bd33b-253e-4869-a9c1-b404e8bf723c">subscribe-caldav</p>
+<p class="TableTitle" align="center">Table 1</p><table id="_f8c19be9-9667-4069-84c8-eb7295286ce2" class="MsoISOTable" border="1" cellspacing="0" cellpadding="0"><thead><tr><th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Relation Name</th><th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Description</th><th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Reference</th></tr></thead><tbody><tr><td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">
+        <p id="_5ff75b55-847f-4545-b37b-3ae4f6c75187">subscribe-caldav</p>
       </td><td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">
-        <p id="_2e9c04f7-6fb3-4e1d-8d63-88a547d39ba1">Current</p>
+        <p id="_7411bd37-c4c2-4fcb-b791-5119f82ec7f8">Current</p>
       </td><td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">
-        <p id="_3612a178-2026-4958-a956-2cbaf4bf95e2">
+        <p id="_3fa248b8-57ed-4b06-9643-24cee6677f2a">
   <a href="#la-subscribe-caldav">Clause 6.2</a>
 </p>
       </td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">
-        <p id="_dbc41275-f733-4582-a11e-9944d78a7e96">subscribe-caldav_auth</p>
+        <p id="_4c3e861c-f6a6-449e-97ef-d7df3293261d">subscribe-caldav_auth</p>
       </td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">
-        <p id="_40bba546-c564-43e1-bbff-fd6025628fb1">Current</p>
+        <p id="_0c637ccd-d3df-488f-97b7-0adf496864dd">Current</p>
       </td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">
-        <p id="_951a4344-0ed9-4fa6-b2bd-c916d06c21cb">
+        <p id="_4b80ce61-04aa-43d4-b976-9ba278437d85">
   <a href="#la-subscribe-caldav_auth">la-subscribe-caldav_auth</a>
 </p>
       </td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">
-        <p id="_ca602271-d877-42dc-83e4-38b76ce298cf">subscribe-webdav-sync</p>
+        <p id="_4c782678-525d-4bbe-a367-14a1330271ac">subscribe-webdav-sync</p>
       </td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">
-        <p id="_837e2bbb-8564-48de-9e6f-40907b808a83">Current</p>
+        <p id="_21ae8875-f28c-46f9-abe1-9d8e49ce7507">Current</p>
       </td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">
-        <p id="_5081788d-8f6f-4717-bb09-df3f63a87af9">
+        <p id="_d47f7dae-d685-44dd-b530-769d43d61630">
   <a href="#la-subscribe-webdav-sync">Clause 6.4</a>
 </p>
       </td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">
-        <p id="_dbfc7401-f1e0-4031-9844-a6cedcf9f67c">subscribe-enhanced_get</p>
+        <p id="_55c6eedf-dee9-4001-979a-c0e01711d7e3">subscribe-enhanced_get</p>
       </td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">
-        <p id="_a2e6649b-9d13-456c-abb1-2ba073f38144">Current</p>
+        <p id="_3b2921b7-ebbb-4dab-b2e5-3a3281ccc4ee">Current</p>
       </td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">
-        <p id="_cb892500-0036-4041-964a-34707af4fcdf">
+        <p id="_5f8b455e-d65b-40fb-a2e3-53e4701085f7">
   <a href="#la-subscribe-enhanced_get">la-subscribe-enhanced_get</a>
 </p>
       </td></tr></tbody></table></div>
       </div>
       <div id="acknowledgements">
         <h1>9.&#xA0; Acknowledgements</h1>
-        <p id="_c0792514-a920-453a-9d26-422be3c1fa51">The author would also like to thank the members of the Calendaring
+        <p id="_a654a413-5a76-466f-aa4c-40e3c7ae7745">The author would also like to thank the members of the Calendaring
 and Scheduling Consortium Calendar Sharing technical committee and
 the following individuals for contributing their ideas and support:</p>
-        <p id="_53d201f8-a9e0-48b9-ac58-e95ad4a1390b">&#x2026;&#x200B;</p>
-        <p id="_cda8a3c1-c11c-4ca6-9b65-433881a7341e">The authors would also like to thank the Calendaring and Scheduling
+        <p id="_b952e471-c469-4831-870d-b8d88dce6e2d">&#x2026;&#x200B;</p>
+        <p id="_53e4412b-9dc4-4948-9e32-9dc465bf724d">The authors would also like to thank the Calendaring and Scheduling
 Consortium for advice with this specification.</p>
       </div>
       <br />
       <div id="appendix-a" class="Section3">
         <h1 class="Annex"><b>Appendix A</b><br />(informative) <br /><b>Open issues</b></h1>
-        <dl id="_09a2ee72-3955-4c03-b1c4-080a30eaeb0c">
+        <dl id="_8f9a14c4-ee3b-44fb-935f-87aed304c296">
           <dt>
             <p>restype values</p>
           </dt>
           <dd>
-    <p id="_ad6f1700-7e90-4157-bad7-de5ee6bd319a">Need to determine what if any registry of resource
+    <p id="_8d0fa0bd-6083-430d-986a-7aa4e21e1f72">Need to determine what if any registry of resource
 types already exists and use that.</p>
   </dd>
         </dl>
@@ -1191,28 +1191,28 @@ types already exists and use that.</p>
       <br />
       <div id="appendix-b" class="Section3">
         <h1 class="Annex"><b>Appendix B</b><br />(informative) <br /><b>Change log</b></h1>
-        <p id="_f37b91e4-5891-4679-8038-2f236bea5d5d">v01 2017-07-28 MD</p>
-        <ul id="_fe98ff76-c4fc-4273-8aa0-0a990fa3becc">
+        <p id="_10a740fd-3f1d-4c5f-aecc-f2bc0299c940">v01 2017-07-28 MD</p>
+        <ul id="_71d125a5-e736-429a-83fc-40c75a234f32">
   <li>
-    <p id="_abea595b-2e0b-4732-86ab-e8c2f2559fc5">Examples</p>
+    <p id="_475be80a-d2d3-41d8-a734-77f2fdc5837d">Examples</p>
   </li>
   <li>
-    <p id="_e2ef4120-d137-4f59-bbe3-89ef575afc00">More text for extended get.  Talk about deletions.</p>
-  </li>
-</ul>
-        <p id="_68b98ddd-4d9a-4289-9b42-f55bc0c9bebf">v01 2017-02-17 MD</p>
-        <ul id="_48776051-34e1-46e8-8b68-4df435284120">
-  <li>
-    <p id="_1dd4047b-9f34-4dcc-ba31-73e4e93c26ec">Add text about OPTIONS</p>
-  </li>
-  <li>
-    <p id="_b80ebfba-be5d-4fb4-821d-373f1f3fb3b0">Add text abut read/write CalDAV</p>
+    <p id="_14804f10-dfb9-4f9d-a375-4a6e5fd9435b">More text for extended get.  Talk about deletions.</p>
   </li>
 </ul>
-        <p id="_f8cc77f7-39b1-4f26-804d-2fbbb8109476">v00 2017-02-15 MD</p>
-        <ul id="_857fa33c-f809-4423-946c-967f7c4b0c14">
+        <p id="_ea027969-7a2d-4b64-8699-4fc1010d1c67">v01 2017-02-17 MD</p>
+        <ul id="_6249c168-b65a-4e65-9e1e-e48e796ea736">
   <li>
-    <p id="_6d3a325f-f748-4e82-9837-081d39a4304c">First pass</p>
+    <p id="_fa4705a4-16e5-4dd9-94d6-0917ea753739">Add text about OPTIONS</p>
+  </li>
+  <li>
+    <p id="_60f88071-5257-4f80-a370-020c1ee7bdb0">Add text abut read/write CalDAV</p>
+  </li>
+</ul>
+        <p id="_2340a7d1-c6ff-4d70-89d6-0dcd7e24224b">v00 2017-02-15 MD</p>
+        <ul id="_9f07a644-5cdb-4fc7-b7c6-310f3a10b575">
+  <li>
+    <p id="_30fd27ca-7765-41c2-b875-f4123da40eaf">First pass</p>
   </li>
 </ul>
       </div>

@@ -10,6 +10,7 @@
 :edition: 1
 :status: committee-draft
 :revdate: 2018-11-30
+:published-date: 2018-11-30
 :script: Latn
 :technical-committee: CALENDAR
 :local-cache-only:
