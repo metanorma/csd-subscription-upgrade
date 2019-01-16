@@ -3,7 +3,7 @@
 :fullname: Michael Douglass
 :firstname: Michael
 :surname: Douglass
-:docnumber: 51004
+:docnumber: 51005
 :copyright-year: 2018
 :language: en
 :doctype: standard
@@ -13,10 +13,16 @@
 :published-date: 2018-11-30
 :script: Latn
 :technical-committee: CALENDAR
+:draft:
+:toc:
+:stem:
+:xrefstyle: short
+:imagesdir: images
+:docfile: cc-51005.adoc
+:mn-document-class: csd
+:mn-output-extensions: xml,html,pdf
 :local-cache-only:
 :data-uri-image:
-:toc:
-
 
 :sectnums!:
 
