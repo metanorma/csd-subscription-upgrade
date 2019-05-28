@@ -1,4 +1,4 @@
-= Privacy Considerations
+== Privacy Considerations
 
 Properties with a "URI" value type can expose their users to privacy
 leaks as any network access of the URI data can be tracked.  Clients

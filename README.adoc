@@ -4,7 +4,7 @@
 
 This work item belongs to TC FREEBUSY.
 
-image:https://travis-ci.com/CalConnect/csd-subscription-upgrade.svg?branch=master["Build Status", link="https://travis-ci.com/CalConnect/csd-subscription-upgrade"]
+image:https://travis-ci.com/CalConnect/csd-subscription-upgrade.svg?branch=master["Build Status", link="https://travis-ci.com/calconnect/csd-subscription-upgrade"]
 
 This document is available in its rendered forms here:
 
@@ -12,6 +12,12 @@ This document is available in its rendered forms here:
 * https://calconnect.github.io/csd-subscription-upgrade/csd-subscription-upgrade.pdf[PDF]
 * https://calconnect.github.io/csd-subscription-upgrade/csd-subscription-upgrade.xml[Metanorma XML]
 * https://calconnect.github.io/csd-subscription-upgrade/csd-subscription-upgrade.rxl[Relaton XML (Bibliographic item)]
+
+
+* https://calconnect.github.io/csd-subscription-upgrade/draft-douglass-subscription-upgrade.html[IETF: subscription-upgrade: Calendar subscription upgrades (HTML)]
+* https://calconnect.github.io/csd-subscription-upgrade/draft-douglass-subscription-upgrade.txt[IETF: TXT]
+* https://calconnect.github.io/csd-subscription-upgrade/draft-douglass-subscription-upgrade.xml[IETF: RFC XML v2]
+* https://calconnect.github.io/csd-subscription-upgrade/draft-douglass-subscription-upgrade.nits[IETF: nits]
 
 
 == Fetching the document

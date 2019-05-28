@@ -24,12 +24,13 @@ determine whether or not it has been granted write access.
 [[la-subscribe-caldav-auth]]
 === subscribe-caldav-auth
 
+
 This specifies an access point which is a full implementation of
 caldav and requires authentication.  This may allow read-write access
 to the resource.
 
 The client *MUST* follow the specification to determine exactly what
-operations are allowed on the access point - for example to determine
+operations are allowed on the access point -- for example to determine
 if sync-report is supported.
 
 
@@ -47,9 +48,11 @@ Initial token?
 The client *MUST* follow that specification.
 
 
+
 [[la-subscribe-enhanced-get]]
 === subscribe-enhanced-get
 
 This specifies an access point which supports something new.
 
 The client *MUST* follow that specification.
+

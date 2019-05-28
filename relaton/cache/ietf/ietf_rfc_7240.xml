@@ -1,17 +1,17 @@
-<bibitem id="RFC6047">
+<bibitem id="RFC7240">
   <fetched>2019-05-28</fetched>
-  <title format="plain" language="en" script="Latn">iCalendar Message-Based Interoperability Protocol (iMIP)</title>
-  <uri type="src">https://www.rfc-editor.org/info/rfc6047</uri>
-  <docidentifier type="IETF">RFC 6047</docidentifier>
-  <docidentifier type="DOI">10.17487/RFC6047</docidentifier>
+  <title format="plain" language="en" script="Latn">Prefer Header for HTTP</title>
+  <uri type="src">https://www.rfc-editor.org/info/rfc7240</uri>
+  <docidentifier type="IETF">RFC 7240</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC7240</docidentifier>
   <date type="published">
-    <on>2010</on>
+    <on>2014</on>
   </date>
   <contributor>
-    <role type="editor"/>
+    <role type="author"/>
     <person>
       <name>
-        <completename language="en">A. Melnikov</completename>
+        <completename language="en">J. Snell</completename>
       </name>
       <affiliation>
         <organization>
@@ -24,6 +24,6 @@
   <language>en</language>
   <series type="main">
     <title format="plain" language="en" script="Latn">RFC</title>
-    <number>6047</number>
+    <number>7240</number>
   </series>
 </bibitem>

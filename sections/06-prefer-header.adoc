@@ -1,0 +1,25 @@
+
+== New Prefer header field preferences
+
+[[preference-subscribe]]
+=== Preference subscribe-enhanced-get
+
+This indicates that the client expects the server to handle the GET
+method according to the specifications for enhanced get.
+
+[source]
+----
+pref-subscribe-enhanced-get = "subscribe-enhanced-get"
+----
+
+This preference *MAY* be followed by a synch-token preference.
+
+[[preference-sync-token]]
+=== Preference sync-token parameter
+
+This preference parameter provides a sync token for enhanced get.
+
+[source]
+----
+pref-sync-token = "sync-token" BWS "=" BWS DQUOTE value DQUOTE
+----

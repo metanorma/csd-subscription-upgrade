@@ -3,7 +3,13 @@
 [appendix,obligation=informative]
 == Change log
 
-v01 2017-07-28 MD
+v04 2019-03-07 MD
+
+* Reference to RFC 6538 - WebDAV sync and RFC 7240 Prefer
+
+* Go back to HEAD
+
+* New Preference and parameters.
 
 * Examples
 

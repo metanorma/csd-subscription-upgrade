@@ -9,16 +9,21 @@ efficiently discover and download changes in the targeted resource.
 It has many similarities to WebDAV sync and for a server could be
 implemented as an extension of the specification.
 
-In this protocol the Etag is used as the sync change token.  By
-adding the If-None-Match header field to the vary header field we can
-ensure intermediate caching proxies will be able to cache different
-versions of the data.
+In this protocol the client *MUST* include the Prefer header field
+preference "subscribe-enhanced-get".  If a sync token is available it
+is passed as a parameter to that preference.
+
+The client *MAY* include the Prefer header field preference
+"handling=strict".  If included and an invalid sync-token is passed
+in the request the server *MUST* return an error response instead of a
+full set of data.
 
 The resource is treated as a set of individual events each of which
 may be updated or deleted separately.  The client will first fetch
 the entire ics file.  On subsequent requests it uses the Prefer
-header with a value of "return=minimal" to indicate that it wants a
-set of changes since the last fetch.
+header with a "sync-token" parameter to indicate that it wants a set
+of changes since the last fetch.
+
 
 === Deletions
 
@@ -27,13 +32,65 @@ deleted from the source data the server needs to be able to inform a
 client of the deletion.  This specification introduces a new value
 for the STATUS property of DELETED.
 
-On the first conditional GET after the entity has been deleted a
+On the first enhanced GET after the entity has been deleted a
 skeleton, but valid, entity will be returned with STATUS: DELETED.
 The receiving client is free to remove the entity or update it's
 STATUS property.
 
-On subsequent conditional fetches the entity will not be returned.
+On subsequent fetches the entity will not be returned.
 
+=== Handling of invalid sync tokens
+
+The default behavior is to treat an invalid sync token as if none
+were supplied.  This will result in all data being returned with a
+new valid token.
+
+For some clients and with some very large sets of data, such behavior
+may be problematic.  To suppress the return of data on an invalid
+token the client should include the Prefer header field preference
+"handling=strict".
+
+When a server receives an invalid token and the "handling=strict"
+preference is supplied, the server *MUST* return a 412 status,
+precondition failed.  The server *MAY* choose to return an error
+message in the body.
+
+The client *SHOULD* respond to this error by restarting the interaction
+from scratch, i.e. retrieve the full set of data then poll for
+updates.
+
+=== Paging the response
+
+A client may explicitly request a limit on the size of the response
+by specifying the Prefer header field preference "limit=n" where n is
+the number of components.
+
+When a server receives a request specifying such a limit it SHOULD
+limit the response to that number of components.  If the limit causes
+a truncation in the response the server should respond with WHAT? and
+return a sync token which may be used to retrieve the next batch of
+data.
+
+The truncated status allows the client to immediately resubmit a
+request for the next batch.
+
+A server *MAY* choose to limit the response size.  The behavior SHOULD
+be as if the client had provided a preference for that size -
+allowing the client to retrieve the full set of data in batches.
+
+=== Caching of responses
+
+To enable proper caching of responses the server *SHOULD* provide a
+VARY header field in responses that names the Prefer header field
+along with any other that are appropriate.
+
+Clients should order the preferences in the following manner so that
+identical responses can be identified...
+
+NOTE: need to discuss this further and check on the HTTP specs to
+ensure this makes sense.
+
+=== Examples
 
 [example]
 --
@@ -47,6 +104,7 @@ that supports the extended GET protocol.
 GET /events.ics HTTP/1.1
 Host: example.com
 Accept: text/calendar
+Prefer: subscribe-enhanced-get
 
 >> Response <<
 
@@ -61,12 +119,11 @@ END:VCALENDAR
 ----
 --
 
+
 [example]
 --
 This is an example of the subsequent request and response when no
-changes have occurred.  The Accept header field indicates that a
-VPATCH format is most desirable but simple text/calendar is
-acceptable.
+changes have occurred.
 
 [source]
 ----
@@ -74,9 +131,8 @@ acceptable.
 
 GET /events.ics HTTP/1.1
 Host: example.com
-Accept: text/calendar; q=0.5, component=VPATCH, text/calendar;
-If-None-Match: ?1234?            conditional request
-Prefer: return=minimal
+Accept: text/calendar
+Prefer: subscribe-enhanced-get; sync-token="1234567"
 
 >> Response <<
 
@@ -84,16 +140,18 @@ HTTP/1.1 304 Not Modified
 Content-Length: 0
 ETag: ?1234?
 Vary: Prefer, If-None-Match
+Preference-Applied: subscribe-enhanced-get; sync-token="1234567"
 ----
 --
 
 
 [example]
 --
-This is an example of the subsequent request and response when no
-changes have occurred.  The Accept header field indicates that a
-VPATCH format is most desirable but simple text/calendar is
-acceptable.
+This is an example of the subsequent request and response when
+changes have occurred and the server cannot return only changed
+data -- perhaps because of an old or invalid token.  Because
+handling=strict was not supplied as a preference all data is returned
+in the response.
 
 [source]
 ----
@@ -101,16 +159,19 @@ acceptable.
 
 GET /events.ics HTTP/1.1
 Host: example.com
-Accept: text/calendar; q=0.5, component=VPATCH, text/calendar;
-If-None-Match: "1234"            conditional request
-Prefer: return=minimal
+Accept: text/calendar
+Prefer: subscribe-enhanced-get; sync-token="1234567"
 
 >> Response <<
 
-HTTP/1.1 304 Not Modified
-Content-Length: 0
-ETag: "1234"
-Vary: Prefer, If-None-Match
+HTTP/1.1 200 OK
+Content-Type: text/calendar
+Content-Length: xxxx
+Preference-Applied: subscribe-enhanced-get; sync-token="56789"
+
+BEGIN:VCALENDAR:
+...  full set of data
+END:VCALENDAR
 ----
 --
 
