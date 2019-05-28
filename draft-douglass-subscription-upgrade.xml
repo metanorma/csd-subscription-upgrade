@@ -358,9 +358,8 @@ the LINK header as defined in <xref target="RFC5988"/>.  New link relation types
 defined in this specification - each being associated with a protocol
 or protocol subset.</t>
 <t>These LINK headers will be delivered when a client carries out a HEAD
-request targeting the URL of the resource.
-== Link relations</t>
-<section anchor="_general_2" title="General">
+request targeting the URL of the resource.</t></section>
+<section anchor="_link_relations" title="Link relations"><section anchor="_general_2" title="General">
   <t>This clause defines a number of new link relations required to
 facilitate subscription upgrades.</t>
 </section>

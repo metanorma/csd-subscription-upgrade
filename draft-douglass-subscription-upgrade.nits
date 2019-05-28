@@ -63,31 +63,31 @@ draft-douglass-subscription-upgrade-04.txt(416): Line is too long: the offending
      (See RFCs 3967 and 4897 for information about using normative references
      to lower-maturity documents in RFCs)
 
-  == Unused Reference: 'I-D.ietf-calext-extensions' is defined on line 541, but
+  == Unused Reference: 'I-D.ietf-calext-extensions' is defined on line 543, but
      no explicit reference was found in the text
      '[I-D.ietf-calext-extensions] Daboo, C., "New Properties for iCalenda...'
 
-  == Unused Reference: 'RFC2434' is defined on line 550, but no explicit
+  == Unused Reference: 'RFC2434' is defined on line 552, but no explicit
      reference was found in the text
      '[RFC2434]  Narten, T. and H. Alvestrand, "Guidelines for Writing an...'
 
-  == Unused Reference: 'RFC3688' is defined on line 555, but no explicit
+  == Unused Reference: 'RFC3688' is defined on line 557, but no explicit
      reference was found in the text
      '[RFC3688]  Mealling, M., "The IETF XML Registry", BCP 81, RFC 3688,...'
 
-  == Unused Reference: 'RFC4589' is defined on line 564, but no explicit
+  == Unused Reference: 'RFC4589' is defined on line 566, but no explicit
      reference was found in the text
      '[RFC4589]  Schulzrinne, H. and H. Tschofenig, "Location Types Regist...'
 
-  == Unused Reference: 'RFC5546' is defined on line 573, but no explicit
+  == Unused Reference: 'RFC5546' is defined on line 575, but no explicit
      reference was found in the text
      '[RFC5546]  Daboo, C., Ed., "iCalendar Transport-Independent Interope...'
 
-  == Unused Reference: 'RFC6578' is defined on line 582, but no explicit
+  == Unused Reference: 'RFC6578' is defined on line 584, but no explicit
      reference was found in the text
      '[RFC6578]  Daboo, C. and A. Quillaud, "Collection Synchronization fo...'
 
-  == Unused Reference: 'RFC7991' is defined on line 591, but no explicit
+  == Unused Reference: 'RFC7991' is defined on line 593, but no explicit
      reference was found in the text
      '[RFC7991]  Hoffman, P., "The "xml2rfc" Version 3 Vocabulary", RFC 79...'
 

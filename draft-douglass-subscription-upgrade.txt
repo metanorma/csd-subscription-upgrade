@@ -81,19 +81,20 @@ Table of Contents
      6.1.  Preference subscribe-enhanced-get . . . . . . . . . . . .  10
      6.2.  Preference sync-token parameter . . . . . . . . . . . . .  10
    7.  Discovering alternative access methods  . . . . . . . . . . .  10
-     7.1.  General . . . . . . . . . . . . . . . . . . . . . . . . .  10
-     7.2.  subscribe-caldav  . . . . . . . . . . . . . . . . . . . .  11
-     7.3.  subscribe-caldav-auth . . . . . . . . . . . . . . . . . .  11
-     7.4.  subscribe-webdav-sync . . . . . . . . . . . . . . . . . .  11
-     7.5.  subscribe-enhanced-get  . . . . . . . . . . . . . . . . .  11
-   8.  Security Considerations . . . . . . . . . . . . . . . . . . .  11
-   9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  12
-     9.1.  Preference Registrations  . . . . . . . . . . . . . . . .  12
-     9.2.  Link Relation Registrations . . . . . . . . . . . . . . .  12
-   10. Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .  13
-   11. Normative References  . . . . . . . . . . . . . . . . . . . .  13
+   8.  Link relations  . . . . . . . . . . . . . . . . . . . . . . .  10
+     8.1.  General . . . . . . . . . . . . . . . . . . . . . . . . .  11
+     8.2.  subscribe-caldav  . . . . . . . . . . . . . . . . . . . .  11
+     8.3.  subscribe-caldav-auth . . . . . . . . . . . . . . . . . .  11
+     8.4.  subscribe-webdav-sync . . . . . . . . . . . . . . . . . .  11
+     8.5.  subscribe-enhanced-get  . . . . . . . . . . . . . . . . .  11
+   9.  Security Considerations . . . . . . . . . . . . . . . . . . .  12
+   10. IANA Considerations . . . . . . . . . . . . . . . . . . . . .  12
+     10.1.  Preference Registrations . . . . . . . . . . . . . . . .  12
+     10.2.  Link Relation Registrations  . . . . . . . . . . . . . .  12
+   11. Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .  13
+   12. Normative References  . . . . . . . . . . . . . . . . . . . .  13
    Appendix A.  Open issues  . . . . . . . . . . . . . . . . . . . .  14
-   Appendix B.  Change log . . . . . . . . . . . . . . . . . . . . .  14
+   Appendix B.  Change log . . . . . . . . . . . . . . . . . . . . .  15
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  15
 
 1.  Introduction
@@ -104,7 +105,6 @@ Table of Contents
 
    The only available option for updating that resource is the usual
    HTTP polling of cached resources using Etags.
-
 
 
 
@@ -546,12 +546,12 @@ Internet-Draft       Calendar subscription upgrades             May 2019
    or protocol subset.
 
    These LINK headers will be delivered when a client carries out a HEAD
-   request targeting the URL of the resource.  == Link relations
+   request targeting the URL of the resource.
 
-7.1.  General
+8.  Link relations
 
-   This clause defines a number of new link relations required to
-   facilitate subscription upgrades.
+
+
 
 
 
@@ -562,7 +562,12 @@ Douglass                Expires November 29, 2019              [Page 10]
 Internet-Draft       Calendar subscription upgrades             May 2019
 
 
-7.2.  subscribe-caldav
+8.1.  General
+
+   This clause defines a number of new link relations required to
+   facilitate subscription upgrades.
+
+8.2.  subscribe-caldav
 
    This specifies an access point which is a full implementation of
    caldav but requires no authentication.  The end point allows the full
@@ -576,7 +581,7 @@ Internet-Draft       Calendar subscription upgrades             May 2019
    targeted collection.  The client must check it's permissions to
    determine whether or not it has been granted write access.
 
-7.3.  subscribe-caldav-auth
+8.3.  subscribe-caldav-auth
 
    This specifies an access point which is a full implementation of
    caldav and requires authentication.  This may allow read-write access
@@ -586,7 +591,7 @@ Internet-Draft       Calendar subscription upgrades             May 2019
    operations are allowed on the access point -- for example to
    determine if sync-report is supported.
 
-7.4.  subscribe-webdav-sync
+8.4.  subscribe-webdav-sync
 
    This specifies an access point which supports only webdav sync.
 
@@ -595,21 +600,16 @@ Internet-Draft       Calendar subscription upgrades             May 2019
 
    The client *MUST* follow that specification.
 
-7.5.  subscribe-enhanced-get
+8.5.  subscribe-enhanced-get
 
    This specifies an access point which supports something new.
 
    The client *MUST* follow that specification.
 
-8.  Security Considerations
 
-   Applications using these properties need to be aware of the risks
-   entailed in using the URIs provided as values.  See [RFC3986] for a
-   discussion of the security considerations relating to URIs.  ==
-   Privacy Considerations
 
-   Properties with a "URI" value type can expose their users to privacy
-   leaks as any network access of the URI data can be tracked.  Clients
+
+
 
 
 
@@ -618,14 +618,23 @@ Douglass                Expires November 29, 2019              [Page 11]
 Internet-Draft       Calendar subscription upgrades             May 2019
 
 
+9.  Security Considerations
+
+   Applications using these properties need to be aware of the risks
+   entailed in using the URIs provided as values.  See [RFC3986] for a
+   discussion of the security considerations relating to URIs.  ==
+   Privacy Considerations
+
+   Properties with a "URI" value type can expose their users to privacy
+   leaks as any network access of the URI data can be tracked.  Clients
    *SHOULD NOT* automatically download data referenced by the URI
    without explicit instruction from users.  This specification does not
    introduce any additional privacy concerns beyond those described in
    [RFC5545].
 
-9.  IANA Considerations
+10.  IANA Considerations
 
-9.1.  Preference Registrations
+10.1.  Preference Registrations
 
    The following preference has been added to the HTTP Preferences
    Registry defined in [RFC7240]
@@ -648,19 +657,10 @@ Internet-Draft       Calendar subscription upgrades             May 2019
 
    Reference: Section 6.1
 
-9.2.  Link Relation Registrations
+10.2.  Link Relation Registrations
 
    This document defines the following new iCalendar properties to be
    added to the registry defined in section=8.2.3 [RFC5545]:
-
-          +------------------------+-------------+--------------+
-          | Relation Name          | Description | Reference    |
-          +------------------------+-------------+--------------+
-          | subscribe-caldav       | Current     | Section 7.2  |
-          | subscribe-caldav_auth  | Current     | Section 7.3  |
-          | subscribe-webdav-sync  | Current     | Section 7.4  |
-          | subscribe-enhanced_get | Current     | Section 7.5  |
-          +------------------------+-------------+--------------+
 
 
 
@@ -674,7 +674,16 @@ Douglass                Expires November 29, 2019              [Page 12]
 Internet-Draft       Calendar subscription upgrades             May 2019
 
 
-10.  Acknowledgements
+          +------------------------+-------------+--------------+
+          | Relation Name          | Description | Reference    |
+          +------------------------+-------------+--------------+
+          | subscribe-caldav       | Current     | Section 8.2  |
+          | subscribe-caldav_auth  | Current     | Section 8.3  |
+          | subscribe-webdav-sync  | Current     | Section 8.4  |
+          | subscribe-enhanced_get | Current     | Section 8.5  |
+          +------------------------+-------------+--------------+
+
+11.  Acknowledgements
 
    The author would also like to thank the members of the CalConnect
    Calendar Sharing technical committee and the following individuals
@@ -685,7 +694,7 @@ Internet-Draft       Calendar subscription upgrades             May 2019
    The authors would also like to thank CalConnect the Calendaring and
    Scheduling Consortium for advice with this specification.
 
-11.  Normative References
+12.  Normative References
 
    [I-D.ietf-calext-extensions]
               Daboo, C., "New Properties for iCalendar", draft-ietf-
@@ -714,21 +723,17 @@ Internet-Draft       Calendar subscription upgrades             May 2019
               Registry", RFC 4589, DOI 10.17487/RFC4589, July 2006,
               <https://www.rfc-editor.org/info/rfc4589>.
 
-   [RFC5545]  Desruisseaux, B., Ed., "Internet Calendaring and
-              Scheduling Core Object Specification (iCalendar)",
-              RFC 5545, DOI 10.17487/RFC5545, September 2009,
-              <https://www.rfc-editor.org/info/rfc5545>.
-
-
-
-
-
 
 
 Douglass                Expires November 29, 2019              [Page 13]
 
 Internet-Draft       Calendar subscription upgrades             May 2019
 
+
+   [RFC5545]  Desruisseaux, B., Ed., "Internet Calendaring and
+              Scheduling Core Object Specification (iCalendar)",
+              RFC 5545, DOI 10.17487/RFC5545, September 2009,
+              <https://www.rfc-editor.org/info/rfc5545>.
 
    [RFC5546]  Daboo, C., Ed., "iCalendar Transport-Independent
               Interoperability Protocol (iTIP)", RFC 5546,
@@ -772,11 +777,6 @@ Appendix A.  Open issues
    sync token formats
       It's a URI in webdav sync.
 
-Appendix B.  Change log
-
-   v04 2019-03-07 MD
-
-   o  Reference to RFC 6538 - WebDAV sync and RFC 7240 Prefer
 
 
 
@@ -785,6 +785,12 @@ Douglass                Expires November 29, 2019              [Page 14]
 
 Internet-Draft       Calendar subscription upgrades             May 2019
 
+
+Appendix B.  Change log
+
+   v04 2019-03-07 MD
+
+   o  Reference to RFC 6538 - WebDAV sync and RFC 7240 Prefer
 
    o  Go back to HEAD
 
@@ -814,12 +820,6 @@ Author's Address
 
    Email: mdouglass@sphericalcowgroup.com
    URI:   http://sphericalcowgroup.com
-
-
-
-
-
-
 
 
 

@@ -390,17 +390,18 @@
 <link href="#rfc.section.6.1" rel="Chapter" title="6.1 Preference subscribe-enhanced-get">
 <link href="#rfc.section.6.2" rel="Chapter" title="6.2 Preference sync-token parameter">
 <link href="#rfc.section.7" rel="Chapter" title="7 Discovering alternative access methods">
-<link href="#rfc.section.7.1" rel="Chapter" title="7.1 General">
-<link href="#rfc.section.7.2" rel="Chapter" title="7.2 subscribe-caldav">
-<link href="#rfc.section.7.3" rel="Chapter" title="7.3 subscribe-caldav-auth">
-<link href="#rfc.section.7.4" rel="Chapter" title="7.4 subscribe-webdav-sync">
-<link href="#rfc.section.7.5" rel="Chapter" title="7.5 subscribe-enhanced-get">
-<link href="#rfc.section.8" rel="Chapter" title="8 Security Considerations">
-<link href="#rfc.section.9" rel="Chapter" title="9 IANA Considerations">
-<link href="#rfc.section.9.1" rel="Chapter" title="9.1 Preference Registrations">
-<link href="#rfc.section.9.2" rel="Chapter" title="9.2 Link Relation Registrations">
-<link href="#rfc.section.10" rel="Chapter" title="10 Acknowledgements">
-<link href="#rfc.references" rel="Chapter" title="11 Normative References">
+<link href="#rfc.section.8" rel="Chapter" title="8 Link relations">
+<link href="#rfc.section.8.1" rel="Chapter" title="8.1 General">
+<link href="#rfc.section.8.2" rel="Chapter" title="8.2 subscribe-caldav">
+<link href="#rfc.section.8.3" rel="Chapter" title="8.3 subscribe-caldav-auth">
+<link href="#rfc.section.8.4" rel="Chapter" title="8.4 subscribe-webdav-sync">
+<link href="#rfc.section.8.5" rel="Chapter" title="8.5 subscribe-enhanced-get">
+<link href="#rfc.section.9" rel="Chapter" title="9 Security Considerations">
+<link href="#rfc.section.10" rel="Chapter" title="10 IANA Considerations">
+<link href="#rfc.section.10.1" rel="Chapter" title="10.1 Preference Registrations">
+<link href="#rfc.section.10.2" rel="Chapter" title="10.2 Link Relation Registrations">
+<link href="#rfc.section.11" rel="Chapter" title="11 Acknowledgements">
+<link href="#rfc.references" rel="Chapter" title="12 Normative References">
 <link href="#rfc.appendix.A" rel="Chapter" title="A Open issues">
 <link href="#rfc.appendix.B" rel="Chapter" title="B Change log">
 <link href="#rfc.authors" rel="Chapter">
@@ -500,27 +501,29 @@
 </li>
 </ul><li>7.   <a href="#rfc.section.7">Discovering alternative access methods</a>
 </li>
-<ul><li>7.1.   <a href="#rfc.section.7.1">General</a>
+<li>8.   <a href="#rfc.section.8">Link relations</a>
 </li>
-<li>7.2.   <a href="#rfc.section.7.2">subscribe-caldav</a>
+<ul><li>8.1.   <a href="#rfc.section.8.1">General</a>
 </li>
-<li>7.3.   <a href="#rfc.section.7.3">subscribe-caldav-auth</a>
+<li>8.2.   <a href="#rfc.section.8.2">subscribe-caldav</a>
 </li>
-<li>7.4.   <a href="#rfc.section.7.4">subscribe-webdav-sync</a>
+<li>8.3.   <a href="#rfc.section.8.3">subscribe-caldav-auth</a>
 </li>
-<li>7.5.   <a href="#rfc.section.7.5">subscribe-enhanced-get</a>
+<li>8.4.   <a href="#rfc.section.8.4">subscribe-webdav-sync</a>
 </li>
-</ul><li>8.   <a href="#rfc.section.8">Security Considerations</a>
+<li>8.5.   <a href="#rfc.section.8.5">subscribe-enhanced-get</a>
 </li>
-<li>9.   <a href="#rfc.section.9">IANA Considerations</a>
+</ul><li>9.   <a href="#rfc.section.9">Security Considerations</a>
 </li>
-<ul><li>9.1.   <a href="#rfc.section.9.1">Preference Registrations</a>
+<li>10.   <a href="#rfc.section.10">IANA Considerations</a>
 </li>
-<li>9.2.   <a href="#rfc.section.9.2">Link Relation Registrations</a>
+<ul><li>10.1.   <a href="#rfc.section.10.1">Preference Registrations</a>
 </li>
-</ul><li>10.   <a href="#rfc.section.10">Acknowledgements</a>
+<li>10.2.   <a href="#rfc.section.10.2">Link Relation Registrations</a>
 </li>
-<li>11.   <a href="#rfc.references">Normative References</a>
+</ul><li>11.   <a href="#rfc.section.11">Acknowledgements</a>
+</li>
+<li>12.   <a href="#rfc.references">Normative References</a>
 </li>
 <li>Appendix A.   <a href="#rfc.appendix.A">Open issues</a>
 </li>
@@ -793,45 +796,48 @@ pref-sync-token = "sync-token" BWS "=" BWS DQUOTE value DQUOTE
 <a href="#rfc.section.7">7.</a> <a href="#_discovering_alternative_access_methods" id="_discovering_alternative_access_methods">Discovering alternative access methods</a>
 </h1>
 <p id="rfc.section.7.p.1">The advertising of other access points is achieved through the use of the LINK header as defined in <a href="#RFC5988" class="xref">[RFC5988]</a>.  New link relation types are defined in this specification - each being associated with a protocol or protocol subset.</p>
-<p id="rfc.section.7.p.2">These LINK headers will be delivered when a client carries out a HEAD request targeting the URL of the resource.  == Link relations</p>
-<h1 id="rfc.section.7.1">
-<a href="#rfc.section.7.1">7.1.</a> <a href="#_general_2" id="_general_2">General</a>
-</h1>
-<p id="rfc.section.7.1.p.1">This clause defines a number of new link relations required to facilitate subscription upgrades.</p>
-<h1 id="rfc.section.7.2">
-<a href="#rfc.section.7.2">7.2.</a> <a href="#la-subscribe-caldav" id="la-subscribe-caldav">subscribe-caldav</a>
-</h1>
-<p id="rfc.section.7.2.p.1">This specifies an access point which is a full implementation of caldav but requires no authentication.  The end point allows the full range of reports as defined by the CalDAV specification.</p>
-<p id="rfc.section.7.2.p.2">The client <strong>MUST</strong> follow the specification to determine exactly what operations are allowed on the access point - for example to determine if sync-report is supported.</p>
-<p id="rfc.section.7.2.p.3">The URL <strong>MAY</strong> include some form of token to allow write access to the targeted collection.  The client must check it&#8217;s permissions to determine whether or not it has been granted write access.</p>
-<h1 id="rfc.section.7.3">
-<a href="#rfc.section.7.3">7.3.</a> <a href="#la-subscribe-caldav-auth" id="la-subscribe-caldav-auth">subscribe-caldav-auth</a>
-</h1>
-<p id="rfc.section.7.3.p.1">This specifies an access point which is a full implementation of caldav and requires authentication.  This may allow read-write access to the resource.</p>
-<p id="rfc.section.7.3.p.2">The client <strong>MUST</strong> follow the specification to determine exactly what operations are allowed on the access point&#8201;&#8212;&#8201;for example to determine if sync-report is supported.</p>
-<h1 id="rfc.section.7.4">
-<a href="#rfc.section.7.4">7.4.</a> <a href="#la-subscribe-webdav-sync" id="la-subscribe-webdav-sync">subscribe-webdav-sync</a>
-</h1>
-<p id="rfc.section.7.4.p.1">This specifies an access point which supports only webdav sync.</p>
-<p id="rfc.section.7.4.p.2">This allows the client to issue a sync-report on the resource to obtain updates.<a id="CREF2" class="info">[CREF2]<span class="info">say something about initial startup - use ics to populate? Initial token?</span></a></p>
-<p id="rfc.section.7.4.p.3">The client <strong>MUST</strong> follow that specification.</p>
-<h1 id="rfc.section.7.5">
-<a href="#rfc.section.7.5">7.5.</a> <a href="#la-subscribe-enhanced-get" id="la-subscribe-enhanced-get">subscribe-enhanced-get</a>
-</h1>
-<p id="rfc.section.7.5.p.1">This specifies an access point which supports something new.</p>
-<p id="rfc.section.7.5.p.2">The client <strong>MUST</strong> follow that specification.</p>
+<p id="rfc.section.7.p.2">These LINK headers will be delivered when a client carries out a HEAD request targeting the URL of the resource.</p>
 <h1 id="rfc.section.8">
-<a href="#rfc.section.8">8.</a> <a href="#security" id="security">Security Considerations</a>
+<a href="#rfc.section.8">8.</a> <a href="#_link_relations" id="_link_relations">Link relations</a>
 </h1>
-<p id="rfc.section.8.p.1">Applications using these properties need to be aware of the risks entailed in using the URIs provided as values.  See <a href="#RFC3986" class="xref">[RFC3986]</a> for a discussion of the security considerations relating to URIs.  == Privacy Considerations</p>
-<p id="rfc.section.8.p.2">Properties with a "URI" value type can expose their users to privacy leaks as any network access of the URI data can be tracked.  Clients <strong>SHOULD NOT</strong> automatically download data referenced by the URI without explicit instruction from users.  This specification does not introduce any additional privacy concerns beyond those described in <a href="#RFC5545" class="xref">[RFC5545]</a>.</p>
+<h1 id="rfc.section.8.1">
+<a href="#rfc.section.8.1">8.1.</a> <a href="#_general_2" id="_general_2">General</a>
+</h1>
+<p id="rfc.section.8.1.p.1">This clause defines a number of new link relations required to facilitate subscription upgrades.</p>
+<h1 id="rfc.section.8.2">
+<a href="#rfc.section.8.2">8.2.</a> <a href="#la-subscribe-caldav" id="la-subscribe-caldav">subscribe-caldav</a>
+</h1>
+<p id="rfc.section.8.2.p.1">This specifies an access point which is a full implementation of caldav but requires no authentication.  The end point allows the full range of reports as defined by the CalDAV specification.</p>
+<p id="rfc.section.8.2.p.2">The client <strong>MUST</strong> follow the specification to determine exactly what operations are allowed on the access point - for example to determine if sync-report is supported.</p>
+<p id="rfc.section.8.2.p.3">The URL <strong>MAY</strong> include some form of token to allow write access to the targeted collection.  The client must check it&#8217;s permissions to determine whether or not it has been granted write access.</p>
+<h1 id="rfc.section.8.3">
+<a href="#rfc.section.8.3">8.3.</a> <a href="#la-subscribe-caldav-auth" id="la-subscribe-caldav-auth">subscribe-caldav-auth</a>
+</h1>
+<p id="rfc.section.8.3.p.1">This specifies an access point which is a full implementation of caldav and requires authentication.  This may allow read-write access to the resource.</p>
+<p id="rfc.section.8.3.p.2">The client <strong>MUST</strong> follow the specification to determine exactly what operations are allowed on the access point&#8201;&#8212;&#8201;for example to determine if sync-report is supported.</p>
+<h1 id="rfc.section.8.4">
+<a href="#rfc.section.8.4">8.4.</a> <a href="#la-subscribe-webdav-sync" id="la-subscribe-webdav-sync">subscribe-webdav-sync</a>
+</h1>
+<p id="rfc.section.8.4.p.1">This specifies an access point which supports only webdav sync.</p>
+<p id="rfc.section.8.4.p.2">This allows the client to issue a sync-report on the resource to obtain updates.<a id="CREF2" class="info">[CREF2]<span class="info">say something about initial startup - use ics to populate? Initial token?</span></a></p>
+<p id="rfc.section.8.4.p.3">The client <strong>MUST</strong> follow that specification.</p>
+<h1 id="rfc.section.8.5">
+<a href="#rfc.section.8.5">8.5.</a> <a href="#la-subscribe-enhanced-get" id="la-subscribe-enhanced-get">subscribe-enhanced-get</a>
+</h1>
+<p id="rfc.section.8.5.p.1">This specifies an access point which supports something new.</p>
+<p id="rfc.section.8.5.p.2">The client <strong>MUST</strong> follow that specification.</p>
 <h1 id="rfc.section.9">
-<a href="#rfc.section.9">9.</a> <a href="#iana" id="iana">IANA Considerations</a>
+<a href="#rfc.section.9">9.</a> <a href="#security" id="security">Security Considerations</a>
 </h1>
-<h1 id="rfc.section.9.1">
-<a href="#rfc.section.9.1">9.1.</a> <a href="#_preference_registrations" id="_preference_registrations">Preference Registrations</a>
+<p id="rfc.section.9.p.1">Applications using these properties need to be aware of the risks entailed in using the URIs provided as values.  See <a href="#RFC3986" class="xref">[RFC3986]</a> for a discussion of the security considerations relating to URIs.  == Privacy Considerations</p>
+<p id="rfc.section.9.p.2">Properties with a "URI" value type can expose their users to privacy leaks as any network access of the URI data can be tracked.  Clients <strong>SHOULD NOT</strong> automatically download data referenced by the URI without explicit instruction from users.  This specification does not introduce any additional privacy concerns beyond those described in <a href="#RFC5545" class="xref">[RFC5545]</a>.</p>
+<h1 id="rfc.section.10">
+<a href="#rfc.section.10">10.</a> <a href="#iana" id="iana">IANA Considerations</a>
 </h1>
-<p id="rfc.section.9.1.p.1">The following preference has been added to the HTTP Preferences Registry defined in <a href="#RFC7240" class="xref">[RFC7240]</a></p>
+<h1 id="rfc.section.10.1">
+<a href="#rfc.section.10.1">10.1.</a> <a href="#_preference_registrations" id="_preference_registrations">Preference Registrations</a>
+</h1>
+<p id="rfc.section.10.1.p.1">The following preference has been added to the HTTP Preferences Registry defined in <a href="#RFC7240" class="xref">[RFC7240]</a></p>
 <p></p>
 
 <dl>
@@ -855,11 +861,11 @@ pref-sync-token = "sync-token" BWS "=" BWS DQUOTE value DQUOTE
 </dl>
 
 <p> </p>
-<p id="rfc.section.9.1.p.3">Reference: <a href="#preference-subscribe" class="xref">Section 6.1</a></p>
-<h1 id="rfc.section.9.2">
-<a href="#rfc.section.9.2">9.2.</a> <a href="#_link_relation_registrations" id="_link_relation_registrations">Link Relation Registrations</a>
+<p id="rfc.section.10.1.p.3">Reference: <a href="#preference-subscribe" class="xref">Section 6.1</a></p>
+<h1 id="rfc.section.10.2">
+<a href="#rfc.section.10.2">10.2.</a> <a href="#_link_relation_registrations" id="_link_relation_registrations">Link Relation Registrations</a>
 </h1>
-<p id="rfc.section.9.2.p.1">This document defines the following new iCalendar properties to be added to the registry defined in <a href="#RFC5545" class="xref">section=8.2.3</a>:</p>
+<p id="rfc.section.10.2.p.1">This document defines the following new iCalendar properties to be added to the registry defined in <a href="#RFC5545" class="xref">section=8.2.3</a>:</p>
 <table cellpadding="3" cellspacing="0" class="tt full center">
 <thead><tr>
 <th class="left">Relation Name</th>
@@ -871,36 +877,36 @@ pref-sync-token = "sync-token" BWS "=" BWS DQUOTE value DQUOTE
 <td class="left">subscribe-caldav</td>
 <td class="left">Current</td>
 <td class="left">
-<a href="#la-subscribe-caldav" class="xref">Section 7.2</a> </td>
+<a href="#la-subscribe-caldav" class="xref">Section 8.2</a> </td>
 </tr>
 <tr>
 <td class="left">subscribe-caldav_auth</td>
 <td class="left">Current</td>
 <td class="left">
-<a href="#la-subscribe-caldav-auth" class="xref">Section 7.3</a> </td>
+<a href="#la-subscribe-caldav-auth" class="xref">Section 8.3</a> </td>
 </tr>
 <tr>
 <td class="left">subscribe-webdav-sync</td>
 <td class="left">Current</td>
 <td class="left">
-<a href="#la-subscribe-webdav-sync" class="xref">Section 7.4</a> </td>
+<a href="#la-subscribe-webdav-sync" class="xref">Section 8.4</a> </td>
 </tr>
 <tr>
 <td class="left">subscribe-enhanced_get</td>
 <td class="left">Current</td>
 <td class="left">
-<a href="#la-subscribe-enhanced-get" class="xref">Section 7.5</a> </td>
+<a href="#la-subscribe-enhanced-get" class="xref">Section 8.5</a> </td>
 </tr>
 </tbody>
 </table>
-<h1 id="rfc.section.10">
-<a href="#rfc.section.10">10.</a> <a href="#acknowledgements" id="acknowledgements">Acknowledgements</a>
+<h1 id="rfc.section.11">
+<a href="#rfc.section.11">11.</a> <a href="#acknowledgements" id="acknowledgements">Acknowledgements</a>
 </h1>
-<p id="rfc.section.10.p.1">The author would also like to thank the members of the CalConnect Calendar Sharing technical committee and the following individuals for contributing their ideas and support:</p>
-<p id="rfc.section.10.p.2">Marten Gajda, Ken Murchison, Garry Shutler</p>
-<p id="rfc.section.10.p.3">The authors would also like to thank CalConnect the Calendaring and Scheduling Consortium for advice with this specification.</p>
+<p id="rfc.section.11.p.1">The author would also like to thank the members of the CalConnect Calendar Sharing technical committee and the following individuals for contributing their ideas and support:</p>
+<p id="rfc.section.11.p.2">Marten Gajda, Ken Murchison, Garry Shutler</p>
+<p id="rfc.section.11.p.3">The authors would also like to thank CalConnect the Calendaring and Scheduling Consortium for advice with this specification.</p>
 <h1 id="rfc.references">
-<a href="#rfc.references">11.</a> Normative References</h1>
+<a href="#rfc.references">12.</a> Normative References</h1>
 <table><tbody>
 <tr>
 <td class="reference"><b id="I-D.ietf-calext-extensions">[I-D.ietf-calext-extensions]</b></td>
