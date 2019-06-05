@@ -3,24 +3,36 @@
 == IANA Considerations
 
 
+=== Sync-Token HTTP Header Field Registration
+
+This specification updates the "Message Headers" registry entry for "Sync-Token" in <<RFC3864>> to refer to this document.
+
+   Header Field Name: Sync-Token
+   Protocol: http
+   Status: standard
+   Reference: <this-document>
+
 === Preference Registrations
 
-The following preference has been added to the HTTP Preferences
+The following preferences have been added to the HTTP Preferences
 Registry defined in <<RFC7240>>
 
 Preference::  subscribe-enhanced-get
 
 Value::  None.
 
-Optional parameters::
-** value is a quoted token
-** value is an integer page size
-
 Description::  Marks the interaction as enhanced get and provides the
 optional sync-token and page size.
 
-Reference: <<preference-subscribe>>
+Reference:: this document
 
+Preference::  limit
+
+Value:: An integer page size.
+
+Description::  Provide a limit on the number of components in the response.
+
+Reference:: this document
 
 === Link Relation Registrations
 

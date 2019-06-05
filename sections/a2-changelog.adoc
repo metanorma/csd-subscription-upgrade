@@ -6,6 +6,7 @@
 calext00 2019-06-05 MD
 
 * First calext version
+* Use Sync-Token header rather than parameter
 
 v04 2019-03-07 MD
 

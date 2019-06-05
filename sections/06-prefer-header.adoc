@@ -12,15 +12,13 @@ method according to the specifications for enhanced get.
 pref-subscribe-enhanced-get = "subscribe-enhanced-get"
 ----
 
-This preference MAY be followed by a synch-token preference.
+[[preference-limit]]
+=== Preference limit
 
-[[preference-sync-token]]
-=== Preference sync-token parameter
-
-This preference parameter provides a sync token for enhanced get.
+This preference parameter provides a limit on the number of components returned for enhanced get.
 
 [source]
 ----
-pref-sync-token = "sync-token" BWS "=" BWS DQUOTE value DQUOTE
+pref-limit = "limit" BWS "=" BWS 1*DIGIT
 ----
 

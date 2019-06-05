@@ -8,5 +8,5 @@ for contributing their ideas and support:
 
 Marten Gajda, Ken Murchison, Garry Shutler
 
-The authors would also like to thank CalConnect the Calendaring and
-Scheduling Consortium for advice with this specification.
+The authors would also like to thank CalConnect, the Calendaring and
+Scheduling Consortium, for advice with this specification.

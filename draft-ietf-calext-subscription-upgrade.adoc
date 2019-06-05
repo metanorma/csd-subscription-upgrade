@@ -7,7 +7,7 @@
 :submissionType: IETF
 :area: Internet
 :intended-series: full-standard
-:revdate: 2019-05-28T00:00:00Z
+:revdate: 2019-06-05T00:00:00Z
 :fullname: Michael Douglass
 :lastname: Douglass
 :forename_initials: M.
@@ -27,11 +27,11 @@ include::sections/00-abstract.adoc[]
 
 include::sections/00-intro.adoc[]
 include::sections-ietf/02-conventions.adoc[]
-include::sections/03-terms.adoc[]
+//include::sections/03-terms.adoc[]
+include::sections/03.5-discovering.adoc[]
 include::sections/04-enhanced-get.adoc[]
 include::sections/05-changes.adoc[]
 include::sections/06-prefer-header.adoc[]
-include::sections/07-discovering.adoc[]
 include::sections/08-link-relations.adoc[]
 include::sections/09-security.adoc[]
 include::sections/10-privacy.adoc[]
