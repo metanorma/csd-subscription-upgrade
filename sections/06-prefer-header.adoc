@@ -12,7 +12,7 @@ method according to the specifications for enhanced get.
 pref-subscribe-enhanced-get = "subscribe-enhanced-get"
 ----
 
-This preference *MAY* be followed by a synch-token preference.
+This preference MAY be followed by a synch-token preference.
 
 [[preference-sync-token]]
 === Preference sync-token parameter

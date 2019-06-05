@@ -12,11 +12,11 @@ This specifies an access point which is a full implementation of
 caldav but requires no authentication.  The end point allows the full
 range of reports as defined by the CalDAV specification.
 
-The client *MUST* follow the specification to determine exactly what
+The client MUST follow the specification to determine exactly what
 operations are allowed on the access point - for example to determine
 if sync-report is supported.
 
-The URL *MAY* include some form of token to allow write access to the
+The URL MAY include some form of token to allow write access to the
 targeted collection.  The client must check it's permissions to
 determine whether or not it has been granted write access.
 
@@ -29,7 +29,7 @@ This specifies an access point which is a full implementation of
 caldav and requires authentication.  This may allow read-write access
 to the resource.
 
-The client *MUST* follow the specification to determine exactly what
+The client MUST follow the specification to determine exactly what
 operations are allowed on the access point -- for example to determine
 if sync-report is supported.
 
@@ -45,7 +45,7 @@ obtain updates.
 NOTE: say something about initial startup - use ics to populate?
 Initial token?
 
-The client *MUST* follow that specification.
+The client MUST follow that specification.
 
 
 
@@ -54,5 +54,5 @@ The client *MUST* follow that specification.
 
 This specifies an access point which supports something new.
 
-The client *MUST* follow that specification.
+The client MUST follow that specification.
 

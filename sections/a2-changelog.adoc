@@ -3,6 +3,10 @@
 [appendix,obligation=informative]
 == Change log
 
+calext00 2019-06-05 MD
+
+* First calext version
+
 v04 2019-03-07 MD
 
 * Reference to RFC 6538 - WebDAV sync and RFC 7240 Prefer

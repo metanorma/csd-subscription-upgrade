@@ -9,13 +9,13 @@ efficiently discover and download changes in the targeted resource.
 It has many similarities to WebDAV sync and for a server could be
 implemented as an extension of the specification.
 
-In this protocol the client *MUST* include the Prefer header field
+In this protocol the client MUST include the Prefer header field
 preference "subscribe-enhanced-get".  If a sync token is available it
 is passed as a parameter to that preference.
 
-The client *MAY* include the Prefer header field preference
+The client MAY include the Prefer header field preference
 "handling=strict".  If included and an invalid sync-token is passed
-in the request the server *MUST* return an error response instead of a
+in the request the server MUST return an error response instead of a
 full set of data.
 
 The resource is treated as a set of individual events each of which
@@ -51,11 +51,11 @@ token the client should include the Prefer header field preference
 "handling=strict".
 
 When a server receives an invalid token and the "handling=strict"
-preference is supplied, the server *MUST* return a 412 status,
-precondition failed.  The server *MAY* choose to return an error
+preference is supplied, the server MUST return a 412 status,
+precondition failed.  The server MAY choose to return an error
 message in the body.
 
-The client *SHOULD* respond to this error by restarting the interaction
+The client SHOULD respond to this error by restarting the interaction
 from scratch, i.e. retrieve the full set of data then poll for
 updates.
 
@@ -74,13 +74,13 @@ data.
 The truncated status allows the client to immediately resubmit a
 request for the next batch.
 
-A server *MAY* choose to limit the response size.  The behavior SHOULD
+A server MAY choose to limit the response size.  The behavior SHOULD
 be as if the client had provided a preference for that size -
 allowing the client to retrieve the full set of data in batches.
 
 === Caching of responses
 
-To enable proper caching of responses the server *SHOULD* provide a
+To enable proper caching of responses the server SHOULD provide a
 VARY header field in responses that names the Prefer header field
 along with any other that are appropriate.
 
@@ -97,25 +97,28 @@ ensure this makes sense.
 This is an example of the initial request and response from a server
 that supports the extended GET protocol.
 
+Note the use of the Vary header so a caching proxy can key off client's ETag (sync token) and preference. The server may return an etag though it need not be used for subsequent requests.
+
 [source]
 ----
->> Request <<
+    >> Request <<
 
-GET /events.ics HTTP/1.1
-Host: example.com
-Accept: text/calendar
-Prefer: subscribe-enhanced-get
+    GET /events.ics HTTP/1.1
+    Host: example.com
+    Accept: text/calendar
+    Prefer: subscribe-enhanced-get
 
->> Response <<
+    >> Response <<
 
-HTTP/1.1 200 OK
-Content-Length: xxxx
-ETag: "1234"                    current ETag (for conditional GET)
-Vary: Prefer, If-None-Match     so caching proxy can key off of client's ETag (sync token) and preference
+    HTTP/1.1 200 OK
+    Content-Length: xxxx
+    ETag: "1234"                    current ETag (for conditional GET)
+    Preference-Applied: subscribe-enhanced-get;sync-token="1234567"
+    Vary: Prefer, If-None-Match
 
-BEGIN:VCALENDAR:
-?  /* full feed */
-END:VCALENDAR
+    BEGIN:VCALENDAR:
+    ?  /* full feed */
+    END:VCALENDAR
 ----
 --
 
@@ -127,20 +130,20 @@ changes have occurred.
 
 [source]
 ----
->> Request <<
+    >> Request <<
 
-GET /events.ics HTTP/1.1
-Host: example.com
-Accept: text/calendar
-Prefer: subscribe-enhanced-get; sync-token="1234567"
+    GET /events.ics HTTP/1.1
+    Host: example.com
+    Accept: text/calendar
+    Prefer: subscribe-enhanced-get; sync-token="1234567"
 
->> Response <<
+    >> Response <<
 
-HTTP/1.1 304 Not Modified
-Content-Length: 0
-ETag: ?1234?
-Vary: Prefer, If-None-Match
-Preference-Applied: subscribe-enhanced-get; sync-token="1234567"
+    HTTP/1.1 304 Not Modified
+    Content-Length: 0
+    ETag: ?1234?
+    Vary: Prefer, If-None-Match
+    Preference-Applied: subscribe-enhanced-get; sync-token="1234567"
 ----
 --
 
