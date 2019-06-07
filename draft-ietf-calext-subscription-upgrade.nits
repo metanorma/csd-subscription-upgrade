@@ -1,13 +1,7 @@
 idnits 2.16.02 
 
-draft-douglass-subscription-upgrade-04.txt:
-draft-douglass-subscription-upgrade-04.txt(259): Line is too long: the offending characters are ' ETag (sync token) and preference'
-draft-douglass-subscription-upgrade-04.txt(262): Possible code comment in line: ?  /* full feed */.
-draft-douglass-subscription-upgrade-04.txt(358): Line is too long: the offending characters are 'hanges  only'
-draft-douglass-subscription-upgrade-04.txt(358): Line has weird spacing: '...minimal    sig...'
-draft-douglass-subscription-upgrade-04.txt(359): Line is too long: the offending characters are 'lient?s  ETag (sync token) and preference'
-draft-douglass-subscription-upgrade-04.txt(416): Line is too long: the offending characters are '  ETag (sync token) and preference'
-
+draft-ietf-calext-subscription-upgrade-00.txt:
+draft-ietf-calext-subscription-upgrade-00.txt(321): Possible code comment in line:        ?  /* full feed */.
 
   Checking boilerplate required by RFC 5378 and the IETF Trust (see
   https://trustee.ietf.org/license-info):
@@ -23,9 +17,6 @@ draft-douglass-subscription-upgrade-04.txt(416): Line is too long: the offending
   Checking nits according to https://www.ietf.org/id-info/checklist :
   ----------------------------------------------------------------------------
 
-  ** There are 4 instances of too long lines in the document, the longest one
-     being 41 characters in excess of 72.
-
   ** The abstract seems to contain references ([RFC5545], [RFC7240]), which it
      shouldn't.  Please replace those with straight textual mentions of the
      documents in question.
@@ -40,18 +31,23 @@ draft-douglass-subscription-upgrade-04.txt(416): Line is too long: the offending
   Miscellaneous warnings:
   ----------------------------------------------------------------------------
 
-  == The document seems to lack the recommended RFC 2119 boilerplate, even if
-     it appears to use RFC 2119 keywords. 
+  == Using lowercase 'not' together with uppercase 'MUST', 'SHALL', 'SHOULD',
+     or 'RECOMMENDED' is not an accepted usage according to RFC 2119.  Please
+     use uppercase 'NOT' together with RFC 2119 keywords (if that is what you
+     mean).
+     
+     Found 'MUST not' in this paragraph:
+     
+     The value MUST be a URI.  This will generally be a data URI
+     representing an opaque token.  Client MUST not attempt to interpret the
+     data URI value.
 
-     RFC 8174, paragraph 11:
-        The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
-        "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY",
-        and "OPTIONAL" in this document are to be interpreted as
-        described in BCP 14 [RFC2119] [RFC8174] when, and only when, they
-        appear in all capitals, as shown here.
+  == Couldn't figure out when the document was first submitted -- there may
+     comments or warnings related to the use of a disclaimer for pre-RFC5378
+     work that could not be issued because of this.  Please check the Legal
+     Provisions document at https://trustee.ietf.org/license-info to determine
+     if you need the pre-RFC5378 disclaimer.
 
-     (The document does seem to have the reference to RFC 2119 which the
-     ID-Checklist requires).
   -- Found something which looks like a code comment -- if you have code
      sections in the document, please surround them with '<CODE BEGINS>' and
      '<CODE ENDS>' lines.
@@ -63,36 +59,29 @@ draft-douglass-subscription-upgrade-04.txt(416): Line is too long: the offending
      (See RFCs 3967 and 4897 for information about using normative references
      to lower-maturity documents in RFCs)
 
-  == Unused Reference: 'I-D.ietf-calext-extensions' is defined on line 543, but
-     no explicit reference was found in the text
-     '[I-D.ietf-calext-extensions] Daboo, C., "New Properties for iCalenda...'
-
-  == Unused Reference: 'RFC2434' is defined on line 552, but no explicit
+  == Unused Reference: 'RFC2434' is defined on line 569, but no explicit
      reference was found in the text
      '[RFC2434]  Narten, T. and H. Alvestrand, "Guidelines for Writing an...'
 
-  == Unused Reference: 'RFC3688' is defined on line 557, but no explicit
+  == Unused Reference: 'RFC3688' is defined on line 574, but no explicit
      reference was found in the text
      '[RFC3688]  Mealling, M., "The IETF XML Registry", BCP 81, RFC 3688,...'
 
-  == Unused Reference: 'RFC4589' is defined on line 566, but no explicit
+  == Unused Reference: 'RFC4589' is defined on line 588, but no explicit
      reference was found in the text
      '[RFC4589]  Schulzrinne, H. and H. Tschofenig, "Location Types Regist...'
 
-  == Unused Reference: 'RFC5546' is defined on line 575, but no explicit
+  == Unused Reference: 'RFC5546' is defined on line 597, but no explicit
      reference was found in the text
      '[RFC5546]  Daboo, C., Ed., "iCalendar Transport-Independent Interope...'
 
-  == Unused Reference: 'RFC6578' is defined on line 584, but no explicit
+  == Unused Reference: 'RFC6578' is defined on line 606, but no explicit
      reference was found in the text
      '[RFC6578]  Daboo, C. and A. Quillaud, "Collection Synchronization fo...'
 
-  == Unused Reference: 'RFC7991' is defined on line 593, but no explicit
+  == Unused Reference: 'RFC7991' is defined on line 615, but no explicit
      reference was found in the text
      '[RFC7991]  Hoffman, P., "The "xml2rfc" Version 3 Vocabulary", RFC 79...'
-
-  == Outdated reference: draft-ietf-calext-extensions has been published as RFC
-     7986
 
   ** Obsolete normative reference: RFC 2434 (Obsoleted by RFC 5226)
 
@@ -101,5 +90,5 @@ draft-douglass-subscription-upgrade-04.txt(416): Line is too long: the offending
   ** Downref: Normative reference to an Informational RFC: RFC 7991
 
 
-     Summary: 5 errors (**), 0 flaws (~~), 9 warnings (==), 3 comments (--).
+     Summary: 4 errors (**), 0 flaws (~~), 8 warnings (==), 3 comments (--).
 
