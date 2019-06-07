@@ -7,3 +7,4 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL",
 interpreted as described in BCP 14 <<RFC2119>> <<RFC8174>> when, and
 only when, they appear in all capitals, as shown here.
 
+Additionally, the rule for URI is included from <<RFC3986>>.

@@ -13,7 +13,7 @@ request targeting the URL of the resource.
 [example]
 --
 This is an example of a HEAD request and the response from a server
-that supports the extended GET protocol.
+that supports the enhanced GET method.
 
 [source]
 ----
@@ -33,3 +33,5 @@ that supports the extended GET protocol.
 ----
 --
 
+Note that the target for an upgraded service may be the same as
+for the initial resource.

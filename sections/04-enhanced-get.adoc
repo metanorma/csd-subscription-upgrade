@@ -15,7 +15,7 @@ is passed as a Sync-Token header field.
 
 The resource is treated as a set of individual events each of which
 may be updated or deleted separately. The client will first fetch
-the entire ics file.  On subsequent requests it uses the Prefer
+the entire iCalendar file.  On subsequent requests it uses the Prefer
 header field and a Sync-Token header field to indicate that it wants a set
 of changes since the last fetch.
 
@@ -41,8 +41,7 @@ On subsequent fetches the entity will not be returned.
 
 === Handling of invalid sync tokens
 
-When a server receives an invalid token it MUST return a 412 status,
-precondition failed.  The server MAY choose to return an error
+When a server receives an invalid token it MUST return a 409 status (Conflict).  The server MAY choose to return an error
 message in the body.
 
 The client SHOULD respond to this error by restarting the interaction
@@ -57,12 +56,12 @@ the number of components.
 
 When a server receives a request specifying such a limit it SHOULD
 limit the response to that number of components.  If the limit causes
-a truncation in the response the server should respond with WHAT? and
-return a sync token which may be used to retrieve the next batch of
-data.
+a truncation in the response the server should respond with a
+Preference-Applied header specifying the limit that was applied
+and return a sync token which may be used to retrieve the next batch of data.
 
-The truncated status allows the client to immediately resubmit a
-request for the next batch.
+This allows the client to immediately resubmit a
+request for the next batch using the updated token.
 
 A server MAY choose to limit the response size.  The behavior SHOULD
 be as if the client had provided a preference for that size -
@@ -71,21 +70,21 @@ allowing the client to retrieve the full set of data in batches.
 === Caching of responses
 
 To enable proper caching of responses the server SHOULD provide a
-VARY header field in responses that names the Prefer header field
+VARY header field in responses that names the Prefer and Sync-Token header fields
 along with any other that are appropriate.
 
-Clients should order the preferences in the following manner so that
-identical responses can be identified...
+Clients should order the preferences as following so that
+identical responses can be identified:
 
-NOTE: need to discuss this further and check on the HTTP specs to
-ensure this makes sense.
+  * subscribe-enhanced-get
+  * limit
 
 === Examples
 
 [example]
 --
 This is an example of the initial request and response from a server
-that supports the extended GET protocol. Note the use of the Vary header so a caching proxy can key off client's Sync-Token and preference. The server may return an etag though it need not be used for subsequent requests.
+that supports the enhanced GET method. Note the use of the Vary header so a caching proxy can key off the client's Sync-Token and preference.
 
 [source]
 ----
@@ -100,9 +99,9 @@ that supports the extended GET protocol. Note the use of the Vary header so a ca
 
     HTTP/1.1 200 OK
     Content-Length: xxxx
-    Sync-Token: "1234567"
+    Sync-Token: "data:,1234567"
     Preference-Applied: subscribe-enhanced-get
-    Vary: Sync-Token
+    Vary: Prefer, Sync-Token
 
     BEGIN:VCALENDAR:
     ?  /* full feed */
@@ -124,15 +123,15 @@ changes have occurred.
     Host: example.com
     Accept: text/calendar
     Prefer: subscribe-enhanced-get
-    Sync-Token: "1234567"
+    Sync-Token: "data:,1234567"
 
     >> Response <<
 
     HTTP/1.1 304 Not Modified
     Content-Length: 0
-    Sync-Token: "1234567"
+    Sync-Token: "data:,1234567"
     Preference-Applied: subscribe-enhanced-get
-    Vary: Sync-Token
+    Vary: Prefer, Sync-Token
 ----
 --
 
@@ -149,12 +148,12 @@ an old or invalid token.
     GET /events.ics HTTP/1.1
     Host: example.com
     Accept: text/calendar
-    Sync-Token: "1234567"
+    Sync-Token: "data:,1234567"
     Prefer: subscribe-enhanced-get
 
     >> Response <<
 
-    HTTP/1.1 412 Precondition Failed
+    HTTP/1.1 409 Conflict
     Content-Length: xxxx
     Preference-Applied: subscribe-enhanced-get
 
@@ -173,15 +172,15 @@ changes have occurred.
     GET /events.ics HTTP/1.1
     Host: example.com
     Accept: text/calendar
-    Sync-Token: "1234567"
+    Sync-Token: "data:,1234567"
     Prefer: subscribe-enhanced-get
 
     >> Response <<
 
     HTTP/1.1 200 OK
     Content-Type: text/calendar
-    Vary: Sync-Token
-    Sync-Token: "4567890"
+    Vary: Prefer, Sync-Token
+    Sync-Token: "data:,4567890"
     Preference-Applied: subscribe-enhanced-get
 
     BEGIN:VCALENDAR:

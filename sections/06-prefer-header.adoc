@@ -9,7 +9,7 @@ method according to the specifications for enhanced get.
 
 [source]
 ----
-pref-subscribe-enhanced-get = "subscribe-enhanced-get"
+    pref-subscribe-enhanced-get = "subscribe-enhanced-get"
 ----
 
 [[preference-limit]]
@@ -19,6 +19,6 @@ This preference parameter provides a limit on the number of components returned 
 
 [source]
 ----
-pref-limit = "limit" BWS "=" BWS 1*DIGIT
+    pref-limit = "limit" BWS "=" BWS 1*DIGIT
 ----
 

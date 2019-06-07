@@ -7,4 +7,4 @@ This specification updates <<RFC5545>> to add the value DELETED to the
 STATUS property.
 
 This specification also updates <<RFC7240>> to add the subscribe-
-enhanced-get and sync-token preferences.
+enhanced-get and limit preferences.

@@ -1,0 +1,24 @@
+== Header Field: Sync-Token
+
+This specification defines a new header field Sync-Token for use by
+the enhanced GET method.
+
+[source]
+----
+    Accept = DQUOTE URI DQUOTE
+----
+
+The value MUST be a URI. This will generally be a data URI
+representing an opaque token. Client MUST not attempt to interpret
+the data URI value.
+
+[example]
+--
+This is an example of the Sync-Token header field:
+
+[source]
+----
+    Sync-Token: "data:,1234567"
+----
+--
+

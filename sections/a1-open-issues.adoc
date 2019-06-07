@@ -3,8 +3,5 @@
 [appendix,obligation=informative]
 == Open issues
 
-restype values::
-  Need to determine what if any registry of resource
-  types already exists and use that.
-
-sync token formats::  It's a URI in webdav sync.
+Vary::
+  Ensure we get that right.
