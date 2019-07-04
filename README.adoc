@@ -8,17 +8,7 @@ image:https://travis-ci.com/CalConnect/csd-subscription-upgrade.svg?branch=maste
 
 This document is available in its rendered forms here:
 
-* https://calconnect.github.io/csd-subscription-upgrade/[CalConnect Standard: Calendaring and scheduling -- Calendar subscription upgrades (HTML)]
-* https://calconnect.github.io/csd-subscription-upgrade/csd-subscription-upgrade.pdf[PDF]
-* https://calconnect.github.io/csd-subscription-upgrade/csd-subscription-upgrade.xml[Metanorma XML]
-* https://calconnect.github.io/csd-subscription-upgrade/csd-subscription-upgrade.rxl[Relaton XML (Bibliographic item)]
-
-
-* https://calconnect.github.io/csd-subscription-upgrade/draft-douglass-subscription-upgrade.html[IETF: subscription-upgrade: Calendar subscription upgrades (HTML)]
-* https://calconnect.github.io/csd-subscription-upgrade/draft-douglass-subscription-upgrade.txt[IETF: TXT]
-* https://calconnect.github.io/csd-subscription-upgrade/draft-douglass-subscription-upgrade.xml[IETF: RFC XML v2]
-* https://calconnect.github.io/csd-subscription-upgrade/draft-douglass-subscription-upgrade.nits[IETF: nits]
-
+* https://calconnect.github.io/csd-subscription-upgrade/[CalConnect+IETF: Calendaring and scheduling -- Calendar subscription upgrades (HTML)]
 
 == Fetching the document
 
@@ -29,7 +19,7 @@ git clone https://github.com/CalConnect/csd-subscription-upgrade/
 
 == Installing Build Tools
 
-See https://www.metanorma.com/overview/getting-started/
+See https://www.metanorma.com/author/topics/install/
 
 
 == Running via Docker or locally

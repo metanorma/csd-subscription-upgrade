@@ -20,7 +20,7 @@
 :imagesdir: images
 :docfile: cc-51005.adoc
 :mn-document-class: csd
-:mn-output-extensions: xml,html,pdf
+:mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
 

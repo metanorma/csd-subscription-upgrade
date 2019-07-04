@@ -1,11 +1,11 @@
-<bibitem id="RFC5545">
-  <fetched>2019-05-28</fetched>
-  <title format="plain" language="en" script="Latn">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
+<bibdata>
+  <fetched>2019-06-20</fetched>
+  <title format="text/plain" language="en" script="Latn">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
   <uri type="src">https://www.rfc-editor.org/info/rfc5545</uri>
   <docidentifier type="IETF">RFC 5545</docidentifier>
   <docidentifier type="DOI">10.17487/RFC5545</docidentifier>
   <date type="published">
-    <on>2009</on>
+    <on>2009-09</on>
   </date>
   <contributor>
     <role type="editor"/>
@@ -22,8 +22,13 @@
     </person>
   </contributor>
   <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">This document defines the iCalendar data format for representing and exchanging calendaring and scheduling information such as events, to-dos, journal entries, and free/busy information, independent of any particular calendar service or protocol. [STANDARDS-TRACK]</abstract>
   <series type="main">
-    <title format="plain" language="en" script="Latn">RFC</title>
+    <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>5545</number>
   </series>
-</bibitem>
+  <ext>
+    <doctype>rfc</doctype>
+  </ext>
+</bibdata>

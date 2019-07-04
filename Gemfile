@@ -1,5 +1,5 @@
 source "https://rubygems.org"
 
-gem "metanorma"
 gem "metanorma-cli"
-gem "metanorma-csd"
+gem "relaton-cli", git: "https://github.com/metanorma/relaton-cli"
+gem "relaton-ietf", git: "https://github.com/metanorma/relaton-ietf"
