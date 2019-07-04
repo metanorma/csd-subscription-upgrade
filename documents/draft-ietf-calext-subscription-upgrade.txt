@@ -94,7 +94,7 @@ Table of Contents
      9.3.  Link Relation Registrations . . . . . . . . . . . . . . .  13
    10. Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .  13
    11. Normative References  . . . . . . . . . . . . . . . . . . . .  13
-   Appendix A.  Open issues  . . . . . . . . . . . . . . . . . . . .  14
+   Appendix A.  Open issues  . . . . . . . . . . . . . . . . . . . .  15
    Appendix B.  Change log . . . . . . . . . . . . . . . . . . . . .  15
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  15
 
@@ -701,6 +701,10 @@ Internet-Draft       Calendar subscription upgrades            June 2019
 
 11.  Normative References
 
+   [I-D.ietf-calext-extensions]
+              Daboo, C., "New Properties for iCalendar", draft-ietf-
+              calext-extensions-05 (work in progress), August 2016.
+
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
               DOI 10.17487/RFC2119, March 1997,
@@ -715,10 +719,6 @@ Internet-Draft       Calendar subscription upgrades            June 2019
               DOI 10.17487/RFC3688, January 2004,
               <https://www.rfc-editor.org/info/rfc3688>.
 
-   [RFC3864]  Klyne, G., Nottingham, M., and J. Mogul, "Registration
-              Procedures for Message Header Fields", BCP 90, RFC 3864,
-              DOI 10.17487/RFC3864, September 2004,
-              <https://www.rfc-editor.org/info/rfc3864>.
 
 
 
@@ -729,6 +729,11 @@ Douglass                Expires December 9, 2019               [Page 13]
 
 Internet-Draft       Calendar subscription upgrades            June 2019
 
+
+   [RFC3864]  Klyne, G., Nottingham, M., and J. Mogul, "Registration
+              Procedures for Message Header Fields", BCP 90, RFC 3864,
+              DOI 10.17487/RFC3864, September 2004,
+              <https://www.rfc-editor.org/info/rfc3864>.
 
    [RFC3986]  Berners-Lee, T., Fielding, R., and L. Masinter, "Uniform
               Resource Identifier (URI): Generic Syntax", STD 66,
@@ -770,11 +775,6 @@ Internet-Draft       Calendar subscription upgrades            June 2019
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
 
-Appendix A.  Open issues
-
-   Vary
-      Ensure we get that right.
-
 
 
 
@@ -785,6 +785,18 @@ Douglass                Expires December 9, 2019               [Page 14]
 
 Internet-Draft       Calendar subscription upgrades            June 2019
 
+
+   [W3C.REC-xml-20060816]
+              Bray, T., Paoli, J., Sperberg-McQueen, M., Maler, E., and
+              F. Yergeau, "Extensible Markup Language (XML) 1.0 (Fourth
+              Edition)", World Wide Web Consortium Recommendation REC-
+              xml-20060816, August 2006,
+              <http://www.w3.org/TR/2006/REC-xml-20060816>.
+
+Appendix A.  Open issues
+
+   Vary
+      Ensure we get that right.
 
 Appendix B.  Change log
 
@@ -818,6 +830,18 @@ Appendix B.  Change log
 
 Author's Address
 
+
+
+
+
+
+
+
+Douglass                Expires December 9, 2019               [Page 15]
+
+Internet-Draft       Calendar subscription upgrades            June 2019
+
+
    Michael Douglass
    Spherical Cow Group
    226 3rd Street
@@ -837,4 +861,36 @@ Author's Address
 
 
 
-Douglass                Expires December 9, 2019               [Page 15]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Douglass                Expires December 9, 2019               [Page 16]

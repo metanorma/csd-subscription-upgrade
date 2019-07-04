@@ -34,7 +34,9 @@
   </version>
   <language>en</language>
   <script>Latn</script>
-  <status format="plain">committee-draft</status>
+  <status>
+    <stage>committee-draft</stage>
+  </status>
   <copyright>
     <from>2018</from>
     <owner>
@@ -43,66 +45,69 @@
       </organization>
     </owner>
   </copyright>
-  <editorialgroup>
-    <technical-committee>CALENDAR</technical-committee>
-  </editorialgroup>
+  <ext>
+    <doctype>standard</doctype>
+    <editorialgroup>
+      <technical-committee>CALENDAR</technical-committee>
+    </editorialgroup>
+  </ext>
 </bibdata>
 <preface><foreword obligation="informative"><title>Foreword</title>
-<p id="_25558fb7-18b6-4c2d-b998-eaf86d84552b">This specification updates <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/> to add the value DELETED to the
+<p id="_a2483a67-0659-4530-b958-87c6b93df3bb">This specification updates <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/> to add the value DELETED to the
 STATUS property.</p>
-<p id="_c2b9d28d-0976-459d-a5a2-0bc6f85bd082">This specification also updates <eref type="inline" bibitemid="RFC7240" citeas="RFC 7240"/> to add the subscribe-
+<p id="_00d4d713-ab0b-47f2-b19a-2efb9c6cd5e9">This specification also updates <eref type="inline" bibitemid="RFC7240" citeas="RFC 7240"/> to add the subscribe-
 enhanced-get and limit preferences.</p>
-<p id="_7f7b3958-5aac-4563-b369-89d22fdb0397">The Calendaring and Scheduling Consortium (“CalConnect”) is a global
+<p id="_f6c9659c-5a09-49de-8637-08fd9f357067">The Calendaring and Scheduling Consortium (“CalConnect”) is a global
 non-profit organization with the aim to facilitate interoperability of
 collaborative technologies and tools through open standards.</p>
-<p id="_1438e1e1-e37e-4e64-a696-fc85735c8bae">CalConnect works closely with international and regional partners,
+<p id="_a9f8a891-29d2-4233-88aa-23c7efde520b">CalConnect works closely with international and regional partners,
 of which the full list is available on our website
 (<link target="https://www.calconnect.org/about/liaisons-and-relationships"/>).</p>
-<p id="_06b2f5fb-a99d-44df-b797-fa2335ea2c2a">The procedures used to develop this document and those intended for its
+<p id="_a365d841-ebd3-43fe-9999-b4f5a198da0c">The procedures used to develop this document and those intended for its
 further maintenance are described in the CalConnect Directives.</p>
-<p id="_5a68d86b-c50f-4ed2-86aa-40751473b82b">In particular the different approval criteria needed for the different
+<p id="_842881bb-d059-4bd6-a791-0f99935cd5a6">In particular the different approval criteria needed for the different
 types of CalConnect documents should be noted. This document was drafted in
 accordance with the editorial rules of the CalConnect Directives.</p>
-<p id="_ec63f981-b2cf-4f14-ae28-616480503fea">Attention is drawn to the possibility that some of the elements of this
+<p id="_d594270d-0d11-445c-bbe1-9ca92998554a">Attention is drawn to the possibility that some of the elements of this
 document may be the subject of patent rights. CalConnect shall not be
 held responsible for identifying any or all such patent rights. Details
 of any patent rights identified during the development of the document
 will be provided in the Introduction.</p>
-<p id="_9845f34f-2dd4-480d-af3c-c94ba50a7048">Any trade name used in this document is information given for the
+<p id="_78d1b04e-6788-4414-bf57-5adb1bf73dee">Any trade name used in this document is information given for the
 convenience of users and does not constitute an endorsement.</p>
-<p id="_e2515dd7-8384-4546-8858-52d24c09a717">This document was prepared by Technical Committee
-<em>CALENDAR</em>.</p></foreword><introduction id="introduction" obligation="informative"><title>Introduction</title><p id="_69738ee8-1969-4e6a-b4cb-c39f7a661c57">Currently clients subscribe to calendar feeds as an iCalendar file which is
+<p id="_f38101a6-7979-4719-9568-308488b1113b">This document was prepared by Technical Committee
+<em>CALENDAR</em>.</p></foreword><introduction id="introduction" obligation="informative"><title>Introduction</title><p id="_9387cc75-7878-4aba-a5ca-df400a0eca09">Currently clients subscribe to calendar feeds as an iCalendar file which is
 often published as a resource accessible using the unofficial
 ‘webcal’ scheme.</p>
-<p id="_cee076e6-cc41-4e1e-9947-10e9d88a5011">The only available option for updating that resource is the usual
+<p id="_2438d375-3175-4311-a4b1-2f14f47cbf5f">The only available option for updating that resource is the usual
 HTTP polling of cached resources using Etags.</p>
-<p id="_37091eab-7a57-4e06-bc61-92bb7fad4391">There is the usual tension between clients wishing to see a timely
+<p id="_4695ca38-8122-4052-bd0f-8a49888a95e1">There is the usual tension between clients wishing to see a timely
 response to changes and servers not wishing to be overloaded by
 frequent requests for possibly large amounts of data.</p>
-<p id="_ba337a52-9dfe-475f-ba8a-30fd6513ced4">This specification introduces an approach whereby clients can
+<p id="_893e258a-2111-49ae-94cd-a04374fd3906">This specification introduces an approach whereby clients can
 discover a more performant access method.  Given the location of the
 resource as an iCalendar file, the client can perfom a HEAD request on the
 resource and inspect the returned headers which will offer a number
 of alternative access methods.</p>
-<p id="_b7f97de2-0485-4ae8-8032-0d48bfe1bf07">Given that many clients and servers already support CalDAV this provides an easy
+<p id="_a3ecdf8b-b8a3-428c-94b6-32a94c6b342c">Given that many clients and servers already support CalDAV this provides an easy
 upgrade path for those clients.  CalDAV and DAV subsets are specified
 here to allow lighter weight implementations.</p></introduction></preface><sections>
 
 <clause id="_scope" obligation="normative">
   <title>Scope</title>
-  <p id="_6033c7f9-d2f0-44b7-b67a-a74a0911ac2e">This document provides a mechanism to allow subscribers to
+  <p id="_47f1f018-dcb1-4cec-9ef8-d6365178ed4e">This document provides a mechanism to allow subscribers to
 calendar feeds to upgrade to a more performant protocol.</p>
 </clause>
 
-<clause id="_discovering_alternative_access_methods" obligation="normative"><title>Discovering alternative access methods</title><p id="_edcccaf5-6f71-471d-9308-e07e5a58072e">The advertising of other access points is achieved through the use of
+<clause id="_discovering_alternative_access_methods" obligation="normative"><title>Discovering alternative access methods</title><p id="_7c82bf07-3063-45a9-bbee-7140cf6eb0de">The advertising of other access points is achieved through the use of
 the LINK header as defined in <eref type="inline" bibitemid="RFC5988" citeas="RFC 5988"/>.  New link relation types are
 defined in this specification - each being associated with a protocol
 or protocol subset.</p>
-<p id="_6ff29436-4290-4b57-9597-73a9402f452a">These LINK headers will be delivered when a client carries out a HEAD
+<p id="_a7db318a-3c0a-44f3-982a-01d3ded9eca4">These LINK headers will be delivered when a client carries out a HEAD
 request targeting the URL of the resource.</p>
-<example id="_c3c2ac60-e8df-4e7c-9a02-e4823a014368"><p id="_470ec0bd-a048-4b44-bff0-3ab4621e21e5">This is an example of a HEAD request and the response from a server
+<example id="_cdca868e-325d-40aa-bc1c-7d0f412c9d58"><p id="_833c8b0c-061e-4dbe-83ea-04448206f0cf">This is an example of a HEAD request and the response from a server
 that supports the enhanced GET method.</p>
-<sourcecode lang="en" id="_954a09b8-6ab2-4841-b404-03699f7c3eaf">    &gt;&gt; Request &lt;&lt;
+<sourcecode lang="en" id="_0332753c-0b5b-424d-880d-cf7bacb5aa94">    &gt;&gt; Request &lt;&lt;
 
     HEAD /caldata/events.ics HTTP/1.1
     Host: example.com
@@ -115,66 +120,66 @@ that supports the enhanced GET method.</p>
     Link: &lt;http://example.com/subscribe/events.ics&gt;;
                  rel="subscribe-enhanced-get"</sourcecode>
 </example>
-<p id="_f4b2990b-1ec3-4021-a1af-65135cd90218">Note that the target for an upgraded service may be the same as
+<p id="_5f82a4c5-fe7a-468f-9a67-899c9ce6bb6d">Note that the target for an upgraded service may be the same as
 for the initial resource.</p></clause>
-<clause id="enhanced-get" obligation="normative"><title>Enhanced GET</title><clause id="_general" obligation="normative"><title>General</title><p id="_969a5ced-8ef8-4c55-807a-8333e7ab6047">This is a lightweight protocol which allows simple clients to
+<clause id="enhanced-get" obligation="normative"><title>Enhanced GET</title><clause id="_general" obligation="normative"><title>General</title><p id="_fc4c8087-5f34-413a-a518-a39a9d754235">This is a lightweight protocol which allows simple clients to
 efficiently discover and download changes in the targeted resource.</p>
-<p id="_9946184f-05af-4f82-bc33-6c8439d25e1e">It has many similarities to WebDAV sync and for a server could be
+<p id="_5a445342-8737-4705-a6dc-ddf1743b3ac0">It has many similarities to WebDAV sync and for a server could be
 implemented as an extension of the specification.</p>
-<p id="_1b123d7d-85cd-4793-b93a-458b0c1c64d1">In this protocol the client MUST include the Prefer header field
+<p id="_7dde509c-c3f7-4296-9b95-dfa520b8fb61">In this protocol the client MUST include the Prefer header field
 preference “subscribe-enhanced-get”. If a sync token is available it
 is passed as a Sync-Token header field.</p>
-<p id="_ea5d2564-9c98-4a22-a111-cd0cbf239a76">The resource is treated as a set of individual events each of which
+<p id="_eb8addeb-7820-4354-9ad6-6aa0c7424184">The resource is treated as a set of individual events each of which
 may be updated or deleted separately. The client will first fetch
 the entire iCalendar file.  On subsequent requests it uses the Prefer
 header field and a Sync-Token header field to indicate that it wants a set
 of changes since the last fetch.</p>
-<p id="_63531d38-c149-4d44-98a4-ac9236cae63f">If no Sync-Token header field is supplied the server SHOULD
+<p id="_d19c67e3-a43e-4b40-96ed-44c2bc7f7fca">If no Sync-Token header field is supplied the server SHOULD
 respond with a full set of data. Otherwise, if the token is valid, it SHOULD return with a set of changed entities.</p>
-<p id="_f370ad20-4770-4058-aa5e-c59f3d772efc">In both cases the server should set the Preference-Applied header field and a new Sync-Token header field value.</p></clause>
-<clause id="_deletions" obligation="normative"><title>Deletions</title><p id="_ce461b5f-3405-4861-b5c9-2ce5900354db">When an entity (VEVENT, VTODO or other valid top-level component) is
+<p id="_d6ac2947-9198-43d5-99b1-a854f0b9c418">In both cases the server should set the Preference-Applied header field and a new Sync-Token header field value.</p></clause>
+<clause id="_deletions" obligation="normative"><title>Deletions</title><p id="_c660b8e3-5d49-41cd-bcc0-8d5aadc033f5">When an entity (VEVENT, VTODO or other valid top-level component) is
 deleted from the source data the server needs to be able to inform a
 client of the deletion.  This specification introduces a new value
 for the STATUS property of DELETED.</p>
-<p id="_fb058be5-dc4b-4a80-b067-1cdc8b25ea95">On the first enhanced GET after the entity has been deleted a
+<p id="_b13b1266-4842-43f5-a548-9128c888054e">On the first enhanced GET after the entity has been deleted a
 skeleton, but valid, entity will be returned with STATUS: DELETED.
 The receiving client is free to remove the entity or update it’s
 STATUS property.</p>
-<p id="_7def2836-ec05-4ae4-b64e-689ec7b485ec">On subsequent fetches the entity will not be returned.</p></clause>
-<clause id="_handling_of_invalid_sync_tokens" obligation="normative"><title>Handling of invalid sync tokens</title><p id="_b61951a5-367f-450b-8620-290623455ccc">When a server receives an invalid token it MUST return a 409 status (Conflict).  The server MAY choose to return an error
+<p id="_1f304ed9-2534-4e24-abb8-004836aea575">On subsequent fetches the entity will not be returned.</p></clause>
+<clause id="_handling_of_invalid_sync_tokens" obligation="normative"><title>Handling of invalid sync tokens</title><p id="_45602fe6-fbca-4f6c-b514-cdce2bbab9b0">When a server receives an invalid token it MUST return a 409 status (Conflict).  The server MAY choose to return an error
 message in the body.</p>
-<p id="_1f3c2e8a-a796-4f90-a068-a5e262c21e06">The client SHOULD respond to this error by restarting the interaction
+<p id="_8e4823fe-6449-469e-bb57-ecfcf7cce1f4">The client SHOULD respond to this error by restarting the interaction
 from scratch, i.e. retrieve the full set of data then poll for
 updates.</p></clause>
-<clause id="_paging_the_response" obligation="normative"><title>Paging the response</title><p id="_6f890c66-cd57-4119-9901-6f2cbe96bec8">A client may explicitly request a limit on the size of the response
+<clause id="_paging_the_response" obligation="normative"><title>Paging the response</title><p id="_4f089ba9-8660-4d83-ba92-ed2bb756e064">A client may explicitly request a limit on the size of the response
 by specifying the Prefer header field preference “limit=n” where n is
 the number of components.</p>
-<p id="_f8905413-df15-4e02-8aa4-f634f4c4edc4">When a server receives a request specifying such a limit it SHOULD
+<p id="_f19ea9f1-a3c2-44ca-916b-aa0fbced5cd2">When a server receives a request specifying such a limit it SHOULD
 limit the response to that number of components.  If the limit causes
 a truncation in the response the server should respond with a
 Preference-Applied header specifying the limit that was applied
 and return a sync token which may be used to retrieve the next batch of data.</p>
-<p id="_1fb1863b-311b-4732-b9e7-fb1cbfccb078">This allows the client to immediately resubmit a
+<p id="_36c139d6-f1a9-419e-9248-71431557592c">This allows the client to immediately resubmit a
 request for the next batch using the updated token.</p>
-<p id="_becdf132-93d4-4bb4-a14f-4c03dbd22920">A server MAY choose to limit the response size.  The behavior SHOULD
+<p id="_5cdace48-4523-4e92-b9e8-0927fa6bfd2c">A server MAY choose to limit the response size.  The behavior SHOULD
 be as if the client had provided a preference for that size -
 allowing the client to retrieve the full set of data in batches.</p></clause>
-<clause id="_caching_of_responses" obligation="normative"><title>Caching of responses</title><p id="_338a5083-80b5-4f1e-9d6f-d4bf7d726ec1">To enable proper caching of responses the server SHOULD provide a
+<clause id="_caching_of_responses" obligation="normative"><title>Caching of responses</title><p id="_3286ffa2-f971-4253-81ac-12ae5bd5dd4c">To enable proper caching of responses the server SHOULD provide a
 VARY header field in responses that names the Prefer and Sync-Token header fields
 along with any other that are appropriate.</p>
-<p id="_9b980359-1bac-447e-9454-f1da8ec2f237">Clients should order the preferences as following so that
+<p id="_5d1f447c-64e2-4f82-845c-b748098e13a4">Clients should order the preferences as following so that
 identical responses can be identified:</p>
-<ul id="_d3adac33-cc43-437f-b328-0daba82c700d">
+<ul id="_8d000db9-fef4-40a2-b776-4599218bd896">
   <li>
-    <p id="_a387607a-b468-4d9e-b774-eacfc868b013">subscribe-enhanced-get</p>
+    <p id="_c8c8178c-8484-434d-9044-e998fe65d998">subscribe-enhanced-get</p>
   </li>
   <li>
-    <p id="_f6387193-57d5-4402-992a-bdc4b84151a4">limit</p>
+    <p id="_db0a8836-4e39-4b6d-a2c1-1d255cd1f1f3">limit</p>
   </li>
 </ul></clause>
-<clause id="_examples" obligation="normative"><title>Examples</title><example id="_0f339f8d-8694-4608-89a9-43dbafe931c9"><p id="_00f4f87b-1363-43ae-8749-b791bb74a0c4">This is an example of the initial request and response from a server
+<clause id="_examples" obligation="normative"><title>Examples</title><example id="_e388719a-e0ad-4ebe-84ea-a7a9669217a0"><p id="_3ec4f745-0992-42aa-bb1c-77e86a696b42">This is an example of the initial request and response from a server
 that supports the enhanced GET method. Note the use of the Vary header so a caching proxy can key off the client’s Sync-Token and preference.</p>
-<sourcecode lang="en" id="_a9609322-99a2-470f-9ddf-5e65b5674040">    &gt;&gt; Request &lt;&lt;
+<sourcecode lang="en" id="_8cf4ac56-801b-4bbc-9bfc-6d6e723c8198">    &gt;&gt; Request &lt;&lt;
 
     GET /events.ics HTTP/1.1
     Host: example.com
@@ -193,9 +198,9 @@ that supports the enhanced GET method. Note the use of the Vary header so a cach
     ?  /* full feed */
     END:VCALENDAR</sourcecode>
 </example>
-<example id="_c959773c-5e0d-409e-88b1-5a13aae6e516"><p id="_5e8f36f6-4bee-4fa0-8d3d-61f2019871c0">This is an example of the subsequent request and response when no
+<example id="_9155df0c-1d2e-4d91-9b2f-dda280cf6e93"><p id="_cfbf8d94-fdc2-4cf5-87b4-f1b8b94e1722">This is an example of the subsequent request and response when no
 changes have occurred.</p>
-<sourcecode lang="en" id="_644807b1-12be-4f04-a59c-4da5e0036167">    &gt;&gt; Request &lt;&lt;
+<sourcecode lang="en" id="_9ad5c052-05ec-4fbd-bb29-4e54817318ac">    &gt;&gt; Request &lt;&lt;
 
     GET /events.ics HTTP/1.1
     Host: example.com
@@ -211,9 +216,9 @@ changes have occurred.</p>
     Preference-Applied: subscribe-enhanced-get
     Vary: Prefer, Sync-Token</sourcecode>
 </example>
-<example id="_9f55ac33-b3e5-45e2-81c0-520b14d2780f"><p id="_0e25466b-539e-408c-b653-7e9f5814bea9">This is an example of the subsequent request and response for
+<example id="_f7043ea7-893e-4a7b-b57e-b4fd3e3885d6"><p id="_4bc96293-b4b3-4b17-ac69-71465428f8ae">This is an example of the subsequent request and response for
 an old or invalid token.</p>
-<sourcecode lang="en" id="_6a0b49f4-311f-462d-87d8-142661857785">&gt;&gt; Request &lt;&lt;
+<sourcecode lang="en" id="_fad8485b-50e0-4a46-8154-b245f8fff9a1">&gt;&gt; Request &lt;&lt;
 
     GET /events.ics HTTP/1.1
     Host: example.com
@@ -227,9 +232,9 @@ an old or invalid token.</p>
     Content-Length: xxxx
     Preference-Applied: subscribe-enhanced-get</sourcecode>
 </example>
-<example id="_0a25f1ac-55bc-4e0d-8d19-92196b9bbd9c"><p id="_91cddb85-017b-441b-8bea-990070d5c0e1">This is an example of the subsequent request and response when
+<example id="_3e6af681-0336-41a7-9355-13750775a656"><p id="_00d6b766-2ba1-4b9f-82a1-6ec84dedad34">This is an example of the subsequent request and response when
 changes have occurred.</p>
-<sourcecode lang="en" id="_75112875-fde4-464d-94ae-9e4dbbc1c258">&gt;&gt; Request &lt;&lt;
+<sourcecode lang="en" id="_4f2ff083-bed7-4015-ae92-5342d2f137a5">&gt;&gt; Request &lt;&lt;
 
     GET /events.ics HTTP/1.1
     Host: example.com
@@ -250,35 +255,35 @@ changes have occurred.</p>
     ...  deleted events have STATUS:DELETED
     END:VCALENDAR</sourcecode>
 </example></clause></clause>
-<clause id="_changes_to_the_icalendar_specifications" obligation="normative"><title>Changes to the iCalendar specifications</title><p id="_ed6ecfa7-f841-400b-852f-db2b9486d9b1">This specification updates <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/> to add the value DELETED to the
+<clause id="_changes_to_the_icalendar_specifications" obligation="normative"><title>Changes to the iCalendar specifications</title><p id="_0df9d311-d958-41e0-b305-2d2320a641f6">This specification updates <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/> to add the value DELETED to the
 STATUS property.</p>
-<clause id="_redefined_status_property" obligation="normative"><title>Redefined Status property</title><dl id="_3da0e362-523b-477d-8a29-ceac2c83aabd">
+<clause id="_redefined_status_property" obligation="normative"><title>Redefined Status property</title><dl id="_1225ea1d-8499-4263-ad30-db3fe71f204d">
   <dt>Property name</dt>
   <dd>
-    <p id="_760c2e6b-c7ce-47fe-963f-48e6389c7217">STATUS</p>
+    <p id="_1494c039-14b7-4a06-99ef-a8e32891f2e6">STATUS</p>
   </dd>
   <dt>Purpose</dt>
   <dd>
-    <p id="_1995d7bf-7870-4db5-9e98-7cd6fb7e39db">This property defines the overall status or confirmation
+    <p id="_fc4451b6-b231-4f00-a94d-824514040bde">This property defines the overall status or confirmation
 for the calendar component.</p>
   </dd>
   <dt>Value Type</dt>
   <dd>
-    <p id="_ad90cdcb-6585-4481-bf2e-12febfe7d112">TEXT</p>
+    <p id="_eb34e4c7-ab31-4fb8-9816-9e6cc65579c0">TEXT</p>
   </dd>
   <dt>Property Parameters</dt>
   <dd>
-    <p id="_302d9373-60d8-4fda-9897-9e8b2fd90d0a">IANA and non-standard property parameters can
+    <p id="_09baf800-4bc6-44a4-9b8e-271bbd8e7686">IANA and non-standard property parameters can
 be specified on this property.</p>
   </dd>
   <dt>Conformance</dt>
   <dd>
-    <p id="_9616924f-794c-4403-b6fc-05bf226d0a0e">This property can be specified once in “VEVENT”,
+    <p id="_8c0169f6-e2b3-4ecb-9df7-86c671dc799c">This property can be specified once in “VEVENT”,
 “VTODO”, or “VJOURNAL” calendar components.</p>
   </dd>
   <dt>Description</dt>
   <dd>
-    <p id="_2a4fbda3-ede7-4f76-9287-d80e4922a5c4">In a group-scheduled calendar component, the property
+    <p id="_5450c6fb-4120-488f-b128-bdffb194d197">In a group-scheduled calendar component, the property
 is used by the “Organizer” to provide a confirmation of the event
 to the “Attendees”.  For example in a “VEVENT” calendar component,
 the “Organizer” can indicate that a meeting is tentative,
@@ -292,8 +297,8 @@ cancelled or removed.</p>
   <dt>Format Definition</dt>
   <dd/>
 </dl>
-<p id="_a574d002-d950-4184-9c5d-e5ce8560b6ac">This property is defined by the following notation:</p>
-<sourcecode lang="abnf" id="_eafdb21f-0ea8-443f-8c85-b42264a8ee0f">status          = "STATUS" statparam ":" statvalue CRLF
+<p id="_d61a4c26-b753-46a0-95ac-97810822e3f4">This property is defined by the following notation:</p>
+<sourcecode lang="abnf" id="_4c8b1c31-c248-4ff4-921d-5ff73e053899">status          = "STATUS" statparam ":" statvalue CRLF
 
 statparam       = *(";" other-param)
 
@@ -320,122 +325,122 @@ statvalue-jour  = "DRAFT"        ;Indicates journal is draft.
                 / "DELETED"      ;Indicates journal was deleted.
 ;Status values for "VJOURNAL".</sourcecode>
 
-<dl id="_a58215fc-2ab8-4912-9051-6ed660eca9de">
+<dl id="_05f45a78-d464-4a0d-a5b5-0ecb57aae095">
   <dt>Example</dt>
   <dd/>
 </dl>
-<example id="_713985ce-1f2f-4c48-b7e2-37e651e7a8de"><p id="_4400a7d0-e94b-4ab9-8e9e-f77c005832fc">The following is an example of this property for a “VEVENT”
+<example id="_e3f02123-5c68-4578-9f8d-0c59dfb2cde2"><p id="_80fc5c5c-8cec-4703-b779-a764ed9fa354">The following is an example of this property for a “VEVENT”
 calendar component:</p>
-<sourcecode lang="en" id="_443b54d2-2106-4181-bc34-947b45b46a56">STATUS:TENTATIVE</sourcecode>
+<sourcecode lang="en" id="_c9355043-61ae-422c-8285-2186c8fb2945">STATUS:TENTATIVE</sourcecode>
 </example>
-<example id="_c881363d-4939-41bd-ab6a-678ca4157ced"><p id="_628bd739-0ea7-4638-8ea4-75d50839c983">The following is an example of this property for a “VTODO” calendar
+<example id="_1add2074-da40-4d90-b82e-128b79e58099"><p id="_bdd574e6-d84b-4ef1-bd8e-4bf188b82e01">The following is an example of this property for a “VTODO” calendar
 component:</p>
-<sourcecode lang="en" id="_d34673ff-b5d4-4869-a1f1-06faa792fbc7">STATUS:NEEDS-ACTION</sourcecode>
+<sourcecode lang="en" id="_5b4a0cbc-dc68-4d38-97cf-2faf94089c3d">STATUS:NEEDS-ACTION</sourcecode>
 </example>
-<example id="_42533c18-18a1-4582-a1ae-723e1ddeffe3"><p id="_cfbaa0b4-53b0-42e6-a422-75704df37056">The following is an example of this property for a “VJOURNAL”
+<example id="_abcc2bb0-0ff7-498a-95d1-a15a0b47abf7"><p id="_9e94882a-52a8-447b-8a37-66785f68c99d">The following is an example of this property for a “VJOURNAL”
 calendar component:</p>
-<sourcecode lang="en" id="_178847cf-f4f6-42a2-9e2f-2b3fd615b07c">STATUS:DRAFT</sourcecode>
+<sourcecode lang="en" id="_fc09d12c-250b-4ccd-89c6-779472ceabfa">STATUS:DRAFT</sourcecode>
 </example></clause></clause>
-<clause id="_header_field_sync_token" obligation="normative"><title>Header Field: Sync-Token</title><p id="_910b4edd-167d-4376-bd8c-130887f3e1c5">This specification defines a new header field Sync-Token for use by
+<clause id="_header_field_sync_token" obligation="normative"><title>Header Field: Sync-Token</title><p id="_bd96a038-f392-4e10-b208-2e6095a10b03">This specification defines a new header field Sync-Token for use by
 the enhanced GET method.</p>
-<sourcecode lang="en" id="_8aa7860f-562c-4c5b-8fa6-f3cac077b5b6">    Accept = DQUOTE URI DQUOTE</sourcecode>
+<sourcecode lang="en" id="_2eeb9ef7-9698-4383-acd7-f4361b952aae">    Accept = DQUOTE URI DQUOTE</sourcecode>
 
-<p id="_82b5acec-fe6d-4203-9fd3-27206d9a236d">The value MUST be a URI. This will generally be a data URI
+<p id="_9ee70557-3ec1-4373-925f-68c8f23f62db">The value MUST be a URI. This will generally be a data URI
 representing an opaque token. Client MUST not attempt to interpret
 the data URI value.</p>
-<example id="_ca9216bc-483d-48e1-a679-26b8c3c5af66"><p id="_bd50beb7-eb6e-4a9c-b7b7-902a3a8e5e2b">This is an example of the Sync-Token header field:</p>
-<sourcecode lang="en" id="_eb7ee8a7-4a92-4b97-ba84-251553be8a86">    Sync-Token: "data:,1234567"</sourcecode>
+<example id="_9b032326-96c6-4500-929b-00d31a721c42"><p id="_32ea2b7b-bce7-4157-a4c8-fb82658d5875">This is an example of the Sync-Token header field:</p>
+<sourcecode lang="en" id="_2bc3f3de-5b77-421e-a6d0-4c56fbdf9064">    Sync-Token: "data:,1234567"</sourcecode>
 </example></clause>
-<clause id="_new_prefer_header_field_preferences" obligation="normative"><title>New Prefer header field preferences</title><clause id="preference-subscribe" obligation="normative"><title>Preference subscribe-enhanced-get</title><p id="_9cfda6a3-3e14-480c-a099-5aab6b4d892d">This indicates that the client expects the server to handle the GET
+<clause id="_new_prefer_header_field_preferences" obligation="normative"><title>New Prefer header field preferences</title><clause id="preference-subscribe" obligation="normative"><title>Preference subscribe-enhanced-get</title><p id="_c18ee85f-f0a1-429d-bba8-ab02fc9be88d">This indicates that the client expects the server to handle the GET
 method according to the specifications for enhanced get.</p>
-<sourcecode lang="en" id="_1846cf7e-be4a-42c0-9175-a21843679b48">    pref-subscribe-enhanced-get = "subscribe-enhanced-get"</sourcecode>
+<sourcecode lang="en" id="_ee03ce0d-a308-42f8-8859-bbd7a8083540">    pref-subscribe-enhanced-get = "subscribe-enhanced-get"</sourcecode>
 </clause>
-<clause id="preference-limit" obligation="normative"><title>Preference limit</title><p id="_71837f51-f667-43f0-997f-c523e9520b27">This preference parameter provides a limit on the number of components returned for enhanced get.</p>
-<sourcecode lang="en" id="_68297042-d376-4d17-b27c-0db8bbfeca92">    pref-limit = "limit" BWS "=" BWS 1*DIGIT</sourcecode>
+<clause id="preference-limit" obligation="normative"><title>Preference limit</title><p id="_4c7cd819-dc4b-4aae-bb11-87809675c354">This preference parameter provides a limit on the number of components returned for enhanced get.</p>
+<sourcecode lang="en" id="_2ec056d3-6c2d-4934-820f-3611fc180745">    pref-limit = "limit" BWS "=" BWS 1*DIGIT</sourcecode>
 </clause></clause>
 <clause id="_link_relations" obligation="normative"><title>Link relations</title><clause id="_general_2" obligation="normative">
   <title>General</title>
-  <p id="_eb6ff398-d9aa-4fbd-8a44-2ec39f7b0443">This clause defines a number of new link relations required to
+  <p id="_0dc84ce3-c51c-481d-b419-83590a0e4aca">This clause defines a number of new link relations required to
 facilitate subscription upgrades.</p>
 </clause>
-<clause id="la-subscribe-caldav" obligation="normative"><title>subscribe-caldav</title><p id="_6227566b-d737-4c27-94e5-34fe86cc7e44">This specifies an access point which is a full implementation of
+<clause id="la-subscribe-caldav" obligation="normative"><title>subscribe-caldav</title><p id="_701f30ce-0a6c-4894-bd98-0813d32fe2d5">This specifies an access point which is a full implementation of
 caldav but requires no authentication.  The end point allows the full
 range of reports as defined by the CalDAV specification.</p>
-<p id="_b47d9891-e038-4158-a7bc-0b821ef0c33b">The client MUST follow the specification to determine exactly what
+<p id="_4818c2d8-dace-44d6-a173-3b0934622e41">The client MUST follow the specification to determine exactly what
 operations are allowed on the access point - for example to determine
 if sync-report is supported.</p>
-<p id="_633bbf2c-8e31-4ae4-92d1-de836366db2a">The URL MAY include some form of token to allow write access to the
+<p id="_4528e5bf-17d8-490b-8344-e0389f4d461a">The URL MAY include some form of token to allow write access to the
 targeted collection.  The client must check it’s permissions to
 determine whether or not it has been granted write access.</p></clause>
-<clause id="la-subscribe-caldav-auth" obligation="normative"><title>subscribe-caldav-auth</title><p id="_692f1bab-14b9-46c8-9131-3c0fe4873c0a">This specifies an access point which is a full implementation of
+<clause id="la-subscribe-caldav-auth" obligation="normative"><title>subscribe-caldav-auth</title><p id="_3017f89c-97db-42d1-a7e4-f99963b599d0">This specifies an access point which is a full implementation of
 caldav and requires authentication.  This may allow read-write access
 to the resource.</p>
-<p id="_a0713c58-3728-4702-bb54-7b53f731e85e">The client MUST follow the specification to determine exactly what
+<p id="_592aab19-b5e7-46d5-8802-8241b8c9f458">The client MUST follow the specification to determine exactly what
 operations are allowed on the access point — for example to determine
 if sync-report is supported.</p></clause>
-<clause id="la-subscribe-webdav-sync" obligation="normative"><title>subscribe-webdav-sync</title><p id="_7e17c487-83eb-419e-90b7-e2f0c413cd12">This specifies an access point which supports only webdav sync.</p>
-<p id="_7739c000-b75f-4b05-874f-3820d0e228f3">This allows the client to issue a sync-report on the resource to
+<clause id="la-subscribe-webdav-sync" obligation="normative"><title>subscribe-webdav-sync</title><p id="_4d7696fc-b7a4-4db5-a58d-fe4c5849a880">This specifies an access point which supports only webdav sync.</p>
+<p id="_86f98ac4-eec6-4a95-87d2-63d97153c124">This allows the client to issue a sync-report on the resource to
 obtain updates.</p>
-<p id="_12bacea4-275a-490c-bf0e-e7bdb8a54b3a">The client MUST follow that specification.</p></clause>
-<clause id="la-subscribe-enhanced-get" obligation="normative"><title>subscribe-enhanced-get</title><p id="_e22d3454-05de-4470-9992-d57bc405b670">This specifies an access point which supports something new.</p>
-<p id="_5cddc424-8502-424c-b98e-71775fe06bfe">The client MUST follow that specification.</p></clause></clause>
-<clause id="security" obligation="normative"><title>Security Considerations</title><p id="_50a0e034-6447-49e8-8bfe-484717690a93">Applications using these properties need to be aware of the risks
+<p id="_0734c33b-38dd-4429-a962-6c71becd59d9">The client MUST follow that specification.</p></clause>
+<clause id="la-subscribe-enhanced-get" obligation="normative"><title>subscribe-enhanced-get</title><p id="_19cd2cd5-3671-4e11-97c0-26e5c7e45995">This specifies an access point which supports something new.</p>
+<p id="_d73fcc20-27e8-4733-9a50-63791c6b4fc7">The client MUST follow that specification.</p></clause></clause>
+<clause id="security" obligation="normative"><title>Security Considerations</title><p id="_9ce8a22c-bfc7-4e43-8613-b3458479e525">Applications using these properties need to be aware of the risks
 entailed in using the URIs provided as values.  See <eref type="inline" bibitemid="RFC3986" citeas="RFC 3986"/> for a
 discussion of the security considerations relating to URIs.
 == Privacy Considerations</p>
-<p id="_aa95f328-680d-4ce0-b31d-f31afc95eadd">Properties with a “URI” value type can expose their users to privacy
+<p id="_2ff81a84-ae7b-4f92-a029-ca37355a8a0a">Properties with a “URI” value type can expose their users to privacy
 leaks as any network access of the URI data can be tracked.  Clients
 SHOULD NOT automatically download data referenced by the URI without
 explicit instruction from users.  This specification does not
 introduce any additional privacy concerns beyond those described in
 <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"/>.</p></clause>
-<clause id="iana" obligation="normative"><title>IANA Considerations</title><clause id="_sync_token_http_header_field_registration" obligation="normative"><title>Sync-Token HTTP Header Field Registration</title><p id="_37353ecf-e5e1-4f45-8216-08c55f783c00">This specification updates the “Message Headers” registry entry for “Sync-Token” in <xref target="RFC3864"/> to refer to this document.</p>
-<figure id="_03577226-9954-40e5-b3ee-45ff2e02ee59">
-  <pre id="_94ff8b76-00eb-40f7-8f30-2e4bfd97b32b">Header Field Name: Sync-Token
+<clause id="iana" obligation="normative"><title>IANA Considerations</title><clause id="_sync_token_http_header_field_registration" obligation="normative"><title>Sync-Token HTTP Header Field Registration</title><p id="_c5f64168-5d49-4d82-a0c0-88a4ebb40956">This specification updates the “Message Headers” registry entry for “Sync-Token” in <xref target="RFC3864"/> to refer to this document.</p>
+<figure id="_eea185d4-3ff0-4b7e-b370-269cb4b6dadd">
+  <pre id="_251d55f9-69ad-4de7-a3e2-816798a174f4">Header Field Name: Sync-Token
 Protocol: http
 Status: standard
 Reference: &lt;this-document&gt;</pre>
 </figure></clause>
-<clause id="_preference_registrations" obligation="normative"><title>Preference Registrations</title><p id="_3304f180-dda6-4e7a-b5b6-eb687d8618a0">The following preferences have been added to the HTTP Preferences
+<clause id="_preference_registrations" obligation="normative"><title>Preference Registrations</title><p id="_e9acd493-8719-494a-8ba7-28f7ee43c5b8">The following preferences have been added to the HTTP Preferences
 Registry defined in <eref type="inline" bibitemid="RFC7240" citeas="RFC 7240"/></p>
-<dl id="_500cfc33-9f92-432d-a214-6af02d454a73">
+<dl id="_27ce5ca9-6e44-498f-aa19-32bc0f82d5f1">
   <dt>Preference</dt>
   <dd>
-    <p id="_b5240506-92db-4515-89d8-d1b2db053fc1">subscribe-enhanced-get</p>
+    <p id="_9866edff-9afa-479d-8114-0802d3ba0a0a">subscribe-enhanced-get</p>
   </dd>
   <dt>Value</dt>
   <dd>
-    <p id="_b550ff4e-03ca-4929-ad0d-1d0df8895655">None.</p>
+    <p id="_26a3e546-7222-473e-8467-7dd5a636468b">None.</p>
   </dd>
   <dt>Description</dt>
   <dd>
-    <p id="_15d00ce8-997f-435f-b221-f6474cb65106">Marks the interaction as enhanced get and provides the
+    <p id="_75949f08-eb1c-47e3-8b84-05ed18902863">Marks the interaction as enhanced get and provides the
 optional sync-token and page size.</p>
   </dd>
   <dt>Reference</dt>
   <dd>
-    <p id="_07f229de-238a-44eb-b2cf-44d8602dff09">this document</p>
+    <p id="_d7f27168-f774-471b-bdda-107465da6e80">this document</p>
   </dd>
   <dt>Preference</dt>
   <dd>
-    <p id="_1629fcb6-4c04-412a-89b0-c1d6cc3fdb49">limit</p>
+    <p id="_2fb78e86-a912-40ae-80e7-2f37404a8c7c">limit</p>
   </dd>
   <dt>Value</dt>
   <dd>
-    <p id="_d97d9090-50b2-4421-a8b0-c6530a0e75d4">An integer page size.</p>
+    <p id="_851779f0-b4dd-40b4-8b6b-2133d59ff6f6">An integer page size.</p>
   </dd>
   <dt>Description</dt>
   <dd>
-    <p id="_50d13006-27e9-4ee6-9cdc-2f6f1663cc01">Provide a limit on the number of components in the response.</p>
+    <p id="_e15396c1-3780-4792-b7df-12aee7ad3dd2">Provide a limit on the number of components in the response.</p>
   </dd>
   <dt>Reference</dt>
   <dd>
-    <p id="_be26035f-399d-4bbd-b75c-24ad9b8cdce6">this document</p>
+    <p id="_58994377-43bb-433f-a27d-48f81354426f">this document</p>
   </dd>
 </dl></clause>
-<clause id="_link_relation_registrations" obligation="normative"><title>Link Relation Registrations</title><p id="_b6755495-8f18-433c-977a-690f633c08fe">This document defines the following new iCalendar properties to be
+<clause id="_link_relation_registrations" obligation="normative"><title>Link Relation Registrations</title><p id="_640134a1-d2da-478e-8eda-05c0907ea702">This document defines the following new iCalendar properties to be
 added to the registry defined in <eref type="inline" bibitemid="RFC5545" citeas="RFC 5545"><locality type="section"><referenceFrom>8.2.3</referenceFrom></locality></eref>:</p>
-<table id="_498a029f-a7fe-44f9-9e7c-60dcef62459a">
+<table id="_49dc07b0-592b-4244-958a-0f8e39e43e81">
   <thead>
     <tr>
       <th align="left">Relation Name</th>
@@ -446,119 +451,119 @@ added to the registry defined in <eref type="inline" bibitemid="RFC5545" citeas=
   <tbody>
     <tr>
       <td align="left">
-        <p id="_1efa8804-92ed-4245-8a46-f43356a8dcb7">subscribe-caldav</p>
+        <p id="_107a91c7-40a9-4103-8078-32f323bd5572">subscribe-caldav</p>
       </td>
       <td align="left">
-        <p id="_d64f3550-04ce-4739-a706-89dbed0d5e4f">Current</p>
+        <p id="_8633bf97-645b-489d-a8ec-4e720588e3df">Current</p>
       </td>
       <td align="left">
-        <p id="_e97b1842-b364-4417-9d95-a1bf11e63161">
+        <p id="_5247ec92-d84e-48c7-aca9-80693eb55c3e">
   <xref target="la-subscribe-caldav"/>
 </p>
       </td>
     </tr>
     <tr>
       <td align="left">
-        <p id="_2d18a357-20f4-4f45-9a67-8c9c91d415ca">subscribe-caldav_auth</p>
+        <p id="_d60c3f3a-33e2-4e1a-ae04-9dc370049cb5">subscribe-caldav_auth</p>
       </td>
       <td align="left">
-        <p id="_eeaf0dee-3c25-4ea2-a194-9a3b60fe0f1b">Current</p>
+        <p id="_4e1c1bd2-b250-4dd1-a375-693375b0cbdf">Current</p>
       </td>
       <td align="left">
-        <p id="_cb10fb6a-5726-4c54-a3ce-017243c034a2">
+        <p id="_fb84dd81-6e83-499a-9d22-7fb51e8e85f7">
   <xref target="la-subscribe-caldav-auth"/>
 </p>
       </td>
     </tr>
     <tr>
       <td align="left">
-        <p id="_c4a920c6-6a94-4bad-b05b-2a0ce1fdf212">subscribe-webdav-sync</p>
+        <p id="_3a9a4111-7c61-4bc8-a99d-010bbe9d3da1">subscribe-webdav-sync</p>
       </td>
       <td align="left">
-        <p id="_dc3d66d1-ceb1-4dd2-a2a1-f6eb80978ae0">Current</p>
+        <p id="_f32abb33-8812-410f-a2c1-a334778beedc">Current</p>
       </td>
       <td align="left">
-        <p id="_6647f76c-5992-4882-a5ad-dba48f4ef06e">
+        <p id="_20afffa9-e12b-4547-a2e7-5715f421c02d">
   <xref target="la-subscribe-webdav-sync"/>
 </p>
       </td>
     </tr>
     <tr>
       <td align="left">
-        <p id="_02c79b70-203e-4f6a-892f-331d872dc63b">subscribe-enhanced_get</p>
+        <p id="_e88ff0d0-80b6-4107-9eda-714205625d0e">subscribe-enhanced_get</p>
       </td>
       <td align="left">
-        <p id="_672e9681-b91d-4506-9df5-b35b40eb05de">Current</p>
+        <p id="_76e4e0bc-f479-4771-95e3-5bc4d71fb733">Current</p>
       </td>
       <td align="left">
-        <p id="_1342a2cb-7179-41a4-b0b4-d04c6a0589f6">
+        <p id="_75cf4972-4663-4a7f-910b-4e4b43e17d20">
   <xref target="la-subscribe-enhanced-get"/>
 </p>
       </td>
     </tr>
   </tbody>
 </table></clause></clause>
-<clause id="acknowledgements" obligation="normative"><title>Acknowledgements</title><p id="_00eb1da2-9bac-4d56-8afc-aa4fe16952a3">The author would also like to thank the members of the CalConnect
+<clause id="acknowledgements" obligation="normative"><title>Acknowledgements</title><p id="_e9d248a9-106b-4cef-92cb-fc3d4d819efa">The author would also like to thank the members of the CalConnect
 Calendar Sharing technical committee and the following individuals
 for contributing their ideas and support:</p>
-<p id="_e2d1c49f-b983-48ba-9424-d009234154d6">Marten Gajda, Ken Murchison, Garry Shutler</p>
-<p id="_a2f7ae0d-534e-4925-977d-0ec98802c185">The authors would also like to thank CalConnect, the Calendaring and
+<p id="_d81aa408-5107-49d6-9cc1-78a9e1bb4f23">Marten Gajda, Ken Murchison, Garry Shutler</p>
+<p id="_1cdad9bf-6f11-4259-ac48-f1e44b78351b">The authors would also like to thank CalConnect, the Calendaring and
 Scheduling Consortium, for advice with this specification.</p></clause>
 
 
 </sections><annex id="appendix-a" obligation="informative">
   <title>Open issues</title>
-  <dl id="_e6c868a5-e828-4b54-943a-0e07d43fe31e">
+  <dl id="_cce140fd-a18b-4fb4-8ef2-f4fa15481b6c">
   <dt>Vary</dt>
   <dd>
-    <p id="_6f920ba0-1bd2-4c71-9905-95f27016ac82">Ensure we get that right.</p>
+    <p id="_57a5aa77-322e-4fa2-8f21-b2513d7673d9">Ensure we get that right.</p>
   </dd>
 </dl>
-</annex><annex id="appendix-b" obligation="informative"><title>Change log</title><p id="_1db913ac-0419-4514-abfe-b7cfec93ded8">calext00 2019-06-05 MD</p>
-<ul id="_35c573d5-6920-478f-8a03-f6e9bf3aaba9">
+</annex><annex id="appendix-b" obligation="informative"><title>Change log</title><p id="_945c6d2f-eb45-4f97-b8f9-3d88967910fb">calext00 2019-06-05 MD</p>
+<ul id="_016e6743-b0d0-47f4-9791-d60ef6b499d5">
   <li>
-    <p id="_ae797046-4710-4c1b-af27-e3488cf0c039">First calext version</p>
+    <p id="_f9b9db49-981f-417c-8922-bc9860db925d">First calext version</p>
   </li>
   <li>
-    <p id="_584091a4-99f8-4608-a887-b4378a818a6d">Use Sync-Token header rather than parameter</p>
-  </li>
-</ul>
-<p id="_b13b0597-4654-42c8-9de4-dfaa34a71236">v04 2019-03-07 MD</p>
-<ul id="_b0e51031-0c5b-4e4e-a3f6-985acd1f0696">
-  <li>
-    <p id="_0d09bb9a-47c9-44be-bb5a-c665dc0e2e61">Reference to RFC 6538 - WebDAV sync and RFC 7240 Prefer</p>
-  </li>
-  <li>
-    <p id="_1973021b-c48d-4880-ab65-1be7200313b7">Go back to HEAD</p>
-  </li>
-  <li>
-    <p id="_b5060a1e-f312-43a3-acc3-6f610a470321">New Preference and parameters.</p>
-  </li>
-  <li>
-    <p id="_c4938137-04b7-4085-b705-f6926585bcc8">Examples</p>
-  </li>
-  <li>
-    <p id="_9b19ebde-cf3e-4873-b3da-2e318d152d6f">More text for extended get.  Talk about deletions.</p>
+    <p id="_b67ac274-4cfa-43d6-97f1-7e80046fe2b6">Use Sync-Token header rather than parameter</p>
   </li>
 </ul>
-<p id="_3bc4ccd5-1a59-4499-af57-909c68b414b2">v01 2017-02-17 MD</p>
-<ul id="_cb32d8b5-7a75-4c71-9d02-24b2aaf6e4f0">
+<p id="_84a6ac1c-454a-47a2-b387-0ca02abd5e25">v04 2019-03-07 MD</p>
+<ul id="_5b9bde99-e622-4f39-9460-d8c46bc8d250">
   <li>
-    <p id="_9ceb26e2-8493-4f6e-9995-1d8666b581f1">Add text about OPTIONS</p>
+    <p id="_74a00ce4-5f14-4f0d-9e6a-59517d25c157">Reference to RFC 6538 - WebDAV sync and RFC 7240 Prefer</p>
   </li>
   <li>
-    <p id="_888e7912-3f48-46cf-8e8f-d467d131d126">Add text abut read/write CalDAV</p>
+    <p id="_b9514f6e-b784-45a2-8741-5bc04d481e8c">Go back to HEAD</p>
+  </li>
+  <li>
+    <p id="_f63cbe0a-00ee-41d0-94da-a9305ea6f58c">New Preference and parameters.</p>
+  </li>
+  <li>
+    <p id="_bdbf3949-11bb-4ae7-8e5c-c8bffa6d2abf">Examples</p>
+  </li>
+  <li>
+    <p id="_16457b65-e94b-4d5c-a945-38c9296dd6ec">More text for extended get.  Talk about deletions.</p>
   </li>
 </ul>
-<p id="_25a865f3-f0ef-4ee9-84d4-72bb3c44d57e">v00 2017-02-15 MD</p>
-<ul id="_509ceee7-612c-48c2-b698-ffc1e93cda44">
+<p id="_959b38e9-535e-45fd-b17a-952ae1b57ed0">v01 2017-02-17 MD</p>
+<ul id="_f67d2403-2841-4427-aedd-bf28fe5f5e71">
   <li>
-    <p id="_a5559237-ed73-47e2-bd9f-2aad4a7a0976">First pass</p>
+    <p id="_89d56fde-0106-4b03-bf60-0777e596276b">Add text about OPTIONS</p>
+  </li>
+  <li>
+    <p id="_51dfbfa9-eebf-4acc-9ab9-282e16b4cdad">Add text abut read/write CalDAV</p>
+  </li>
+</ul>
+<p id="_6fb67dd0-a772-4ba5-903b-076ef28850fa">v00 2017-02-15 MD</p>
+<ul id="_e0b6b932-a18e-49c1-b9f3-d2696dad6f79">
+  <li>
+    <p id="_0ffbb070-db0b-437d-b37e-652276b0ae31">First pass</p>
   </li>
 </ul></annex><bibliography><references id="_normative_references" obligation="informative"><title>Normative References</title>
 <bibitem id="RFC2518">
-  <fetched>2019-06-07</fetched>
-  <title format="plain" language="en" script="Latn">HTTP Extensions for Distributed Authoring — WEBDAV</title>
+  <fetched>2019-06-20</fetched>
+  <title format="text/plain" language="en" script="Latn">HTTP Extensions for Distributed Authoring — WEBDAV</title>
   <uri type="src">https://www.rfc-editor.org/info/rfc2518</uri>
   <docidentifier type="IETF">RFC 2518</docidentifier>
   <docidentifier type="DOI">10.17487/RFC2518</docidentifier>
@@ -637,15 +642,16 @@ Scheduling Consortium, for advice with this specification.</p></clause>
   </contributor>
   <language>en</language>
   <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">This document specifies a set of methods, headers, and content-types ancillary to HTTP/1.1 for the management of resource properties, creation and management of resource collections, namespace manipulation, and resource locking (collision avoidance).  [STANDARDS-TRACK]</abstract>
   <series type="main">
-    <title format="plain" language="en" script="Latn">RFC</title>
+    <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>2518</number>
   </series>
 </bibitem>
 
 <bibitem id="RFC3986">
-  <fetched>2019-06-07</fetched>
-  <title format="plain" language="en" script="Latn">Uniform Resource Identifier (URI): Generic Syntax</title>
+  <fetched>2019-06-20</fetched>
+  <title format="text/plain" language="en" script="Latn">Uniform Resource Identifier (URI): Generic Syntax</title>
   <uri type="src">https://www.rfc-editor.org/info/rfc3986</uri>
   <docidentifier type="IETF">RFC 3986</docidentifier>
   <docidentifier type="DOI">10.17487/RFC3986</docidentifier>
@@ -696,19 +702,20 @@ Scheduling Consortium, for advice with this specification.</p></clause>
   </contributor>
   <language>en</language>
   <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">A Uniform Resource Identifier (URI) is a compact sequence of characters that identifies an abstract or physical resource.  This specification defines the generic URI syntax and a process for resolving URI references that might be in relative form, along with guidelines and security considerations for the use of URIs on the Internet.  The URI syntax defines a grammar that is a superset of all valid URIs, allowing an implementation to parse the common components of a URI reference without knowing the scheme-specific requirements of every possible identifier.  This specification does not define a generative grammar for URIs; that task is performed by the individual specifications of each URI scheme.  [STANDARDS-TRACK]</abstract>
   <series type="main">
-    <title format="plain" language="en" script="Latn">STD</title>
+    <title format="text/plain" language="en" script="Latn">STD</title>
     <number>66</number>
   </series>
   <series type="main">
-    <title format="plain" language="en" script="Latn">RFC</title>
+    <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>3986</number>
   </series>
 </bibitem>
 
 <bibitem id="RFC4791">
-  <fetched>2019-06-07</fetched>
-  <title format="plain" language="en" script="Latn">Calendaring Extensions to WebDAV (CalDAV)</title>
+  <fetched>2019-06-20</fetched>
+  <title format="text/plain" language="en" script="Latn">Calendaring Extensions to WebDAV (CalDAV)</title>
   <uri type="src">https://www.rfc-editor.org/info/rfc4791</uri>
   <docidentifier type="IETF">RFC 4791</docidentifier>
   <docidentifier type="DOI">10.17487/RFC4791</docidentifier>
@@ -759,15 +766,16 @@ Scheduling Consortium, for advice with this specification.</p></clause>
   </contributor>
   <language>en</language>
   <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">This document defines extensions to the Web Distributed Authoring and Versioning (WebDAV) protocol to specify a standard way of accessing, managing, and sharing calendaring and scheduling information based on the iCalendar format.  This document defines the “calendar-access” feature of CalDAV.  [STANDARDS-TRACK]</abstract>
   <series type="main">
-    <title format="plain" language="en" script="Latn">RFC</title>
+    <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>4791</number>
   </series>
 </bibitem>
 
 <bibitem id="RFC5545">
-  <fetched>2019-06-07</fetched>
-  <title format="plain" language="en" script="Latn">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
+  <fetched>2019-06-20</fetched>
+  <title format="text/plain" language="en" script="Latn">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
   <uri type="src">https://www.rfc-editor.org/info/rfc5545</uri>
   <docidentifier type="IETF">RFC 5545</docidentifier>
   <docidentifier type="DOI">10.17487/RFC5545</docidentifier>
@@ -790,15 +798,16 @@ Scheduling Consortium, for advice with this specification.</p></clause>
   </contributor>
   <language>en</language>
   <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">This document defines the iCalendar data format for representing and exchanging calendaring and scheduling information such as events, to-dos, journal entries, and free/busy information, independent of any particular calendar service or protocol. [STANDARDS-TRACK]</abstract>
   <series type="main">
-    <title format="plain" language="en" script="Latn">RFC</title>
+    <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>5545</number>
   </series>
 </bibitem>
 
 <bibitem id="RFC5546">
-  <fetched>2019-06-07</fetched>
-  <title format="plain" language="en" script="Latn">iCalendar Transport-Independent Interoperability Protocol (iTIP)</title>
+  <fetched>2019-06-20</fetched>
+  <title format="text/plain" language="en" script="Latn">iCalendar Transport-Independent Interoperability Protocol (iTIP)</title>
   <uri type="src">https://www.rfc-editor.org/info/rfc5546</uri>
   <docidentifier type="IETF">RFC 5546</docidentifier>
   <docidentifier type="DOI">10.17487/RFC5546</docidentifier>
@@ -821,15 +830,16 @@ Scheduling Consortium, for advice with this specification.</p></clause>
   </contributor>
   <language>en</language>
   <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">This document specifies a protocol that uses the iCalendar object specification to provide scheduling interoperability between different calendaring systems.  This is done without reference to a specific transport protocol so as to allow multiple methods of communication between systems.  Subsequent documents will define profiles of this protocol that use specific, interoperable methods of communication between systems.The iCalendar Transport-Independent Interoperability Protocol (iTIP) complements the iCalendar object specification by adding semantics for group scheduling methods commonly available in current calendaring systems.  These scheduling methods permit two or more calendaring systems to perform transactions such as publishing, scheduling, rescheduling, responding to scheduling requests, negotiating changes, or canceling.  [STANDARDS-TRACK]</abstract>
   <series type="main">
-    <title format="plain" language="en" script="Latn">RFC</title>
+    <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>5546</number>
   </series>
 </bibitem>
 
 <bibitem id="RFC6047">
-  <fetched>2019-06-07</fetched>
-  <title format="plain" language="en" script="Latn">iCalendar Message-Based Interoperability Protocol (iMIP)</title>
+  <fetched>2019-06-20</fetched>
+  <title format="text/plain" language="en" script="Latn">iCalendar Message-Based Interoperability Protocol (iMIP)</title>
   <uri type="src">https://www.rfc-editor.org/info/rfc6047</uri>
   <docidentifier type="IETF">RFC 6047</docidentifier>
   <docidentifier type="DOI">10.17487/RFC6047</docidentifier>
@@ -852,15 +862,16 @@ Scheduling Consortium, for advice with this specification.</p></clause>
   </contributor>
   <language>en</language>
   <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">This document, “iCalendar Message-Based Interoperability Protocol (iMIP)”, specifies a binding from the iCalendar Transport-independent Interoperability Protocol (iTIP) to Internet email-based transports. Calendaring entries defined by the iCalendar Object Model (iCalendar) are wrapped using constructs from RFC 5322 and MIME (RFC 2045, RFC 2046, RFC 2047, and RFC 2049), and then transported over SMTP.  [STANDARDS-TRACK]</abstract>
   <series type="main">
-    <title format="plain" language="en" script="Latn">RFC</title>
+    <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>6047</number>
   </series>
 </bibitem>
 
 <bibitem id="RFC6638">
-  <fetched>2019-06-07</fetched>
-  <title format="plain" language="en" script="Latn">Scheduling Extensions to CalDAV</title>
+  <fetched>2019-06-20</fetched>
+  <title format="text/plain" language="en" script="Latn">Scheduling Extensions to CalDAV</title>
   <uri type="src">https://www.rfc-editor.org/info/rfc6638</uri>
   <docidentifier type="IETF">RFC 6638</docidentifier>
   <docidentifier type="DOI">10.17487/RFC6638</docidentifier>
@@ -897,15 +908,16 @@ Scheduling Consortium, for advice with this specification.</p></clause>
   </contributor>
   <language>en</language>
   <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">This document defines extensions to the Calendaring Extensions to WebDAV (CalDAV) “calendar-access” feature to specify a standard way of performing scheduling operations with iCalendar-based calendar components.  This document defines the “calendar-auto-schedule” feature of CalDAV.  [STANDARDS-TRACK]</abstract>
   <series type="main">
-    <title format="plain" language="en" script="Latn">RFC</title>
+    <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>6638</number>
   </series>
 </bibitem>
 
 <bibitem id="RFC5988">
-  <fetched>2019-06-07</fetched>
-  <title format="plain" language="en" script="Latn">Web Linking</title>
+  <fetched>2019-06-20</fetched>
+  <title format="text/plain" language="en" script="Latn">Web Linking</title>
   <uri type="src">https://www.rfc-editor.org/info/rfc5988</uri>
   <docidentifier type="IETF">RFC 5988</docidentifier>
   <docidentifier type="DOI">10.17487/RFC5988</docidentifier>
@@ -928,15 +940,16 @@ Scheduling Consortium, for advice with this specification.</p></clause>
   </contributor>
   <language>en</language>
   <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">This document specifies relation types for Web links, and defines a registry for them.  It also defines the use of such links in HTTP headers with the Link header field.  [STANDARDS-TRACK]</abstract>
   <series type="main">
-    <title format="plain" language="en" script="Latn">RFC</title>
+    <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>5988</number>
   </series>
 </bibitem>
 
 <bibitem id="RFC7240">
-  <fetched>2019-06-07</fetched>
-  <title format="plain" language="en" script="Latn">Prefer Header for HTTP</title>
+  <fetched>2019-06-20</fetched>
+  <title format="text/plain" language="en" script="Latn">Prefer Header for HTTP</title>
   <uri type="src">https://www.rfc-editor.org/info/rfc7240</uri>
   <docidentifier type="IETF">RFC 7240</docidentifier>
   <docidentifier type="DOI">10.17487/RFC7240</docidentifier>
@@ -959,8 +972,9 @@ Scheduling Consortium, for advice with this specification.</p></clause>
   </contributor>
   <language>en</language>
   <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">This specification defines an HTTP header field that can be used by a client to request that certain behaviors be employed by a server while processing a request.</abstract>
   <series type="main">
-    <title format="plain" language="en" script="Latn">RFC</title>
+    <title format="text/plain" language="en" script="Latn">RFC</title>
     <number>7240</number>
   </series>
 </bibitem> </references><references id="_bibliography" obligation="informative">
