@@ -1,7 +1,7 @@
-<?xml version="1.0"?>
-<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns:epub="http://www.idpf.org/2007/ops">
-  <head><style>
+
+<!DOCTYPE html>
+<html xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
   <!--
 /*
     0 CSS RESET
@@ -181,17 +181,19 @@ main {
     padding: 0 1.5em 0 1.5em;
     overflow: visible; } }
 
-@media screen {
-  div.figure > img {
-    width: 100%;
-    height: auto; } }
+div.figure > img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+  height: auto; }
 
 #toc ul {
   margin: 0;
   padding: 0;
   list-style: none; }
 
-#toc li {
+#toc li a {
   padding: 5px 10px; }
 
 #toc a {
@@ -200,6 +202,7 @@ main {
   display: block; }
 
 #toc a:hover {
+  box-shadow: none;
   color: white; }
 
 #toc .h2 {
@@ -876,19 +879,16 @@ a.anchorjs-link:hover {
     margin-top: 2em; } }
 
 -->
-</style><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Calendaring and scheduling&#x2009;&#x2014;&#x2009;Calendar subscription upgrades</title>
+</style><title>Calendaring and scheduling&#x2009;&#x2014;&#x2009;Calendar subscription upgrades</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--TOC script import-->
 <script type="text/javascript" src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
-<script type="text/javascript">function toclevel() { var i; var text = "";
-  for(i = 1; i <= 2; i++) {
-    if (i > 1) { text += ","; } text += "h" + i + ":not(:empty):not(.TermNum)"; } 
-  return text;}
+<script type="text/javascript">function toclevel() { return "h1:not(:empty):not(.TermNum):not(.noTOC),h2:not(:empty):not(.TermNum):not(.noTOC)";}
 </script>
 
 <!--Google fonts-->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
 
 <!--Font awesome import for the link icon-->
@@ -1013,7 +1013,7 @@ a.anchorjs-link:hover {
     <br />
     <div class="prefatory-section"><nav>
   <h1 id="content">Contents</h1>
-  <div id="toc"></div>
+  <div id="toc"><ul></ul></div>
 
 </nav>
 
@@ -1027,61 +1027,61 @@ a.anchorjs-link:hover {
       <br />
       <div>
         <h1 class="ForewordTitle">Foreword</h1>
-        <p id="_a2483a67-0659-4530-b958-87c6b93df3bb">This specification updates <a href="#RFC5545">RFC 5545</a> to add the value DELETED to the
+        <p id="_70186e5c-3dec-4048-a55d-2da0361230b0">This specification updates <a href="#RFC5545">RFC 5545</a> to add the value DELETED to the
 STATUS property.</p>
-        <p id="_00d4d713-ab0b-47f2-b19a-2efb9c6cd5e9">This specification also updates <a href="#RFC7240">RFC 7240</a> to add the subscribe-
+        <p id="_71cc186d-4c66-48c9-a77c-b344f4845902">This specification also updates <a href="#RFC7240">RFC 7240</a> to add the subscribe-
 enhanced-get and limit preferences.</p>
-        <p id="_f6c9659c-5a09-49de-8637-08fd9f357067">The Calendaring and Scheduling Consortium (&#x201C;CalConnect&#x201D;) is a global
+        <p id="_972ec302-c733-4cba-a393-0aab9428457a">The Calendaring and Scheduling Consortium (&#x201C;CalConnect&#x201D;) is a global
 non-profit organization with the aim to facilitate interoperability of
 collaborative technologies and tools through open standards.</p>
-        <p id="_a9f8a891-29d2-4233-88aa-23c7efde520b">CalConnect works closely with international and regional partners,
+        <p id="_e3fd0c85-7a1b-47fa-aae4-f30ba2ef6503">CalConnect works closely with international and regional partners,
 of which the full list is available on our website
 (<a href="https://www.calconnect.org/about/liaisons-and-relationships">https://www.calconnect.org/about/liaisons-and-relationships</a>).</p>
-        <p id="_a365d841-ebd3-43fe-9999-b4f5a198da0c">The procedures used to develop this document and those intended for its
+        <p id="_02b70f36-8e29-4de6-ab9c-f7b7afe0e52b">The procedures used to develop this document and those intended for its
 further maintenance are described in the CalConnect Directives.</p>
-        <p id="_842881bb-d059-4bd6-a791-0f99935cd5a6">In particular the different approval criteria needed for the different
+        <p id="_baf9f34c-f640-4c11-af97-9ea86403b8d9">In particular the different approval criteria needed for the different
 types of CalConnect documents should be noted. This document was drafted in
 accordance with the editorial rules of the CalConnect Directives.</p>
-        <p id="_d594270d-0d11-445c-bbe1-9ca92998554a">Attention is drawn to the possibility that some of the elements of this
+        <p id="_f6c9a0a2-cac2-4640-aed7-b5f2cc8909cc">Attention is drawn to the possibility that some of the elements of this
 document may be the subject of patent rights. CalConnect shall not be
 held responsible for identifying any or all such patent rights. Details
 of any patent rights identified during the development of the document
 will be provided in the Introduction.</p>
-        <p id="_78d1b04e-6788-4414-bf57-5adb1bf73dee">Any trade name used in this document is information given for the
+        <p id="_2b87fbc6-f9c7-4a4c-b952-e1fb134e0448">Any trade name used in this document is information given for the
 convenience of users and does not constitute an endorsement.</p>
-        <p id="_f38101a6-7979-4719-9568-308488b1113b">This document was prepared by Technical Committee
+        <p id="_5de704b0-f6c0-4a2b-a923-f1f7d3e6ed77">This document was prepared by Technical Committee
 <i>CALENDAR</i>.</p>
       </div>
       <br />
       <div class="Section3" id="introduction">
         <h1 class="IntroTitle">Introduction</h1>
-        <p id="_9387cc75-7878-4aba-a5ca-df400a0eca09">Currently clients subscribe to calendar feeds as an iCalendar file which is
+        <p id="_3f9f881d-430a-4c7b-8677-82e4ca6be39d">Currently clients subscribe to calendar feeds as an iCalendar file which is
 often published as a resource accessible using the unofficial
 &#x2018;webcal&#x2019; scheme.</p>
-        <p id="_2438d375-3175-4311-a4b1-2f14f47cbf5f">The only available option for updating that resource is the usual
+        <p id="_ee42ce52-fa47-4e8e-8bbd-dacd282c286a">The only available option for updating that resource is the usual
 HTTP polling of cached resources using Etags.</p>
-        <p id="_4695ca38-8122-4052-bd0f-8a49888a95e1">There is the usual tension between clients wishing to see a timely
+        <p id="_575dc22d-f4a6-41ed-8380-adbc703725fb">There is the usual tension between clients wishing to see a timely
 response to changes and servers not wishing to be overloaded by
 frequent requests for possibly large amounts of data.</p>
-        <p id="_893e258a-2111-49ae-94cd-a04374fd3906">This specification introduces an approach whereby clients can
+        <p id="_6d4a1caa-d4e2-4d84-832f-f93e37b5947b">This specification introduces an approach whereby clients can
 discover a more performant access method.  Given the location of the
 resource as an iCalendar file, the client can perfom a HEAD request on the
 resource and inspect the returned headers which will offer a number
 of alternative access methods.</p>
-        <p id="_a3ecdf8b-b8a3-428c-94b6-32a94c6b342c">Given that many clients and servers already support CalDAV this provides an easy
+        <p id="_5f8ec7b8-1aba-4372-a621-0426bd7e240e">Given that many clients and servers already support CalDAV this provides an easy
 upgrade path for those clients.  CalDAV and DAV subsets are specified
 here to allow lighter weight implementations.</p>
       </div>
       <p class="zzSTDTitle1">Calendaring and scheduling&#x2009;&#x2014;&#x2009;Calendar subscription upgrades</p>
       <div id="_scope">
         <h1>1.&#xA0; Scope</h1>
-        <p id="_47f1f018-dcb1-4cec-9ef8-d6365178ed4e">This document provides a mechanism to allow subscribers to
+        <p id="_0e4a78ab-33ee-4317-9f36-1357fec556c4">This document provides a mechanism to allow subscribers to
 calendar feeds to upgrade to a more performant protocol.</p>
       </div>
       <div>
         <h1>2.&#xA0; Normative references</h1>
         <p>The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
-        <p id="RFC2518" class="NormRef">IETF RFC 2518, <i>HTTP Extensions for Distributed Authoring&#x2009;&#x2014;&#x2009;WEBDAV</i></p>
+        <p id="RFC2518" class="NormRef">IETF RFC 2518, <i>HTTP Extensions for Distributed Authoring&#x2009;&#x2013;&#x2009;WEBDAV</i></p>
         <p id="RFC3986" class="NormRef">IETF RFC 3986, <i>Uniform Resource Identifier (URI): Generic Syntax</i></p>
         <p id="RFC4791" class="NormRef">IETF RFC 4791, <i>Calendaring Extensions to WebDAV (CalDAV)</i></p>
         <p id="RFC5545" class="NormRef">IETF RFC 5545, <i>Internet Calendaring and Scheduling Core Object Specification (iCalendar)</i></p>
@@ -1093,112 +1093,112 @@ calendar feeds to upgrade to a more performant protocol.</p>
       </div>
       <div id="_discovering_alternative_access_methods">
         <h1>3.&#xA0; Discovering alternative access methods</h1>
-        <p id="_7c82bf07-3063-45a9-bbee-7140cf6eb0de">The advertising of other access points is achieved through the use of
+        <p id="_47e7a033-319f-4ebd-becb-541a0a0525d7">The advertising of other access points is achieved through the use of
 the LINK header as defined in <a href="#RFC5988">RFC 5988</a>.  New link relation types are
-defined in this specification - each being associated with a protocol
+defined in this specification&#x2009;&#x2013;&#x2009;each being associated with a protocol
 or protocol subset.</p>
-        <p id="_a7db318a-3c0a-44f3-982a-01d3ded9eca4">These LINK headers will be delivered when a client carries out a HEAD
+        <p id="_7a2ba1a1-b7f9-4f74-88b9-fa502e642b0d">These LINK headers will be delivered when a client carries out a HEAD
 request targeting the URL of the resource.</p>
-        <div id="_cdca868e-325d-40aa-bc1c-7d0f412c9d58" class="example"><p class="example-title">EXAMPLE</p><p id="_833c8b0c-061e-4dbe-83ea-04448206f0cf">This is an example of a HEAD request and the response from a server
+        <div id="_f2b208e0-f349-4578-8f63-9e8980a423db" class="example"><p class="example-title">EXAMPLE</p><p id="_e41c72b7-f46c-4876-89bd-2241c37754d6">This is an example of a HEAD request and the response from a server
 that supports the enhanced GET method.</p>
-<pre id="_0332753c-0b5b-424d-880d-cf7bacb5aa94" class="prettyprint ">&#xA0;&#xA0;&#xA0; &gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HEAD /caldata/events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 200 OK<br />&#xA0;&#xA0;&#xA0; Content-Length: xxxx<br />&#xA0;&#xA0;&#xA0; Link: &lt;http://example.com/subscribe/events.ics&gt;;<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; rel="subscribe-enhanced-get"</pre>
+<pre id="_d2351cd2-db99-4cba-a3d8-a3c9ddc618a7" class="prettyprint ">&#xA0;&#xA0;&#xA0; &gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HEAD /caldata/events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 200 OK<br />&#xA0;&#xA0;&#xA0; Content-Length: xxxx<br />&#xA0;&#xA0;&#xA0; Link: &lt;http://example.com/subscribe/events.ics&gt;;<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; rel="subscribe-enhanced-get"</pre>
 </div>
-        <p id="_5f82a4c5-fe7a-468f-9a67-899c9ce6bb6d">Note that the target for an upgraded service may be the same as
+        <p id="_6e2c7d98-06fe-446d-9c02-f1e2df416985">Note that the target for an upgraded service may be the same as
 for the initial resource.</p>
       </div>
       <div id="enhanced-get">
         <h1>4.&#xA0; Enhanced GET</h1>
-        <div id="_general"><h2>4.1. General</h2><p id="_fc4c8087-5f34-413a-a518-a39a9d754235">This is a lightweight protocol which allows simple clients to
+        <div id="_general"><h2>4.1. General</h2><p id="_6dde8e93-1598-48e8-a09f-b96a4531ff4b">This is a lightweight protocol which allows simple clients to
 efficiently discover and download changes in the targeted resource.</p>
-<p id="_5a445342-8737-4705-a6dc-ddf1743b3ac0">It has many similarities to WebDAV sync and for a server could be
+<p id="_8616b7ba-d528-4103-a72a-ecb7ed6d2c42">It has many similarities to WebDAV sync and for a server could be
 implemented as an extension of the specification.</p>
-<p id="_7dde509c-c3f7-4296-9b95-dfa520b8fb61">In this protocol the client MUST include the Prefer header field
+<p id="_61644ce4-45c1-414c-b6c2-8d221889824b">In this protocol the client MUST include the Prefer header field
 preference &#x201C;subscribe-enhanced-get&#x201D;. If a sync token is available it
 is passed as a Sync-Token header field.</p>
-<p id="_eb8addeb-7820-4354-9ad6-6aa0c7424184">The resource is treated as a set of individual events each of which
+<p id="_987df201-3abc-4475-adaa-01a298771e48">The resource is treated as a set of individual events each of which
 may be updated or deleted separately. The client will first fetch
 the entire iCalendar file.  On subsequent requests it uses the Prefer
 header field and a Sync-Token header field to indicate that it wants a set
 of changes since the last fetch.</p>
-<p id="_d19c67e3-a43e-4b40-96ed-44c2bc7f7fca">If no Sync-Token header field is supplied the server SHOULD
+<p id="_bf8bfba9-84d6-48d3-8030-c9509a02c00c">If no Sync-Token header field is supplied the server SHOULD
 respond with a full set of data. Otherwise, if the token is valid, it SHOULD return with a set of changed entities.</p>
-<p id="_d6ac2947-9198-43d5-99b1-a854f0b9c418">In both cases the server should set the Preference-Applied header field and a new Sync-Token header field value.</p></div>
-        <div id="_deletions"><h2>4.2. Deletions</h2><p id="_c660b8e3-5d49-41cd-bcc0-8d5aadc033f5">When an entity (VEVENT, VTODO or other valid top-level component) is
+<p id="_d80a1656-7915-4623-8710-039ec8f4a9f9">In both cases the server should set the Preference-Applied header field and a new Sync-Token header field value.</p></div>
+        <div id="_deletions"><h2>4.2. Deletions</h2><p id="_2d693c90-3e2a-468c-a4fb-e86b693597d6">When an entity (VEVENT, VTODO or other valid top-level component) is
 deleted from the source data the server needs to be able to inform a
 client of the deletion.  This specification introduces a new value
 for the STATUS property of DELETED.</p>
-<p id="_b13b1266-4842-43f5-a548-9128c888054e">On the first enhanced GET after the entity has been deleted a
+<p id="_11925c8f-f441-4e38-87ce-b83b2e591347">On the first enhanced GET after the entity has been deleted a
 skeleton, but valid, entity will be returned with STATUS: DELETED.
 The receiving client is free to remove the entity or update it&#x2019;s
 STATUS property.</p>
-<p id="_1f304ed9-2534-4e24-abb8-004836aea575">On subsequent fetches the entity will not be returned.</p></div>
-        <div id="_handling_of_invalid_sync_tokens"><h2>4.3. Handling of invalid sync tokens</h2><p id="_45602fe6-fbca-4f6c-b514-cdce2bbab9b0">When a server receives an invalid token it MUST return a 409 status (Conflict).  The server MAY choose to return an error
+<p id="_9aec00d5-dd9f-4886-a99c-7d26f0a22114">On subsequent fetches the entity will not be returned.</p></div>
+        <div id="_handling_of_invalid_sync_tokens"><h2>4.3. Handling of invalid sync tokens</h2><p id="_9c349fa8-59b6-4d05-9e8a-2fe09035c98a">When a server receives an invalid token it MUST return a 409 status (Conflict).  The server MAY choose to return an error
 message in the body.</p>
-<p id="_8e4823fe-6449-469e-bb57-ecfcf7cce1f4">The client SHOULD respond to this error by restarting the interaction
+<p id="_34699800-f7c3-4ef1-8be6-d9f4d8aecd2b">The client SHOULD respond to this error by restarting the interaction
 from scratch, i.e. retrieve the full set of data then poll for
 updates.</p></div>
-        <div id="_paging_the_response"><h2>4.4. Paging the response</h2><p id="_4f089ba9-8660-4d83-ba92-ed2bb756e064">A client may explicitly request a limit on the size of the response
+        <div id="_paging_the_response"><h2>4.4. Paging the response</h2><p id="_a2c05bff-4e45-49f4-a9e6-d36ed3585683">A client may explicitly request a limit on the size of the response
 by specifying the Prefer header field preference &#x201C;limit=n&#x201D; where n is
 the number of components.</p>
-<p id="_f19ea9f1-a3c2-44ca-916b-aa0fbced5cd2">When a server receives a request specifying such a limit it SHOULD
+<p id="_8a02f289-e826-4d99-b69c-6dd294582c64">When a server receives a request specifying such a limit it SHOULD
 limit the response to that number of components.  If the limit causes
 a truncation in the response the server should respond with a
 Preference-Applied header specifying the limit that was applied
 and return a sync token which may be used to retrieve the next batch of data.</p>
-<p id="_36c139d6-f1a9-419e-9248-71431557592c">This allows the client to immediately resubmit a
+<p id="_da4a3d37-a98a-4fcf-9d1a-9849428da911">This allows the client to immediately resubmit a
 request for the next batch using the updated token.</p>
-<p id="_5cdace48-4523-4e92-b9e8-0927fa6bfd2c">A server MAY choose to limit the response size.  The behavior SHOULD
+<p id="_8ca56bec-96b1-4012-ba12-46e0fc1897e6">A server MAY choose to limit the response size.  The behavior SHOULD
 be as if the client had provided a preference for that size -
 allowing the client to retrieve the full set of data in batches.</p></div>
-        <div id="_caching_of_responses"><h2>4.5. Caching of responses</h2><p id="_3286ffa2-f971-4253-81ac-12ae5bd5dd4c">To enable proper caching of responses the server SHOULD provide a
+        <div id="_caching_of_responses"><h2>4.5. Caching of responses</h2><p id="_8067268e-2edc-421e-bf61-dc635528a21f">To enable proper caching of responses the server SHOULD provide a
 VARY header field in responses that names the Prefer and Sync-Token header fields
 along with any other that are appropriate.</p>
-<p id="_5d1f447c-64e2-4f82-845c-b748098e13a4">Clients should order the preferences as following so that
+<p id="_c8d8667e-ca84-4311-abef-fb13bd49ae25">Clients should order the preferences as following so that
 identical responses can be identified:</p>
-<ul id="_8d000db9-fef4-40a2-b776-4599218bd896">
+<ul id="_4b9e8d5e-a072-4f5b-b154-a97ea3b8a56b">
   <li>
-    <p id="_c8c8178c-8484-434d-9044-e998fe65d998">subscribe-enhanced-get</p>
+    <p id="_00ae0e49-a811-41ab-aa1a-b1ea193e6a71">subscribe-enhanced-get</p>
   </li>
   <li>
-    <p id="_db0a8836-4e39-4b6d-a2c1-1d255cd1f1f3">limit</p>
+    <p id="_c4b4f63c-b860-48c5-a783-54165ccc11bd">limit</p>
   </li>
 </ul></div>
-        <div id="_examples"><h2>4.6. Examples</h2><div id="_e388719a-e0ad-4ebe-84ea-a7a9669217a0" class="example"><p class="example-title">EXAMPLE  1</p><p id="_3ec4f745-0992-42aa-bb1c-77e86a696b42">This is an example of the initial request and response from a server
+        <div id="_examples"><h2>4.6. Examples</h2><div id="_f99f5b4a-287c-45bf-9b3f-f4b2b3ad0875" class="example"><p class="example-title">EXAMPLE  1</p><p id="_26301463-3b87-438a-876d-042f01d38183">This is an example of the initial request and response from a server
 that supports the enhanced GET method. Note the use of the Vary header so a caching proxy can key off the client&#x2019;s Sync-Token and preference.</p>
-<pre id="_8cf4ac56-801b-4bbc-9bfc-6d6e723c8198" class="prettyprint ">&#xA0;&#xA0;&#xA0; &gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; GET /events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br />&#xA0;&#xA0;&#xA0; Prefer: subscribe-enhanced-get<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 200 OK<br />&#xA0;&#xA0;&#xA0; Content-Length: xxxx<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br />&#xA0;&#xA0;&#xA0; Preference-Applied: subscribe-enhanced-get<br />&#xA0;&#xA0;&#xA0; Vary: Prefer, Sync-Token<br /><br />&#xA0;&#xA0;&#xA0; BEGIN:VCALENDAR:<br />&#xA0;&#xA0;&#xA0; ?&#xA0; /* full feed */<br />&#xA0;&#xA0;&#xA0; END:VCALENDAR</pre>
+<pre id="_2c712951-7687-4ad3-b45c-b8fa6a838164" class="prettyprint ">&#xA0;&#xA0;&#xA0; &gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; GET /events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br />&#xA0;&#xA0;&#xA0; Prefer: subscribe-enhanced-get<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 200 OK<br />&#xA0;&#xA0;&#xA0; Content-Length: xxxx<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br />&#xA0;&#xA0;&#xA0; Preference-Applied: subscribe-enhanced-get<br />&#xA0;&#xA0;&#xA0; Vary: Prefer, Sync-Token<br /><br />&#xA0;&#xA0;&#xA0; BEGIN:VCALENDAR:<br />&#xA0;&#xA0;&#xA0; ?&#xA0; /* full feed */<br />&#xA0;&#xA0;&#xA0; END:VCALENDAR</pre>
 </div>
-<div id="_9155df0c-1d2e-4d91-9b2f-dda280cf6e93" class="example"><p class="example-title">EXAMPLE  2</p><p id="_cfbf8d94-fdc2-4cf5-87b4-f1b8b94e1722">This is an example of the subsequent request and response when no
+<div id="_43bb1d8c-ec25-4999-b5eb-1514f2e4e4b5" class="example"><p class="example-title">EXAMPLE  2</p><p id="_8946c94a-0995-41f5-a88e-14e215290cdf">This is an example of the subsequent request and response when no
 changes have occurred.</p>
-<pre id="_9ad5c052-05ec-4fbd-bb29-4e54817318ac" class="prettyprint ">&#xA0;&#xA0;&#xA0; &gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; GET /events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br />&#xA0;&#xA0;&#xA0; Prefer: subscribe-enhanced-get<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 304 Not Modified<br />&#xA0;&#xA0;&#xA0; Content-Length: 0<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br />&#xA0;&#xA0;&#xA0; Preference-Applied: subscribe-enhanced-get<br />&#xA0;&#xA0;&#xA0; Vary: Prefer, Sync-Token</pre>
+<pre id="_e981b71a-b02d-442a-8248-058b89d619bc" class="prettyprint ">&#xA0;&#xA0;&#xA0; &gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; GET /events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br />&#xA0;&#xA0;&#xA0; Prefer: subscribe-enhanced-get<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 304 Not Modified<br />&#xA0;&#xA0;&#xA0; Content-Length: 0<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br />&#xA0;&#xA0;&#xA0; Preference-Applied: subscribe-enhanced-get<br />&#xA0;&#xA0;&#xA0; Vary: Prefer, Sync-Token</pre>
 </div>
-<div id="_f7043ea7-893e-4a7b-b57e-b4fd3e3885d6" class="example"><p class="example-title">EXAMPLE  3</p><p id="_4bc96293-b4b3-4b17-ac69-71465428f8ae">This is an example of the subsequent request and response for
+<div id="_2f5da36e-7ecc-4466-9911-cf1641eb4c85" class="example"><p class="example-title">EXAMPLE  3</p><p id="_aa02cd02-309f-4c11-8edb-95978403ccf1">This is an example of the subsequent request and response for
 an old or invalid token.</p>
-<pre id="_fad8485b-50e0-4a46-8154-b245f8fff9a1" class="prettyprint ">&gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; GET /events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br />&#xA0;&#xA0;&#xA0; Prefer: subscribe-enhanced-get<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 409 Conflict<br />&#xA0;&#xA0;&#xA0; Content-Length: xxxx<br />&#xA0;&#xA0;&#xA0; Preference-Applied: subscribe-enhanced-get</pre>
+<pre id="_5aa9bbf0-da68-4dbd-9468-6ced44a14ed3" class="prettyprint ">&gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; GET /events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br />&#xA0;&#xA0;&#xA0; Prefer: subscribe-enhanced-get<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 409 Conflict<br />&#xA0;&#xA0;&#xA0; Content-Length: xxxx<br />&#xA0;&#xA0;&#xA0; Preference-Applied: subscribe-enhanced-get</pre>
 </div>
-<div id="_3e6af681-0336-41a7-9355-13750775a656" class="example"><p class="example-title">EXAMPLE  4</p><p id="_00d6b766-2ba1-4b9f-82a1-6ec84dedad34">This is an example of the subsequent request and response when
+<div id="_e322f0c0-f2b8-4067-9b96-f6610f12a721" class="example"><p class="example-title">EXAMPLE  4</p><p id="_a7741512-cceb-409b-b5c8-6e1b635a8d52">This is an example of the subsequent request and response when
 changes have occurred.</p>
-<pre id="_4f2ff083-bed7-4015-ae92-5342d2f137a5" class="prettyprint ">&gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; GET /events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br />&#xA0;&#xA0;&#xA0; Prefer: subscribe-enhanced-get<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 200 OK<br />&#xA0;&#xA0;&#xA0; Content-Type: text/calendar<br />&#xA0;&#xA0;&#xA0; Vary: Prefer, Sync-Token<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,4567890"<br />&#xA0;&#xA0;&#xA0; Preference-Applied: subscribe-enhanced-get<br /><br />&#xA0;&#xA0;&#xA0; BEGIN:VCALENDAR:<br />&#xA0;&#xA0;&#xA0; ...&#xA0; only new/changed events<br />&#xA0;&#xA0;&#xA0; ...&#xA0; deleted events have STATUS:DELETED<br />&#xA0;&#xA0;&#xA0; END:VCALENDAR</pre>
+<pre id="_e64fdd83-09c7-44d3-b6c1-4e64e3d4866d" class="prettyprint ">&gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; GET /events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br />&#xA0;&#xA0;&#xA0; Prefer: subscribe-enhanced-get<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 200 OK<br />&#xA0;&#xA0;&#xA0; Content-Type: text/calendar<br />&#xA0;&#xA0;&#xA0; Vary: Prefer, Sync-Token<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,4567890"<br />&#xA0;&#xA0;&#xA0; Preference-Applied: subscribe-enhanced-get<br /><br />&#xA0;&#xA0;&#xA0; BEGIN:VCALENDAR:<br />&#xA0;&#xA0;&#xA0; ...&#xA0; only new/changed events<br />&#xA0;&#xA0;&#xA0; ...&#xA0; deleted events have STATUS:DELETED<br />&#xA0;&#xA0;&#xA0; END:VCALENDAR</pre>
 </div></div>
       </div>
       <div id="_changes_to_the_icalendar_specifications">
         <h1>5.&#xA0; Changes to the iCalendar specifications</h1>
-        <p id="_0df9d311-d958-41e0-b305-2d2320a641f6">This specification updates <a href="#RFC5545">RFC 5545</a> to add the value DELETED to the
+        <p id="_fca8c741-f70c-44f6-9344-44d282a17d1e">This specification updates <a href="#RFC5545">RFC 5545</a> to add the value DELETED to the
 STATUS property.</p>
-        <div id="_redefined_status_property"><h2>5.1. Redefined Status property</h2><dl id="_1225ea1d-8499-4263-ad30-db3fe71f204d"><dt><p>Property name</p></dt><dd>
-    <p id="_1494c039-14b7-4a06-99ef-a8e32891f2e6">STATUS</p>
+        <div id="_redefined_status_property"><h2>5.1. Redefined Status property</h2><dl id="_50e1a956-43b8-478e-816b-b904c9151308"><dt><p>Property name</p></dt><dd>
+    <p id="_80936e6b-6f23-49a9-97c4-414d4bbe6866">STATUS</p>
   </dd><dt><p>Purpose</p></dt><dd>
-    <p id="_fc4451b6-b231-4f00-a94d-824514040bde">This property defines the overall status or confirmation
+    <p id="_7765cd32-6f66-44d5-99a3-c3fd633af79d">This property defines the overall status or confirmation
 for the calendar component.</p>
   </dd><dt><p>Value Type</p></dt><dd>
-    <p id="_eb34e4c7-ab31-4fb8-9816-9e6cc65579c0">TEXT</p>
+    <p id="_fd8dc938-ee69-438a-a014-fc318d18e6a9">TEXT</p>
   </dd><dt><p>Property Parameters</p></dt><dd>
-    <p id="_09baf800-4bc6-44a4-9b8e-271bbd8e7686">IANA and non-standard property parameters can
+    <p id="_7ac2d734-d025-4947-aace-37e8900720de">IANA and non-standard property parameters can
 be specified on this property.</p>
   </dd><dt><p>Conformance</p></dt><dd>
-    <p id="_8c0169f6-e2b3-4ecb-9df7-86c671dc799c">This property can be specified once in &#x201C;VEVENT&#x201D;,
+    <p id="_e1cafc13-a42c-4418-94ec-3bdd3fd8378d">This property can be specified once in &#x201C;VEVENT&#x201D;,
 &#x201C;VTODO&#x201D;, or &#x201C;VJOURNAL&#x201D; calendar components.</p>
   </dd><dt><p>Description</p></dt><dd>
-    <p id="_5450c6fb-4120-488f-b128-bdffb194d197">In a group-scheduled calendar component, the property
+    <p id="_9d1d8686-4df9-4825-ae2a-61409d7aa3eb">In a group-scheduled calendar component, the property
 is used by the &#x201C;Organizer&#x201D; to provide a confirmation of the event
 to the &#x201C;Attendees&#x201D;.  For example in a &#x201C;VEVENT&#x201D; calendar component,
 the &#x201C;Organizer&#x201D; can indicate that a meeting is tentative,
@@ -1209,81 +1209,81 @@ cancelled.  In a &#x201C;VJOURNAL&#x201D; calendar component, the &#x201C;Organi
 can indicate that a journal entry is draft, final, or has been
 cancelled or removed.</p>
   </dd><dt><p>Format Definition</p></dt><dd></dd></dl>
-<p id="_d61a4c26-b753-46a0-95ac-97810822e3f4">This property is defined by the following notation:</p>
-<pre id="_4c8b1c31-c248-4ff4-921d-5ff73e053899" class="prettyprint ">status&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; = "STATUS" statparam ":" statvalue CRLF<br /><br />statparam&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; = *(";" other-param)<br /><br />statvalue&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; = (statvalue-event<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; /&#xA0; statvalue-todo<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; /&#xA0; statvalue-jour)<br /><br />statvalue-event = "TENTATIVE"&#xA0;&#xA0;&#xA0; ;Indicates event is tentative.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "CONFIRMED"&#xA0;&#xA0;&#xA0; ;Indicates event is definite.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "CANCELLED"&#xA0;&#xA0;&#xA0; ;Indicates event was cancelled.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "DELETED"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates event was deleted.<br />;Status values for a "VEVENT"<br /><br />statvalue-todo&#xA0; = "NEEDS-ACTION" ;Indicates to-do needs action.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "COMPLETED"&#xA0;&#xA0;&#xA0; ;Indicates to-do completed.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "IN-PROCESS"&#xA0;&#xA0; ;Indicates to-do in process of.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "CANCELLED"&#xA0;&#xA0;&#xA0; ;Indicates to-do was cancelled.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "DELETED"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates to-do was deleted.<br />;Status values for "VTODO".<br /><br />statvalue-jour&#xA0; = "DRAFT"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates journal is draft.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "FINAL"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates journal is final.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "CANCELLED"&#xA0;&#xA0;&#xA0; ;Indicates journal is removed.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "DELETED"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates journal was deleted.<br />;Status values for "VJOURNAL".</pre>
+<p id="_83c280d3-2b92-4369-9a61-03be323f57ea">This property is defined by the following notation:</p>
+<pre id="_f31a68c9-4415-4a8b-b595-403924eba521" class="prettyprint ">status&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; = "STATUS" statparam ":" statvalue CRLF<br /><br />statparam&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; = *(";" other-param)<br /><br />statvalue&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; = (statvalue-event<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; /&#xA0; statvalue-todo<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; /&#xA0; statvalue-jour)<br /><br />statvalue-event = "TENTATIVE"&#xA0;&#xA0;&#xA0; ;Indicates event is tentative.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "CONFIRMED"&#xA0;&#xA0;&#xA0; ;Indicates event is definite.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "CANCELLED"&#xA0;&#xA0;&#xA0; ;Indicates event was cancelled.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "DELETED"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates event was deleted.<br />;Status values for a "VEVENT"<br /><br />statvalue-todo&#xA0; = "NEEDS-ACTION" ;Indicates to-do needs action.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "COMPLETED"&#xA0;&#xA0;&#xA0; ;Indicates to-do completed.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "IN-PROCESS"&#xA0;&#xA0; ;Indicates to-do in process of.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "CANCELLED"&#xA0;&#xA0;&#xA0; ;Indicates to-do was cancelled.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "DELETED"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates to-do was deleted.<br />;Status values for "VTODO".<br /><br />statvalue-jour&#xA0; = "DRAFT"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates journal is draft.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "FINAL"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates journal is final.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "CANCELLED"&#xA0;&#xA0;&#xA0; ;Indicates journal is removed.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "DELETED"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates journal was deleted.<br />;Status values for "VJOURNAL".</pre>
 
-<dl id="_05f45a78-d464-4a0d-a5b5-0ecb57aae095"><dt><p>Example</p></dt><dd></dd></dl>
-<div id="_e3f02123-5c68-4578-9f8d-0c59dfb2cde2" class="example"><p class="example-title">EXAMPLE  1</p><p id="_80fc5c5c-8cec-4703-b779-a764ed9fa354">The following is an example of this property for a &#x201C;VEVENT&#x201D;
+<dl id="_b3df31b9-d47f-4e1b-8e93-367cb88cb82b"><dt><p>Example</p></dt><dd></dd></dl>
+<div id="_441fa113-ed53-45ca-8def-5890780820e3" class="example"><p class="example-title">EXAMPLE  1</p><p id="_f7ada915-acbb-4605-bf2d-85ebaf03a4e8">The following is an example of this property for a &#x201C;VEVENT&#x201D;
 calendar component:</p>
-<pre id="_c9355043-61ae-422c-8285-2186c8fb2945" class="prettyprint ">STATUS:TENTATIVE</pre>
+<pre id="_82804419-42ee-4bce-a02e-bd4016cea6aa" class="prettyprint ">STATUS:TENTATIVE</pre>
 </div>
-<div id="_1add2074-da40-4d90-b82e-128b79e58099" class="example"><p class="example-title">EXAMPLE  2</p><p id="_bdd574e6-d84b-4ef1-bd8e-4bf188b82e01">The following is an example of this property for a &#x201C;VTODO&#x201D; calendar
+<div id="_ab396646-7020-4919-bd64-8293ed425b8c" class="example"><p class="example-title">EXAMPLE  2</p><p id="_17a279c7-cc81-44e6-b931-42922606bceb">The following is an example of this property for a &#x201C;VTODO&#x201D; calendar
 component:</p>
-<pre id="_5b4a0cbc-dc68-4d38-97cf-2faf94089c3d" class="prettyprint ">STATUS:NEEDS-ACTION</pre>
+<pre id="_1f7ddedd-a661-480b-8aa8-757b05facbf6" class="prettyprint ">STATUS:NEEDS-ACTION</pre>
 </div>
-<div id="_abcc2bb0-0ff7-498a-95d1-a15a0b47abf7" class="example"><p class="example-title">EXAMPLE  3</p><p id="_9e94882a-52a8-447b-8a37-66785f68c99d">The following is an example of this property for a &#x201C;VJOURNAL&#x201D;
+<div id="_a751ad69-366a-42f4-9360-f61f344bc27b" class="example"><p class="example-title">EXAMPLE  3</p><p id="_0068be46-49ce-48ac-a117-0a8cd1d719e1">The following is an example of this property for a &#x201C;VJOURNAL&#x201D;
 calendar component:</p>
-<pre id="_fc09d12c-250b-4ccd-89c6-779472ceabfa" class="prettyprint ">STATUS:DRAFT</pre>
+<pre id="_dd0fd87c-54c0-4a0c-8caf-d971971690ac" class="prettyprint ">STATUS:DRAFT</pre>
 </div></div>
       </div>
       <div id="_header_field_sync_token">
         <h1>6.&#xA0; Header Field: Sync-Token</h1>
-        <p id="_bd96a038-f392-4e10-b208-2e6095a10b03">This specification defines a new header field Sync-Token for use by
+        <p id="_bce5c4fe-3964-4180-ac22-30652a10de53">This specification defines a new header field Sync-Token for use by
 the enhanced GET method.</p>
-        <pre id="_2eeb9ef7-9698-4383-acd7-f4361b952aae" class="prettyprint ">&#xA0;&#xA0;&#xA0; Accept = DQUOTE URI DQUOTE</pre>
-        <p id="_9ee70557-3ec1-4373-925f-68c8f23f62db">The value MUST be a URI. This will generally be a data URI
+        <pre id="_da69c8c4-3a95-473f-bc0b-3b3dbb79f359" class="prettyprint ">&#xA0;&#xA0;&#xA0; Accept = DQUOTE URI DQUOTE</pre>
+        <p id="_a000ee22-001d-481b-bb66-6d62091d3f9c">The value MUST be a URI. This will generally be a data URI
 representing an opaque token. Client MUST not attempt to interpret
 the data URI value.</p>
-        <div id="_9b032326-96c6-4500-929b-00d31a721c42" class="example"><p class="example-title">EXAMPLE</p><p id="_32ea2b7b-bce7-4157-a4c8-fb82658d5875">This is an example of the Sync-Token header field:</p>
-<pre id="_2bc3f3de-5b77-421e-a6d0-4c56fbdf9064" class="prettyprint ">&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"</pre>
+        <div id="_91bb4926-55a5-460b-8e05-6955eacd7292" class="example"><p class="example-title">EXAMPLE</p><p id="_87fb02c0-1dd7-4606-b4ed-73c0e2194313">This is an example of the Sync-Token header field:</p>
+<pre id="_4e920980-0c7b-40df-b3ff-2b7367741eaf" class="prettyprint ">&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"</pre>
 </div>
       </div>
       <div id="_new_prefer_header_field_preferences">
         <h1>7.&#xA0; New Prefer header field preferences</h1>
-        <div id="preference-subscribe"><h2>7.1. Preference subscribe-enhanced-get</h2><p id="_c18ee85f-f0a1-429d-bba8-ab02fc9be88d">This indicates that the client expects the server to handle the GET
+        <div id="preference-subscribe"><h2>7.1. Preference subscribe-enhanced-get</h2><p id="_9b67fb8f-c956-4c79-ad45-5f34327fed14">This indicates that the client expects the server to handle the GET
 method according to the specifications for enhanced get.</p>
-<pre id="_ee03ce0d-a308-42f8-8859-bbd7a8083540" class="prettyprint ">&#xA0;&#xA0;&#xA0; pref-subscribe-enhanced-get = "subscribe-enhanced-get"</pre>
+<pre id="_9392af7a-f17c-4e0e-9ef5-296f81ed92a6" class="prettyprint ">&#xA0;&#xA0;&#xA0; pref-subscribe-enhanced-get = "subscribe-enhanced-get"</pre>
 </div>
-        <div id="preference-limit"><h2>7.2. Preference limit</h2><p id="_4c7cd819-dc4b-4aae-bb11-87809675c354">This preference parameter provides a limit on the number of components returned for enhanced get.</p>
-<pre id="_2ec056d3-6c2d-4934-820f-3611fc180745" class="prettyprint ">&#xA0;&#xA0;&#xA0; pref-limit = "limit" BWS "=" BWS 1*DIGIT</pre>
+        <div id="preference-limit"><h2>7.2. Preference limit</h2><p id="_4dd8919f-72b1-443a-aec3-8adfdcc764a9">This preference parameter provides a limit on the number of components returned for enhanced get.</p>
+<pre id="_b91db4d1-c349-4301-a7bc-c443ae5f8777" class="prettyprint ">&#xA0;&#xA0;&#xA0; pref-limit = "limit" BWS "=" BWS 1*DIGIT</pre>
 </div>
       </div>
       <div id="_link_relations">
         <h1>8.&#xA0; Link relations</h1>
         <div id="_general_2"><h2>8.1. General</h2>
 
-  <p id="_0dc84ce3-c51c-481d-b419-83590a0e4aca">This clause defines a number of new link relations required to
+  <p id="_4a0a3358-3ba7-42ee-a5c1-e19ae2a6bb2c">This clause defines a number of new link relations required to
 facilitate subscription upgrades.</p>
 </div>
-        <div id="la-subscribe-caldav"><h2>8.2. subscribe-caldav</h2><p id="_701f30ce-0a6c-4894-bd98-0813d32fe2d5">This specifies an access point which is a full implementation of
+        <div id="la-subscribe-caldav"><h2>8.2. subscribe-caldav</h2><p id="_0a8e19d1-d510-4d12-9e98-fa3a7e4b977c">This specifies an access point which is a full implementation of
 caldav but requires no authentication.  The end point allows the full
 range of reports as defined by the CalDAV specification.</p>
-<p id="_4818c2d8-dace-44d6-a173-3b0934622e41">The client MUST follow the specification to determine exactly what
-operations are allowed on the access point - for example to determine
+<p id="_0fbd3a77-a5c4-47ee-8e7f-4787437cdc67">The client MUST follow the specification to determine exactly what
+operations are allowed on the access point&#x2009;&#x2013;&#x2009;for example to determine
 if sync-report is supported.</p>
-<p id="_4528e5bf-17d8-490b-8344-e0389f4d461a">The URL MAY include some form of token to allow write access to the
+<p id="_0948bc0f-f967-4236-b61b-dd225169620c">The URL MAY include some form of token to allow write access to the
 targeted collection.  The client must check it&#x2019;s permissions to
 determine whether or not it has been granted write access.</p></div>
-        <div id="la-subscribe-caldav-auth"><h2>8.3. subscribe-caldav-auth</h2><p id="_3017f89c-97db-42d1-a7e4-f99963b599d0">This specifies an access point which is a full implementation of
+        <div id="la-subscribe-caldav-auth"><h2>8.3. subscribe-caldav-auth</h2><p id="_e096135c-f2b1-4200-8fb4-dac0b63e3d4d">This specifies an access point which is a full implementation of
 caldav and requires authentication.  This may allow read-write access
 to the resource.</p>
-<p id="_592aab19-b5e7-46d5-8802-8241b8c9f458">The client MUST follow the specification to determine exactly what
+<p id="_99833714-61d4-42f0-954f-aa9f7cc0c628">The client MUST follow the specification to determine exactly what
 operations are allowed on the access point&#x2009;&#x2014;&#x2009;for example to determine
 if sync-report is supported.</p></div>
-        <div id="la-subscribe-webdav-sync"><h2>8.4. subscribe-webdav-sync</h2><p id="_4d7696fc-b7a4-4db5-a58d-fe4c5849a880">This specifies an access point which supports only webdav sync.</p>
-<p id="_86f98ac4-eec6-4a95-87d2-63d97153c124">This allows the client to issue a sync-report on the resource to
+        <div id="la-subscribe-webdav-sync"><h2>8.4. subscribe-webdav-sync</h2><p id="_9b8536cc-7ea4-4c6e-9396-b0d15dfcf803">This specifies an access point which supports only webdav sync.</p>
+<p id="_110a0c05-6556-4e4e-bbad-cc87a1e6cae5">This allows the client to issue a sync-report on the resource to
 obtain updates.</p>
-<p id="_0734c33b-38dd-4429-a962-6c71becd59d9">The client MUST follow that specification.</p></div>
-        <div id="la-subscribe-enhanced-get"><h2>8.5. subscribe-enhanced-get</h2><p id="_19cd2cd5-3671-4e11-97c0-26e5c7e45995">This specifies an access point which supports something new.</p>
-<p id="_d73fcc20-27e8-4733-9a50-63791c6b4fc7">The client MUST follow that specification.</p></div>
+<p id="_9bed477f-a829-4e62-a590-c1cc96a84bb9">The client MUST follow that specification.</p></div>
+        <div id="la-subscribe-enhanced-get"><h2>8.5. subscribe-enhanced-get</h2><p id="_f997a139-b58b-4fc8-a15a-ade5f00c9f9e">This specifies an access point which supports something new.</p>
+<p id="_3d6d516c-c93a-4e89-a1b9-27eae5e8639a">The client MUST follow that specification.</p></div>
       </div>
       <div id="security">
         <h1>9.&#xA0; Security Considerations</h1>
-        <p id="_9ce8a22c-bfc7-4e43-8613-b3458479e525">Applications using these properties need to be aware of the risks
+        <p id="_42052270-07a7-4bd0-acd8-bfa16e32868b">Applications using these properties need to be aware of the risks
 entailed in using the URIs provided as values.  See <a href="#RFC3986">RFC 3986</a> for a
 discussion of the security considerations relating to URIs.
 == Privacy Considerations</p>
-        <p id="_2ff81a84-ae7b-4f92-a029-ca37355a8a0a">Properties with a &#x201C;URI&#x201D; value type can expose their users to privacy
+        <p id="_4b8adf77-e4df-40a4-a953-e64db827eaa8">Properties with a &#x201C;URI&#x201D; value type can expose their users to privacy
 leaks as any network access of the URI data can be tracked.  Clients
 SHOULD NOT automatically download data referenced by the URI without
 explicit instruction from users.  This specification does not
@@ -1292,133 +1292,133 @@ introduce any additional privacy concerns beyond those described in
       </div>
       <div id="iana">
         <h1>10.&#xA0; IANA Considerations</h1>
-        <div id="_sync_token_http_header_field_registration"><h2>10.1. Sync-Token HTTP Header Field Registration</h2><p id="_c5f64168-5d49-4d82-a0c0-88a4ebb40956">This specification updates the &#x201C;Message Headers&#x201D; registry entry for &#x201C;Sync-Token&#x201D; in <a href="#RFC3864">???</a> to refer to this document.</p>
-<div id="_eea185d4-3ff0-4b7e-b370-269cb4b6dadd" class="figure">
-  <pre id="_251d55f9-69ad-4de7-a3e2-816798a174f4">Header Field Name: Sync-Token
+        <div id="_sync_token_http_header_field_registration"><h2>10.1. Sync-Token HTTP Header Field Registration</h2><p id="_69bbbf86-8451-4001-a36e-7dfacbb98cac">This specification updates the &#x201C;Message Headers&#x201D; registry entry for &#x201C;Sync-Token&#x201D; in <a href="#RFC3864">[[RFC3864]], [RFC3864]</a> to refer to this document.</p>
+<div id="_1634fa99-dc36-439e-bac2-a345d5966059" class="figure">
+  <pre id="_3aa13bfc-aec3-4cde-9d44-db366d20589c">Header Field Name: Sync-Token
 Protocol: http
 Status: standard
 Reference: &lt;this-document&gt;</pre>
-<p class="FigureTitle" align="center">Figure 1</p></div></div>
-        <div id="_preference_registrations"><h2>10.2. Preference Registrations</h2><p id="_e9acd493-8719-494a-8ba7-28f7ee43c5b8">The following preferences have been added to the HTTP Preferences
+<p class="FigureTitle" style="text-align:center;">Figure 1</p></div></div>
+        <div id="_preference_registrations"><h2>10.2. Preference Registrations</h2><p id="_c5b32398-005c-4edd-97ae-0cb5bc9b77b5">The following preferences have been added to the HTTP Preferences
 Registry defined in <a href="#RFC7240">RFC 7240</a></p>
-<dl id="_27ce5ca9-6e44-498f-aa19-32bc0f82d5f1"><dt><p>Preference</p></dt><dd>
-    <p id="_9866edff-9afa-479d-8114-0802d3ba0a0a">subscribe-enhanced-get</p>
+<dl id="_25fe43d2-8e68-43aa-a7af-582e62168286"><dt><p>Preference</p></dt><dd>
+    <p id="_b4035774-7458-4df2-b9d7-539085e09e7b">subscribe-enhanced-get</p>
   </dd><dt><p>Value</p></dt><dd>
-    <p id="_26a3e546-7222-473e-8467-7dd5a636468b">None.</p>
+    <p id="_8ccebc65-8e51-4315-bc50-3c4f25a6fe1b">None.</p>
   </dd><dt><p>Description</p></dt><dd>
-    <p id="_75949f08-eb1c-47e3-8b84-05ed18902863">Marks the interaction as enhanced get and provides the
+    <p id="_93ba5c99-e8a3-4095-b938-b8ae5ff18aa0">Marks the interaction as enhanced get and provides the
 optional sync-token and page size.</p>
   </dd><dt><p>Reference</p></dt><dd>
-    <p id="_d7f27168-f774-471b-bdda-107465da6e80">this document</p>
+    <p id="_065ffc86-e203-431c-afcc-9b7f70aa840f">this document</p>
   </dd><dt><p>Preference</p></dt><dd>
-    <p id="_2fb78e86-a912-40ae-80e7-2f37404a8c7c">limit</p>
+    <p id="_f0cd7b6b-9edc-40e3-8d64-cb07eb98a3d7">limit</p>
   </dd><dt><p>Value</p></dt><dd>
-    <p id="_851779f0-b4dd-40b4-8b6b-2133d59ff6f6">An integer page size.</p>
+    <p id="_3b7cfd75-c131-4652-b353-8b04c194511b">An integer page size.</p>
   </dd><dt><p>Description</p></dt><dd>
-    <p id="_e15396c1-3780-4792-b7df-12aee7ad3dd2">Provide a limit on the number of components in the response.</p>
+    <p id="_fe1905ed-4315-444b-964d-e4f81d8bec6d">Provide a limit on the number of components in the response.</p>
   </dd><dt><p>Reference</p></dt><dd>
-    <p id="_58994377-43bb-433f-a27d-48f81354426f">this document</p>
+    <p id="_c5784b20-a03a-4be9-80d1-fd8a89e9aa06">this document</p>
   </dd></dl></div>
-        <div id="_link_relation_registrations"><h2>10.3. Link Relation Registrations</h2><p id="_640134a1-d2da-478e-8eda-05c0907ea702">This document defines the following new iCalendar properties to be
+        <div id="_link_relation_registrations"><h2>10.3. Link Relation Registrations</h2><p id="_4638ec3f-a83a-4ecc-977b-8742079129f9">This document defines the following new iCalendar properties to be
 added to the registry defined in <a href="#RFC5545">RFC 5545, Section 8.2.3</a>:</p>
-<p class="TableTitle" align="center">Table 1</p><table id="_49dc07b0-592b-4244-958a-0f8e39e43e81" class="MsoISOTable" border="1" cellspacing="0" cellpadding="0"><thead><tr><th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Relation Name</th><th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Description</th><th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Reference</th></tr></thead><tbody><tr><td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">
-        <p id="_107a91c7-40a9-4103-8078-32f323bd5572">subscribe-caldav</p>
-      </td><td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">
-        <p id="_8633bf97-645b-489d-a8ec-4e720588e3df">Current</p>
-      </td><td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">
-        <p id="_5247ec92-d84e-48c7-aca9-80693eb55c3e">
+<p class="TableTitle" style="text-align:center;">Table 1</p><table id="_53aa318f-5de3-4ad8-b5a8-56d0713c552b" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><thead><tr><th style="font-weight:bold;text-align:left;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;padding:0;" scope="col">Relation Name</th><th style="font-weight:bold;text-align:left;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;padding:0;" scope="col">Description</th><th style="font-weight:bold;text-align:left;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;padding:0;" scope="col">Reference</th></tr></thead><tbody><tr><td style="text-align:left;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;padding:0;">
+        <p id="_24d1bd43-7c2f-47d1-958f-85bae513d693">subscribe-caldav</p>
+      </td><td style="text-align:left;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;padding:0;">
+        <p id="_109b07df-1cf7-4055-bdb7-eb61b6354757">Current</p>
+      </td><td style="text-align:left;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;padding:0;">
+        <p id="_b14aa9bc-f1c7-427b-8c11-7c35d7e4110b">
   <a href="#la-subscribe-caldav">Clause 8.2</a>
 </p>
-      </td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">
-        <p id="_d60c3f3a-33e2-4e1a-ae04-9dc370049cb5">subscribe-caldav_auth</p>
-      </td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">
-        <p id="_4e1c1bd2-b250-4dd1-a375-693375b0cbdf">Current</p>
-      </td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">
-        <p id="_fb84dd81-6e83-499a-9d22-7fb51e8e85f7">
+      </td></tr><tr><td style="text-align:left;border-top:none;border-bottom:solid windowtext 1.0pt;padding:0;">
+        <p id="_f3d46d30-d25d-426a-bcee-c238cfa042b9">subscribe-caldav_auth</p>
+      </td><td style="text-align:left;border-top:none;border-bottom:solid windowtext 1.0pt;padding:0;">
+        <p id="_d8b704a4-9da4-4de8-954a-0d2bcfe69e83">Current</p>
+      </td><td style="text-align:left;border-top:none;border-bottom:solid windowtext 1.0pt;padding:0;">
+        <p id="_0cd14e78-6560-402e-8c82-7ae0b358967f">
   <a href="#la-subscribe-caldav-auth">Clause 8.3</a>
 </p>
-      </td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">
-        <p id="_3a9a4111-7c61-4bc8-a99d-010bbe9d3da1">subscribe-webdav-sync</p>
-      </td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">
-        <p id="_f32abb33-8812-410f-a2c1-a334778beedc">Current</p>
-      </td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.0pt;">
-        <p id="_20afffa9-e12b-4547-a2e7-5715f421c02d">
+      </td></tr><tr><td style="text-align:left;border-top:none;border-bottom:solid windowtext 1.0pt;padding:0;">
+        <p id="_2b8a774c-6e79-4d8d-984d-f739c09ae1eb">subscribe-webdav-sync</p>
+      </td><td style="text-align:left;border-top:none;border-bottom:solid windowtext 1.0pt;padding:0;">
+        <p id="_022c5e87-3ed2-4e06-b7ba-f7f71c2d34ee">Current</p>
+      </td><td style="text-align:left;border-top:none;border-bottom:solid windowtext 1.0pt;padding:0;">
+        <p id="_3870fdce-6c85-4a6e-b0ae-fba1ec413645">
   <a href="#la-subscribe-webdav-sync">Clause 8.4</a>
 </p>
-      </td></tr><tr><td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">
-        <p id="_e88ff0d0-80b6-4107-9eda-714205625d0e">subscribe-enhanced_get</p>
-      </td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">
-        <p id="_76e4e0bc-f479-4771-95e3-5bc4d71fb733">Current</p>
-      </td><td align="left" style="border-top:none;border-bottom:solid windowtext 1.5pt;">
-        <p id="_75cf4972-4663-4a7f-910b-4e4b43e17d20">
+      </td></tr><tr><td style="text-align:left;border-top:none;border-bottom:solid windowtext 1.5pt;padding:0;">
+        <p id="_1e5106ba-d5c4-43ce-b5a9-4b60aa0ac625">subscribe-enhanced_get</p>
+      </td><td style="text-align:left;border-top:none;border-bottom:solid windowtext 1.5pt;padding:0;">
+        <p id="_6dc3b614-89c6-4052-affd-51e309c445a8">Current</p>
+      </td><td style="text-align:left;border-top:none;border-bottom:solid windowtext 1.5pt;padding:0;">
+        <p id="_25553db7-a56e-43fe-b7d2-6bbf869b893a">
   <a href="#la-subscribe-enhanced-get">Clause 8.5</a>
 </p>
       </td></tr></tbody></table></div>
       </div>
       <div id="acknowledgements">
         <h1>11.&#xA0; Acknowledgements</h1>
-        <p id="_e9d248a9-106b-4cef-92cb-fc3d4d819efa">The author would also like to thank the members of the CalConnect
+        <p id="_7b313d57-05f0-46be-8895-0b358b62df6b">The author would also like to thank the members of the CalConnect
 Calendar Sharing technical committee and the following individuals
 for contributing their ideas and support:</p>
-        <p id="_d81aa408-5107-49d6-9cc1-78a9e1bb4f23">Marten Gajda, Ken Murchison, Garry Shutler</p>
-        <p id="_1cdad9bf-6f11-4259-ac48-f1e44b78351b">The authors would also like to thank CalConnect, the Calendaring and
+        <p id="_6ff55d25-d893-49f9-9f6b-eee4911049b4">Marten Gajda, Ken Murchison, Garry Shutler</p>
+        <p id="_84399c01-61f8-4817-b4d2-d4daffbc1b19">The authors would also like to thank CalConnect, the Calendaring and
 Scheduling Consortium, for advice with this specification.</p>
       </div>
       <br />
       <div id="appendix-a" class="Section3">
         <h1 class="Annex"><b>Appendix A</b><br />(informative) <br /><b>Open issues</b></h1>
-        <dl id="_cce140fd-a18b-4fb4-8ef2-f4fa15481b6c">
+        <dl id="_3fc3f7ac-e301-4195-81b6-e1a9cda5ffdb">
           <dt>
             <p>Vary</p>
           </dt>
           <dd>
-    <p id="_57a5aa77-322e-4fa2-8f21-b2513d7673d9">Ensure we get that right.</p>
+    <p id="_2cb5e741-f552-4375-b1e5-93d92bb66e0a">Ensure we get that right.</p>
   </dd>
         </dl>
       </div>
       <br />
       <div id="appendix-b" class="Section3">
         <h1 class="Annex"><b>Appendix B</b><br />(informative) <br /><b>Change log</b></h1>
-        <p id="_945c6d2f-eb45-4f97-b8f9-3d88967910fb">calext00 2019-06-05 MD</p>
-        <ul id="_016e6743-b0d0-47f4-9791-d60ef6b499d5">
+        <p id="_37dd6c48-4eae-41d5-a8a4-7ff89134a965">calext00 2019-06-05 MD</p>
+        <ul id="_0f71d66c-a36a-4a4f-b37a-933c2207700e">
   <li>
-    <p id="_f9b9db49-981f-417c-8922-bc9860db925d">First calext version</p>
+    <p id="_ba96a0d5-242c-48c0-b3ad-66a0adeb6c7d">First calext version</p>
   </li>
   <li>
-    <p id="_b67ac274-4cfa-43d6-97f1-7e80046fe2b6">Use Sync-Token header rather than parameter</p>
-  </li>
-</ul>
-        <p id="_84a6ac1c-454a-47a2-b387-0ca02abd5e25">v04 2019-03-07 MD</p>
-        <ul id="_5b9bde99-e622-4f39-9460-d8c46bc8d250">
-  <li>
-    <p id="_74a00ce4-5f14-4f0d-9e6a-59517d25c157">Reference to RFC 6538 - WebDAV sync and RFC 7240 Prefer</p>
-  </li>
-  <li>
-    <p id="_b9514f6e-b784-45a2-8741-5bc04d481e8c">Go back to HEAD</p>
-  </li>
-  <li>
-    <p id="_f63cbe0a-00ee-41d0-94da-a9305ea6f58c">New Preference and parameters.</p>
-  </li>
-  <li>
-    <p id="_bdbf3949-11bb-4ae7-8e5c-c8bffa6d2abf">Examples</p>
-  </li>
-  <li>
-    <p id="_16457b65-e94b-4d5c-a945-38c9296dd6ec">More text for extended get.  Talk about deletions.</p>
+    <p id="_e48f15ca-b350-48ac-bf3c-3008515dc2ff">Use Sync-Token header rather than parameter</p>
   </li>
 </ul>
-        <p id="_959b38e9-535e-45fd-b17a-952ae1b57ed0">v01 2017-02-17 MD</p>
-        <ul id="_f67d2403-2841-4427-aedd-bf28fe5f5e71">
+        <p id="_46ce0636-1d52-47d2-a708-dd761558138f">v04 2019-03-07 MD</p>
+        <ul id="_bfad3f68-9c99-452b-b72e-268bec1969ac">
   <li>
-    <p id="_89d56fde-0106-4b03-bf60-0777e596276b">Add text about OPTIONS</p>
+    <p id="_7163b902-eea8-4e1d-9af5-381d4f263361">Reference to RFC 6538&#x2009;&#x2013;&#x2009;WebDAV sync and RFC 7240 Prefer</p>
   </li>
   <li>
-    <p id="_51dfbfa9-eebf-4acc-9ab9-282e16b4cdad">Add text abut read/write CalDAV</p>
+    <p id="_d2676b50-1085-407b-8cd6-3a6567be1cbb">Go back to HEAD</p>
+  </li>
+  <li>
+    <p id="_9d3564d7-93f2-4786-b32d-a3c012801562">New Preference and parameters.</p>
+  </li>
+  <li>
+    <p id="_32e9002f-ba6d-4af8-b8bb-622ae1630b17">Examples</p>
+  </li>
+  <li>
+    <p id="_4e303e92-0943-41ff-9740-ddc2dc8976d3">More text for extended get.  Talk about deletions.</p>
   </li>
 </ul>
-        <p id="_6fb67dd0-a772-4ba5-903b-076ef28850fa">v00 2017-02-15 MD</p>
-        <ul id="_e0b6b932-a18e-49c1-b9f3-d2696dad6f79">
+        <p id="_ddbf3686-6710-421a-9876-028e1a10f475">v01 2017-02-17 MD</p>
+        <ul id="_1f31a448-b1f0-4de8-9c76-4da4164f6075">
   <li>
-    <p id="_0ffbb070-db0b-437d-b37e-652276b0ae31">First pass</p>
+    <p id="_6b4cd71b-733b-48b6-8458-4639b657ce18">Add text about OPTIONS</p>
+  </li>
+  <li>
+    <p id="_340fcbbf-4a20-407f-8159-a10d75592856">Add text abut read/write CalDAV</p>
+  </li>
+</ul>
+        <p id="_83fe0ecb-7519-4867-b035-80ceb1e9d20b">v00 2017-02-15 MD</p>
+        <ul id="_d8811a9c-46d6-4a88-9328-8f8b60c23b71">
+  <li>
+    <p id="_7b1053c9-c3a4-4634-9643-1bda245aca33">First pass</p>
   </li>
 </ul>
       </div>
@@ -1429,13 +1429,11 @@ Scheduling Consortium, for advice with this specification.</p>
     </main>
   <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    asciimath2jax: {
-      delimiters: [['(#(', ')#)']]
-    }
+    asciimath2jax: { delimiters: [['(#(', ')#)']] }
  });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=AM_HTMLorMML" async="async"></script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script><script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>  <script>
     //TOC generation
       $('#toc').toc({
           'selectors': toclevel(), //elements to use as headings
@@ -1500,9 +1498,12 @@ $('#toggle').on('click', function(){
  * https://github.com/bryanbraun/anchorjs
  * Copyright (c) 2017 Bryan Braun; Licensed MIT
  */
-!function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function e(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64}function t(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}function i(){if(null===document.head.querySelector("style.anchorjs")){var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"], style'))?document.head.appendChild(e):document.head.insertBefore(e,A),e.sheet.insertRule(" .anchorjs-link {   opacity: 0;   text-decoration: none;   -webkit-font-smoothing: antialiased;   -moz-osx-font-smoothing: grayscale; }",e.sheet.cssRules.length),e.sheet.insertRule(" *:hover > .anchorjs-link, .anchorjs-link:focus  {   opacity: 1; }",e.sheet.cssRules.length),e.sheet.insertRule(" [data-anchorjs-icon]::after {   content: attr(data-anchorjs-icon); }",e.sheet.cssRules.length),e.sheet.insertRule(' @font-face {   font-family: "anchorjs-icons";   src: url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype"); }',e.sheet.cssRules.length)}}this.options=A||{},this.elements=[],e(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var n,o,s,a,r,c,h,l,u,d,f,p=[];if(e(this.options),"touch"===(f=this.options.visible)&&(f=this.isTouchDevice()?"always":"hover"),A||(A="h2, h3, h4, h5, h6"),0===(n=t(A)).length)return this;for(i(),o=document.querySelectorAll("[id]"),s=[].map.call(o,function(A){return A.id}),r=0;r<n.length;r++)if(this.hasAnchorJSLink(n[r]))p.push(r);else{if(n[r].hasAttribute("id"))a=n[r].getAttribute("id");else if(n[r].hasAttribute("data-anchor-id"))a=n[r].getAttribute("data-anchor-id");else{u=l=this.urlify(n[r].textContent),h=0;do{void 0!==c&&(u=l+"-"+h),c=s.indexOf(u),h+=1}while(-1!==c);c=void 0,s.push(u),n[r].setAttribute("id",u),a=u}a.replace(/-/g," "),(d=document.createElement("a")).className="anchorjs-link "+this.options.class,d.href="#"+a,d.setAttribute("aria-label",this.options.ariaLabel),d.setAttribute("data-anchorjs-icon",this.options.icon),"always"===f&&(d.style.opacity="1"),""===this.options.icon&&(d.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(d.style.lineHeight="inherit")),"left"===this.options.placement?(d.style.position="absolute",d.style.marginLeft="-1em",d.style.paddingRight="0.5em",n[r].insertBefore(d,n[r].firstChild)):(d.style.paddingLeft="0.375em",n[r].appendChild(d))}for(r=0;r<p.length;r++)n.splice(p[r]-r,1);return this.elements=this.elements.concat(n),this},this.remove=function(A){for(var e,i,n=t(A),o=0;o<n.length;o++)(i=n[o].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(n[o]))&&this.elements.splice(e,1),n[o].removeChild(i));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){var t=/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\]/g;return this.options.truncate||e(this.options),A.trim().replace(/\'/gi,"").replace(t,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&(" "+A.firstChild.className+" ").indexOf(" anchorjs-link ")>-1,t=A.lastChild&&(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ")>-1;return e||t||!1}}});  </script>
+!function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function e(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64}function t(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}function i(){if(null===document.head.querySelector("style.anchorjs")){var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"], style'))?document.head.appendChild(e):document.head.insertBefore(e,A),e.sheet.insertRule(" .anchorjs-link {   opacity: 0;   text-decoration: none;   -webkit-font-smoothing: antialiased;   -moz-osx-font-smoothing: grayscale; }",e.sheet.cssRules.length),e.sheet.insertRule(" *:hover > .anchorjs-link, .anchorjs-link:focus  {   opacity: 1; }",e.sheet.cssRules.length),e.sheet.insertRule(" [data-anchorjs-icon]::after {   content: attr(data-anchorjs-icon); }",e.sheet.cssRules.length),e.sheet.insertRule(' @font-face {   font-family: "anchorjs-icons";   src: url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype"); }',e.sheet.cssRules.length)}}this.options=A||{},this.elements=[],e(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var n,o,s,a,r,c,h,l,u,d,f,p=[];if(e(this.options),"touch"===(f=this.options.visible)&&(f=this.isTouchDevice()?"always":"hover"),A||(A="h2, h3, h4, h5, h6"),0===(n=t(A)).length)return this;for(i(),o=document.querySelectorAll("[id]"),s=[].map.call(o,function(A){return A.id}),r=0;r<n.length;r++)if(this.hasAnchorJSLink(n[r]))p.push(r);else{if(n[r].hasAttribute("id"))a=n[r].getAttribute("id");else if(n[r].hasAttribute("data-anchor-id"))a=n[r].getAttribute("data-anchor-id");else{u=l=this.urlify(n[r].textContent),h=0;do{void 0!==c&&(u=l+"-"+h),c=s.indexOf(u),h+=1}while(-1!==c);c=void 0,s.push(u),n[r].setAttribute("id",u),a=u}a.replace(/-/g," "),(d=document.createElement("a")).className="anchorjs-link "+this.options.class,d.href="#"+a,d.setAttribute("aria-label",this.options.ariaLabel),d.setAttribute("data-anchorjs-icon",this.options.icon),"always"===f&&(d.style.opacity="1"),""===this.options.icon&&(d.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(d.style.lineHeight="inherit")),"left"===this.options.placement?(d.style.position="absolute",d.style.marginLeft="-1em",d.style.paddingRight="0.5em",n[r].insertBefore(d,n[r].firstChild)):(d.style.paddingLeft="0.375em",n[r].appendChild(d))}for(r=0;r<p.length;r++)n.splice(p[r]-r,1);return this.elements=this.elements.concat(n),this},this.remove=function(A){for(var e,i,n=t(A),o=0;o<n.length;o++)(i=n[o].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(n[o]))&&this.elements.splice(e,1),n[o].removeChild(i));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){var t=/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\]/g;return this.options.truncate||e(this.options),A.trim().replace(/
+</html>
+/gi,"").replace(t,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&(" "+A.firstChild.className+" ").indexOf(" anchorjs-link ")>-1,t=A.lastChild&&(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ")>-1;return e||t||!1}}});  </script>
 
   <script>
+/*
   $(document).ready(function() {
           $('[id^=toc]').each(function ()
           {
@@ -1511,9 +1512,13 @@ $('#toggle').on('click', function(){
              currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "' </a>");
           });
 });
+*/
   anchors.options = {
   placement: 'left'
 };
 anchors.add('h1, h2, h3, h4');
-</script></body>
+</script>
+
+
+</body>
 </html>

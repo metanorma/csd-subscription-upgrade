@@ -679,14 +679,14 @@ Internet-Draft       Calendar subscription upgrades            June 2019
    This document defines the following new iCalendar properties to be
    added to the registry defined in section=8.2.3 [RFC5545]:
 
-          +------------------------+-------------+--------------+
-          | Relation Name          | Description | Reference    |
-          +------------------------+-------------+--------------+
-          | subscribe-caldav       | Current     | Section 7.2  |
-          | subscribe-caldav_auth  | Current     | Section 7.3  |
-          | subscribe-webdav-sync  | Current     | Section 7.4  |
-          | subscribe-enhanced_get | Current     | Section 7.5  |
-          +------------------------+-------------+--------------+
+          +------------------------+-------------+-------------+
+          | Relation Name          | Description | Reference   |
+          +------------------------+-------------+-------------+
+          | subscribe-caldav       | Current     | Section 7.2 |
+          | subscribe-caldav_auth  | Current     | Section 7.3 |
+          | subscribe-webdav-sync  | Current     | Section 7.4 |
+          | subscribe-enhanced_get | Current     | Section 7.5 |
+          +------------------------+-------------+-------------+
 
 10.  Acknowledgements
 
