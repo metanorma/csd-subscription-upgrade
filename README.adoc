@@ -4,11 +4,11 @@
 
 This work item belongs to TC FREEBUSY.
 
-image:https://travis-ci.com/CalConnect/csd-subscription-upgrade.svg?branch=master["Build Status", link="https://travis-ci.com/calconnect/csd-subscription-upgrade"]
+image:https://github.com/CalConnect/csd-subscription-upgrade/workflows/publish/badge.svg["Build Status", link="https://github.com/CalConnect/csd-subscription-upgrade/actions?workflow=publish"]
 
 This document is available in its rendered forms here:
 
-* https://calconnect.github.io/csd-subscription-upgrade/[CalConnect+IETF: Calendaring and scheduling -- Calendar subscription upgrades (HTML)]
+* https://calconnect.github.io/csd-subscription-upgrade/[CalConnect+IETF: Calendaring and scheduling -- Calendar subscription upgrades]
 
 == Fetching the document
 
