@@ -44,5 +44,6 @@ include::sections/12-acknowledgements.adoc[]
 // must give references before appendix!
 
 include::sections-ietf/98-references.adoc[]
+
 include::sections/a1-open-issues.adoc[]
 include::sections/a2-changelog.adoc[]
