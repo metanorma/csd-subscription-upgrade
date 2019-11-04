@@ -3,13 +3,6 @@
 <html xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
   <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
   <!--
-/*
-    0 CSS RESET
-*/
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -80,201 +73,35 @@ code *, pre *, tt *, kbd *, samp * {
   font-family: "Space Mono", monospace !important;
   font-variant-ligatures: none; }
 
-h1, h2, h3, h4, h5, h6, .h2Annex {
-  font-family: "Overpass", sans-serif; }
-
-dl {
-  display: grid;
-  grid-template-columns: max-content auto; }
-
-dt {
-  grid-column-start: 1; }
-
-dd {
-  grid-column-start: 2; }
-
-dd p, dt p {
-  margin-top: 0px; }
-
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
-
-body {
-  line-height: 1; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
 
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/*
-    1. HTML & Body
-*/
-body {
-  margin: 0;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  color: #1d1d1d;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 1.4em;
-  background-color: #ffffff; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Overpass", sans-serif; }
 
-main {
-  margin: 0 3em 0 6em; }
+blockquote, q {
+  quotes: none; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none; }
 
-#toc {
-  font-family: "Overpass", sans-serif;
-  font-weight: 400; }
+.h2Annex {
+  font-family: "Overpass", sans-serif; }
 
-/*
-    2. Responsive navigation layout
-*/
-@media screen and (min-width: 768px) {
-  nav {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 323px;
-    font-size: 0.9em;
-    overflow: auto;
-    padding: 0 0 0 45px;
-    margin-right: 30px;
-    background-color: #f7f7f7; }
-  #toggle {
-    position: fixed;
-    height: 100%;
-    width: 30px;
-    background-color: #1d1d1d;
-    color: white !important;
-    cursor: pointer;
-    z-index: 100; }
-  #toggle span {
-    text-align: center;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%); }
-  .container {
-    padding-left: 360px; }
-  .rule.toc {
-    display: none; }
-  h1.toc-contents {
-    margin-top: 1em; }
-  ul#toc-list {
-    padding: 0;
-    margin: 0; } }
-
-@media screen and (max-width: 768px) {
-  #toc {
-    padding: 0 1.5em 0 1.5em;
-    overflow: visible; } }
-
-div.figure > img {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  max-width: 100%;
-  height: auto; }
-
-#toc ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-#toc li a {
-  padding: 5px 10px; }
-
-#toc a {
-  color: #485094;
-  text-decoration: none;
-  display: block; }
-
-#toc a:hover {
-  box-shadow: none;
-  color: white; }
-
-#toc .h2 {
-  padding-left: 30px; }
-
-#toc .h3 {
-  padding-left: 50px; }
-
-#toc .toc-active a {
-  color: white; }
-
-#toc .toc-active, #toc li:hover {
-  background: #1d1d1d;
-  box-shadow: inset -5px 0px 10px -5px #1d1d1d !important; }
-
-#toc li:hover a {
-  color: white; }
-
-/*
-    Document types + stages
-*/
-.document-type-band {
-  left: 0;
-  top: 180px;
-  height: 100%;
-  position: fixed;
-  display: block;
-  z-index: 99;
-  /*box-shadow: -5px 0px 10px #1d1d1d*/ }
-
-.document-stage-band {
-  left: 0;
-  top: 0;
-  height: 100%;
-  position: fixed;
-  display: block;
-  z-index: 98;
-  box-shadow: -5px 0px 10px #1d1d1d; }
-
-.document-type {
-  position: relative;
-  width: 25px; }
-
-.document-stage {
-  position: relative;
-  width: 25px; }
-
-p.document-type, p.document-stage {
-  color: white;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  margin: 0;
-  margin-left: 6px;
-  writing-mode: tb-rl;
-  transform: rotate(180deg);
-  white-space: nowrap;
-  display: block;
-  bottom: 0; }
-
-p.document-type {
-  font-weight: 400;
-  height: 210px; }
-
-#governance-band p.document-type {
-  font-weight: 400;
-  height: 230px !important; }
-
-p.document-stage {
-  font-weight: 300;
-  height: 160px; }
+dl {
+  display: grid;
+  grid-template-columns: max-content auto; }
+  dl dt p, dl dd p {
+    margin-top: 0; }
+  dl dt {
+    grid-column-start: 1; }
+  dl dd {
+    grid-column-start: 2; }
 
 #standard-band {
   background-color: #0AC442; }
@@ -378,21 +205,196 @@ p.document-stage {
 #cancelled {
   border-bottom: solid 3px #2E382E; }
 
-.coverpage-maturity {
-  font-family: "Overpass", sans-serif;
-  font-weight: 400;
-  font-size: 1em;
-  margin: 0 0 2em 0;
-  text-transform: uppercase; }
+body {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.4em;
+  color: #1d1d1d;
+  background-color: #fff; }
+  body main {
+    margin: 0 3em 0 6em; }
 
-/*
-    3. TYPOGRAPHY
-*/
-/*
-    3.1 Titles
-*/
-h1, h2, h3, h4, h5, h6 {
+@media screen and (min-width: 768px) {
+  .container {
+    padding-left: 360px; } }
+
+@media print {
+  .container {
+    padding-left: 0; } }
+
+@media screen and (min-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 323px;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0 0 0 45px;
+    background-color: #f7f7f7; } }
+
+@media print {
+  nav {
+    position: relative;
+    width: auto;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0;
+    margin-right: 0;
+    background-color: white; } }
+
+nav #toc {
   font-family: "Overpass", sans-serif;
+  font-weight: 400; }
+  @media screen and (max-width: 768px) {
+    nav #toc {
+      padding: 0 1.5em;
+      overflow: visible; } }
+
+@media screen and (min-width: 768px) {
+  #toggle {
+    position: fixed;
+    height: 100%;
+    width: 30px;
+    background-color: #1d1d1d;
+    color: white !important;
+    cursor: pointer;
+    z-index: 100; }
+    #toggle span {
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%); } }
+
+@media screen and (max-width: 768px) {
+  #toggle {
+    display: none; } }
+
+@media print {
+  #toggle {
+    display: none; } }
+
+#toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  #toc ul li a {
+    padding: 5px 10px; }
+  #toc ul a {
+    color: #485094;
+    text-decoration: none;
+    display: block; }
+    #toc ul a:hover {
+      box-shadow: none;
+      color: white; }
+
+#toc .h2 {
+  padding-left: 30px; }
+
+#toc .h3 {
+  padding-left: 50px; }
+
+#toc .toc-active, #toc li:hover {
+  background: #1d1d1d;
+  box-shadow: inset -5px 0px 10px -5px #1d1d1d !important; }
+  #toc .toc-active a, #toc li:hover a {
+    color: white; }
+
+@media print {
+  #toc .toc-active, #toc li:hover {
+    background: white;
+    box-shadow: none !important; }
+  #toc .toc-active a {
+    color: #485094; }
+  #toc li:hover a {
+    color: black; } }
+
+#toc ul {
+  margin-bottom: 0.25em; }
+
+#toc li {
+  list-style-type: none; }
+  #toc li:before {
+    content: " " !important;
+    display: none; }
+
+.rule {
+  width: 100%;
+  height: 1px;
+  background-color: #0e1a85;
+  margin: 2em 0; }
+  @media screen and (min-width: 768px) {
+    .rule.toc {
+      display: none; } }
+
+.document-stage-band {
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 101;
+  box-shadow: -5px 0px 10px #1d1d1d; }
+  .document-stage-band > :first-child {
+    position: relative;
+    width: 25px;
+    font-weight: 300;
+    height: 160px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin: 0;
+    margin-left: 6px;
+    writing-mode: tb-rl;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    white-space: nowrap;
+    display: block;
+    bottom: 0; }
+  @media print {
+    .document-stage-band {
+      display: none; } }
+
+.document-type-band {
+  left: 0;
+  top: 180px;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 102; }
+  .document-type-band > :first-child {
+    position: relative;
+    width: 25px;
+    font-weight: 400;
+    height: 210px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin: 0;
+    margin-left: 6px;
+    writing-mode: tb-rl;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    white-space: nowrap;
+    display: block;
+    bottom: 0; }
+  @media print {
+    .document-type-band {
+      display: none; } }
+
+/* Typograpy */
+h1, h2, h3, h4, h5, h6 {
   color: #0e1a85;
   font-weight: 600;
   margin-top: 2em;
@@ -402,30 +404,24 @@ h1 {
   font-size: 1.4em;
   text-transform: uppercase;
   margin-top: 2em; }
-
-h1#content {
-  margin-top: 2em; }
+  h1#content {
+    margin-top: 2em; }
 
 h2 {
   font-size: 1.3em;
   font-weight: 400; }
+  h2 p {
+    display: inline; }
 
 h3 {
   font-size: 1.1em;
   font-weight: 400; }
 
-/*
-  span[id^="toc"]:after {
-    float: left;
-    padding-right: 4px;
-    margin-left: -20px;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 0.8em;
-    color: #cfcfcf;
-    content: "\f0c1";
-  }
-  */
+p {
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+/* Terms */
 .TermNum, .Terms, .AltTerms {
   color: #485094;
   font-weight: 400; }
@@ -441,18 +437,7 @@ p.Terms {
   line-height: 1.7em;
   margin: 0; }
 
-/*
-  p.AltTerms {
-    font-style: italic;
-    margin: 0;
-  }
-  */
-span.obligation {
-  font-weight: 400; }
-
-/*
-    3.2 Links
-*/
+/* Links, selection */
 a, a:visited {
   text-decoration: none;
   color: #485094; }
@@ -460,28 +445,14 @@ a, a:visited {
 a:hover {
   color: white;
   background: #1d1d1d;
-  box-shadow: 3px 0 0 #1d1d1d, -3px 0 0 #1d1d1d;
-  /* padding: 2px 0 2px 0; */ }
+  box-shadow: 3px 0 0 #1d1d1d, -3px 0 0 #1d1d1d; }
 
-::selection {
-  background: #1d1d1d;
-  /* WebKit/Blink Browsers */
-  color: white; }
-
+::selection,
 ::-moz-selection {
   background: #1d1d1d;
-  /* Gecko Browsers */
   color: white; }
 
-.contact-info a:hover {
-  color: #485094;
-  text-decoration: underline;
-  background: none;
-  box-shadow: 0 0 0 0; }
-
-/*
-    3.3 Lists
-*/
+/* Lists */
 ol {
   margin-left: 1.2em; }
 
@@ -500,31 +471,7 @@ main li {
   margin-top: 1em;
   padding-left: 0.5em; }
 
-#toc ul {
-  margin-bottom: 0.25em; }
-
-#toc li {
-  list-style-type: none; }
-
-#toc li:before {
-  content: " ";
-  display: none; }
-
-/*
-    3.4 Rules
-*/
-.rule {
-  width: 100%;
-  height: 1px;
-  background-color: #0e1a85;
-  margin: 2em 0; }
-
-h2 p {
-  display: inline; }
-
-/*
-    3.5 Bibliograhy
-*/
+/* Bibliograhy */
 p.Biblio, p.NormRef {
   margin-top: 1em; }
 
@@ -532,10 +479,26 @@ p.Biblio:before, p.NormRef:before {
   content: "\2014";
   padding-right: 1em; }
 
-/*
-    3.6 Source Code + figures
-*/
-.figure, .Sourcecode {
+/* Blocks */
+.figure {
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto;
+  font-family: "Space Mono", monospace;
+  font-variant-ligatures: none; }
+  .figure .FigureTitle, .figure .figure-title {
+    font-weight: 700;
+    font-size: 1em;
+    text-align: center; }
+  .figure > img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 100%;
+    height: auto; }
+
+.Sourcecode {
   font-family: "Space Mono", monospace;
   font-variant-ligatures: none;
   background-color: #f7f7f7;
@@ -544,32 +507,46 @@ p.Biblio:before, p.NormRef:before {
   padding: 1.5em;
   margin: 2em 0 1em 0;
   overflow: auto; }
+  .Sourcecode .SourceTitle {
+    font-weight: 700;
+    font-size: 1em;
+    text-align: center; }
+  .example .Sourcecode {
+    background: none; }
 
-.FigureTitle, .SourceTitle, .AdmonitionTitle {
+.Admonition .AdmonitionTitle {
   font-weight: 700;
   font-size: 1em;
   text-align: center; }
 
-/*
-    3.7 Notes
-*/
 .Note, .Admonition {
   color: #47430c;
   padding: 0.25em;
   margin: 0; }
 
-.Note p, .Admonition p {
-  margin: 1em; }
-
 .Note {
   background-color: #fff495; }
+  .Note p {
+    margin: 1em; }
 
-.Admonition {
-  background-color: #ffcccc; }
+.blockquote, .Quote {
+  background-color: #f7f7f7;
+  font-style: italic;
+  width: 80%;
+  padding: 1.5em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto; }
+  .blockquote .QuoteAttribution, .Quote .QuoteAttribution {
+    text-align: right; }
 
-/*
-    3.8 Examples
-*/
+.formula, .Formula {
+  background-color: #f7f7f7;
+  padding: 1.5em;
+  margin-top: 2em;
+  text-align: center; }
+
+/* Examples */
 table.example {
   background-color: #e1eef1; }
 
@@ -590,42 +567,33 @@ td.example {
 .example .example-title {
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 0;
   margin-left: -1.5em; }
 
 .example .Sourcecode {
   background: none; }
 
-/*
-    3.9 Tables
-*/
+/* Tables */
 table {
-  border-collapse: collapse;
   width: 100%;
   font-weight: 300;
   margin: 1em 0 2em 0;
   margin-left: auto;
   margin-right: auto;
   padding-right: 2em; }
-
-table, th, td {
-  border: 1px solid black;
-  font-size: 0.95em; }
-
-td, th {
-  padding: 1em; }
-
-td.header {
-  font-weight: 400; }
+  table, table th, table td {
+    border: 1px solid black;
+    font-size: 0.95em; }
+  table th, table td {
+    padding: 1em; }
+  table td.header {
+    font-weigth: 400; }
 
 p.TableTitle {
   text-align: center;
   margin-top: 2.5em;
   font-weight: 400; }
 
-/*
-  3.10 Footnotes
-*/
+/* Footnotes */
 a.footnote-number {
   vertical-align: super;
   font-size: 0.8em; }
@@ -633,33 +601,7 @@ a.footnote-number {
 .footnote {
   font-size: 0.9em; }
 
-/*
-    3.11 Blockquotes
-*/
-.Quote {
-  background-color: #f7f7f7;
-  font-style: italic;
-  width: 80%;
-  padding: 1.5em;
-  margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto; }
-
-.QuoteAttribution {
-  text-align: right; }
-
-/*
-    3.12 Formulas
-*/
-.formula, .Formula {
-  background-color: #f7f7f7;
-  padding: 1.5em;
-  margin-top: 2em;
-  text-align: center; }
-
-/*
-    3.13 Contact Info
-*/
+/* Contact Info */
 .contact-info {
   background-color: #f7f7f7;
   padding: 1em;
@@ -668,51 +610,40 @@ a.footnote-number {
   margin-left: auto;
   margin-right: auto;
   text-align: left; }
+  .contact-info p, .contact-info a {
+    font-family: "Space Mono", monospace;
+    font-variant-ligatures: none;
+    font-weight: 400;
+    line-height: 1.3em;
+    font-size: 1em;
+    margin: 0; }
+  .contact-info a:hover {
+    color: #485094;
+    background: none;
+    text-decoration: underline;
+    box-shadow: none; }
+  .contact-info .name {
+    font-weight: 700; }
 
-.contact-info p, .contact-info a {
-  font-family: "Space Mono", monospace;
-  font-variant-ligatures: none;
-  font-weight: 400;
-  line-height: 1.3em;
-  font-size: 1em;
-  margin: 0; }
-
-.contact-info .name {
-  font-weight: 700; }
-
-/*
-    Keywords
-*/
+/* Keywords */
 span.keyword {
   font-weight: 600; }
-
-/*
-    Paragraphs
-*/
-p {
-  margin-top: 1em;
-  margin-bottom: 1em; }
 
 /* Admonitions */
 .Admonition, .admonition {
   background-color: #ffb3b3;
-  /* color: #47430c;*/
   padding: 0.5em;
   margin: 1.5em 0 1.5em 0;
   text-align: left; }
+  .Admonition p, .admonition p {
+    margin: 0; }
 
-.Admonition p, .admonition p {
-  margin: 0; }
+.coverpage {
+  text-align: center;
+  padding-left: 1.5em; }
 
-/*
-    4.0 Page header
-*/
-/*
-    4.1 Top Logo
-*/
 .wrapper-top {
   background-color: #0e1a85;
-  /* background-image: url("img/dots@2x.png"); */
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAACXBIWXMAABYlAAAWJQFJUiTwAAADwUlEQVR4nO3YgQ2AMAwDwcAiWZ1NizrH30lIeIEq9nPOGSDqPgC7+93v/suy3Mmvhx+6VAAIcwFAmc4nyzYAIMgGAGEuACirdyBZtgEASTYACHMBQFm9A8myDQBIsgFAmAsAyuodSJZtAECSDQDCXABQVu9AsmwDAJJsABDmAoCyegeSZRsAkGQDgDAXAJTVO5As2wCAJBsAhLkAoKzegWTZBgAk2QAgzAUAZfUOJMs2ACDJBgBhLgAoq3cgWbYBAEk2AAhzAUBZvQPJsg0ASLIBQJgLAMrqHUiWbQBAkg0AwlwAUFbvQLJsAwCSbAAQ5gKAsnoHkmUbAJBkA4AwFwCU1TuQLNsAgCQbAIS5AKCs3oFk2QYAJNkAIMwFAGX1DiTLNgAgyQYAYS4AKKt3IFm2AQBJNgAIcwFAWb0DybINAEiyAUCYCwDK6h1Ilm0AQJINAMJcAFBW70CybAMAkmwAEOYCgLJ6B5JlGwCQZAOAMBcAlNU7kCzbAIAkGwCEuQCgrN6BZNkGACTZACDMBQBl9Q4kyzYAIMkGAGEuACirdyBZtgEASTYACHMBQFm9A8myDQBIsgFAmAsAyuodSJZtAECSDQDCXABQVu9AsmwDAJJsABDmAoCyegeSZRsAkGQDgDAXAJTVO5As2wCAJBsAhLkAoKzegWTZBgAk2QAgzAUAZfUOJMs2ACDJBgBhLgAoq3cgWbYBAEk2AAhzAUBZvQPJsg0ASLIBQJgLAMrqHUiWbQBAkg0AwlwAUFbvQLJsAwCSbAAQ5gKAsnoHkmUbAJBkA4AwFwCU1TuQLNsAgCQbAIS5AKCs3oFk2QYAJNkAIMwFAGX1DiTLNgAgyQYAYS4AKKt3IFm2AQBJNgAIcwFAWb0DybINAEiyAUCYCwDK6h1Ilm0AQJINAMJcAFBW70CybAMAkmwAEOYCgLJ6B5JlGwCQZAOAMBcAlNU7kCzbAIAkGwCEuQCgrN6BZNkGACTZACDMBQBl9Q4kyzYAIMkGAGEuACirdyBZtgEASTYACHMBQFm9A8myDQBIsgFAmAsAyuodSJZtAECSDQDCXABQVu9AsmwDAJJsABDmAoCyegeSZRsAkGQDgDAXAJTVO5As2wCAJBsAhLkAoKzegWTZBgAk2QAgzAUAZfUOJMs2ACDJBgBhLgAoq3cgWbYBAEk2AAhzAUBZvQPJsg0ASLIBQJgLAMrqHUiWbQBAkg0AwlwAUFbvQLJsAwCSbAAQ5gKAsnoHkmUbAJBkA4AwFwCU1TuQLNsAgCQbAFTNzA9ggAr9aahO8QAAAABJRU5ErkJggg==");
   color: #ffffff;
   padding: 2em 0; }
@@ -720,6 +651,13 @@ p {
 .doc-number {
   font-size: 0.5em;
   font-family: "Overpass", sans-serif; }
+
+.coverpage-maturity {
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0 0 2em 0;
+  text-transform: uppercase; }
 
 .coverpage-title {
   padding-bottom: 0.5em;
@@ -739,10 +677,6 @@ p {
 .zzSTDTitle1, .MsoCommentText {
   display: none; }
 
-.coverpage {
-  text-align: center;
-  padding-left: 1.5em; }
-
 .coverpage-logo span, .coverpage-tc-name span {
   font-family: "Overpass", sans-serif;
   text-transform: uppercase;
@@ -757,24 +691,19 @@ p {
   margin-top: 1em;
   line-height: 1.5em;
   font-weight: 300; }
+  .coverpage-contributors .role {
+    font-variant-caps: all-small-caps;
+    background: #f7f7f7;
+    border-radius: 5px;
+    padding: 0.1em 0.5em;
+    margin-left: 1em;
+    color: #485094;
+    font-size: 0.9em;
+    font-weight: 900; }
+  .coverpage-contributors .person {
+    display: block;
+    font-weight: 300; }
 
-.coverpage-contributors .role {
-  font-variant-caps: all-small-caps;
-  background: #f7f7f7;
-  border-radius: 5px;
-  padding: 0.1em 0.5em;
-  margin-left: 1em;
-  color: #485094;
-  font-size: 0.9em;
-  font-weight: 900; }
-
-.coverpage-contributors .person {
-  display: block;
-  font-weight: 300; }
-
-/*
-    4.2 Document Identity
-*/
 .coverpage-doc-identity {
   font-size: 2em;
   line-height: 2em; }
@@ -789,40 +718,26 @@ p {
   margin: 2em 0em 2em 0em;
   text-transform: uppercase; }
 
-/*
-    4.3 Draft Warning
-*/
 .coverpage-warning {
   border-top: solid 1px #f36f36;
   border-bottom: solid 1px #f36f36;
   margin: 1em 2em;
   color: #485094;
   padding: 1em; }
+  .coverpage-warning .title {
+    color: #f36f36;
+    font-family: "Overpass", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.2em; }
 
-.coverpage-warning .title {
-  color: #f36f36;
-  font-family: "Overpass", sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 1.2em; }
-
-/*
-    4.4 Copyright
-*/
 .copyright {
   padding: 1em;
   font-size: 0.9em;
   text-align: left; }
+  .copyright .name, .copyright .address {
+    color: #485094; }
 
-.copyright .name, .copyright .address {
-  color: #485094; }
-
-/*
-    5.0 Other styles
-*/
-/*
-To top button
-*/
 #myBtn {
   font-family: "Space Mono", monospace;
   font-variant-ligatures: none;
@@ -840,9 +755,11 @@ To top button
   cursor: pointer;
   padding: 10px 15px 10px 15px;
   border-radius: 4px; }
-
-#myBtn:hover {
-  opacity: 1; }
+  #myBtn:hover {
+    opacity: 1; }
+  @media print {
+    #myBtn {
+      display: none; } }
 
 a.anchorjs-link:hover {
   background: none;
@@ -855,26 +772,6 @@ a.anchorjs-link:hover {
 @media print {
   h1, .title-section1 {
     page-break-before: always; }
-  #toggle, .document-stage-band,
-  .document-type-band, #myBtn {
-    display: none; }
-  .container {
-    padding-left: 0; }
-  nav {
-    position: relative;
-    width: auto;
-    font-size: 0.9em;
-    overflow: auto;
-    padding: 0;
-    margin-right: 0;
-    background-color: white; }
-  #toc .toc-active a {
-    color: #485094; }
-  #toc .toc-active, #toc li:hover {
-    background: white;
-    box-shadow: none !important; }
-  #toc li:hover a {
-    color: black; }
   h1.toc-contents {
     margin-top: 2em; } }
 
@@ -1027,55 +924,55 @@ a.anchorjs-link:hover {
       <br />
       <div>
         <h1 class="ForewordTitle">Foreword</h1>
-        <p id="_4d1d2260-915b-4a7f-82f2-730360c0546f">This specification updates <a href="#RFC5545">RFC 5545</a> to add the value DELETED to the
+        <p id="_70a0ff6c-3b6a-49e3-97d7-84070d516785">This specification updates <a href="#RFC5545">RFC 5545</a> to add the value DELETED to the
 STATUS property.</p>
-        <p id="_25bef358-69b6-49d7-b13d-0ebe061710ac">This specification also updates <a href="#RFC7240">RFC 7240</a> to add the subscribe-
+        <p id="_17f21818-8707-456b-ab0d-060ccebc5927">This specification also updates <a href="#RFC7240">RFC 7240</a> to add the subscribe-
 enhanced-get and limit preferences.</p>
-        <p id="_f720976e-bcb5-47b3-931b-f9ab1004fddf">The Calendaring and Scheduling Consortium (&#x201C;CalConnect&#x201D;) is a global
+        <p id="_b0ce70d3-cc34-4201-b752-c0e10109119d">The Calendaring and Scheduling Consortium (&#x201C;CalConnect&#x201D;) is a global
 non-profit organization with the aim to facilitate interoperability of
 collaborative technologies and tools through open standards.</p>
-        <p id="_1963e436-8b18-480a-9390-d4ba8c55a490">CalConnect works closely with international and regional partners,
+        <p id="_d002e8e5-620e-4fed-9690-6ede9037b3f7">CalConnect works closely with international and regional partners,
 of which the full list is available on our website
 (<a href="https://www.calconnect.org/about/liaisons-and-relationships">https://www.calconnect.org/about/liaisons-and-relationships</a>).</p>
-        <p id="_e1ede01a-cb0b-498c-8e7a-aba1d9c80d1b">The procedures used to develop this document and those intended for its
+        <p id="_b0ca4b1e-81ce-40f6-8e6a-3ede6e1d8f20">The procedures used to develop this document and those intended for its
 further maintenance are described in the CalConnect Directives.</p>
-        <p id="_d6905661-96eb-4f6d-a47c-b32b65f777e3">In particular the different approval criteria needed for the different
+        <p id="_2387adf9-00cc-48f4-af10-2f75b717329f">In particular the different approval criteria needed for the different
 types of CalConnect documents should be noted. This document was drafted in
 accordance with the editorial rules of the CalConnect Directives.</p>
-        <p id="_ffea9b23-14ef-406b-8a7c-58995987947b">Attention is drawn to the possibility that some of the elements of this
+        <p id="_efcdd7e1-8dc7-45ea-804e-d48ae7bb9027">Attention is drawn to the possibility that some of the elements of this
 document may be the subject of patent rights. CalConnect shall not be
 held responsible for identifying any or all such patent rights. Details
 of any patent rights identified during the development of the document
 will be provided in the Introduction.</p>
-        <p id="_c0b37222-54f0-48c6-a509-ac42245f1852">Any trade name used in this document is information given for the
+        <p id="_f48e3773-9f2c-447f-b15d-7280d0540f23">Any trade name used in this document is information given for the
 convenience of users and does not constitute an endorsement.</p>
-        <p id="_4f28ddd1-631b-463a-bd74-5a4b2067bc4e">This document was prepared by Technical Committee
+        <p id="_1146f055-0b76-4917-8425-f5fce2a3a9d8">This document was prepared by Technical Committee
 <i>CALENDAR</i>.</p>
       </div>
       <br />
       <div class="Section3" id="introduction">
         <h1 class="IntroTitle">Introduction</h1>
-        <p id="_8f2be749-a770-428b-8cff-427e70c36666">Currently clients subscribe to calendar feeds as an iCalendar file which is
+        <p id="_a694a42a-872f-411c-9521-be874bef8af3">Currently clients subscribe to calendar feeds as an iCalendar file which is
 often published as a resource accessible using the unofficial
 &#x2018;webcal&#x2019; scheme.</p>
-        <p id="_16355516-eb66-4474-ac96-2721459738ea">The only available option for updating that resource is the usual
+        <p id="_6ff80310-51d1-4dc2-b921-54ee955779bf">The only available option for updating that resource is the usual
 HTTP polling of cached resources using Etags.</p>
-        <p id="_6b0a0eb8-396b-458b-9946-9d34f9db4e9f">There is the usual tension between clients wishing to see a timely
+        <p id="_c8614bc4-c5f0-41cc-8ac4-09f99a612a96">There is the usual tension between clients wishing to see a timely
 response to changes and servers not wishing to be overloaded by
 frequent requests for possibly large amounts of data.</p>
-        <p id="_963e0a07-7d8e-4e4a-9c80-e2340723c2b1">This specification introduces an approach whereby clients can
+        <p id="_ebf9d76d-214f-4b2d-a79b-5e0ce7d043bf">This specification introduces an approach whereby clients can
 discover a more performant access method.  Given the location of the
 resource as an iCalendar file, the client can perfom a HEAD request on the
 resource and inspect the returned headers which will offer a number
 of alternative access methods.</p>
-        <p id="_25c5286b-7024-4bcc-805a-7ecafe95d318">Given that many clients and servers already support CalDAV this provides an easy
+        <p id="_2cd647a0-9f62-41e7-8036-2400b30c5cd0">Given that many clients and servers already support CalDAV this provides an easy
 upgrade path for those clients.  CalDAV and DAV subsets are specified
 here to allow lighter weight implementations.</p>
       </div>
       <p class="zzSTDTitle1">Calendaring and scheduling&#x2009;&#x2014;&#x2009;Calendar subscription upgrades</p>
       <div id="_scope">
         <h1>1.&#xA0; Scope</h1>
-        <p id="_4d103791-ed8b-478c-9e25-3b403779ea6b">This document provides a mechanism to allow subscribers to
+        <p id="_aaf635ad-0165-4728-9b03-5687ffe636e6">This document provides a mechanism to allow subscribers to
 calendar feeds to upgrade to a more performant protocol.</p>
       </div>
       <div>
@@ -1093,112 +990,112 @@ calendar feeds to upgrade to a more performant protocol.</p>
       </div>
       <div id="_discovering_alternative_access_methods">
         <h1>3.&#xA0; Discovering alternative access methods</h1>
-        <p id="_7108d73f-4e90-4449-89d4-accf8e9d558f">The advertising of other access points is achieved through the use of
+        <p id="_45e666a4-dda7-43c6-874d-cb70ef062d8d">The advertising of other access points is achieved through the use of
 the LINK header as defined in <a href="#RFC5988">RFC 5988</a>.  New link relation types are
 defined in this specification&#x2009;&#x2013;&#x2009;each being associated with a protocol
 or protocol subset.</p>
-        <p id="_33a6252e-53eb-4c40-9c8b-f9b889a8d615">These LINK headers will be delivered when a client carries out a HEAD
+        <p id="_56c0005d-6485-42e4-bcf4-4166dff4b477">These LINK headers will be delivered when a client carries out a HEAD
 request targeting the URL of the resource.</p>
-        <div id="_681c8fb1-93db-4647-a853-a1e50aa0ef74" class="example"><p class="example-title">EXAMPLE</p><p id="_611df7e7-4222-4129-97e9-5f6b95b5b2ba">This is an example of a HEAD request and the response from a server
+        <div id="_28afae99-bba5-49cd-9daf-9b7cf93c7b40" class="example"><p class="example-title">EXAMPLE</p><p id="_c02f09bb-0186-4788-a176-8bdaaaf13b44">This is an example of a HEAD request and the response from a server
 that supports the enhanced GET method.</p>
-<pre id="_b7253697-1fe2-4585-a3c0-cdde4f30059c" class="prettyprint ">&#xA0;&#xA0;&#xA0; &gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HEAD /caldata/events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 200 OK<br />&#xA0;&#xA0;&#xA0; Content-Length: xxxx<br />&#xA0;&#xA0;&#xA0; Link: &lt;http://example.com/subscribe/events.ics&gt;;<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; rel="subscribe-enhanced-get"</pre>
+<pre id="_257ee986-124d-4025-a05c-3a4f4fbc586b" class="prettyprint ">&#xA0;&#xA0;&#xA0; &gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HEAD /caldata/events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 200 OK<br />&#xA0;&#xA0;&#xA0; Content-Length: xxxx<br />&#xA0;&#xA0;&#xA0; Link: &lt;http://example.com/subscribe/events.ics&gt;;<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; rel="subscribe-enhanced-get"</pre>
 </div>
-        <p id="_50c13d6b-7459-40d9-a187-1d3a014a6b82">Note that the target for an upgraded service may be the same as
+        <p id="_b21e0a0b-5953-42aa-8b91-f3cee42c22b3">Note that the target for an upgraded service may be the same as
 for the initial resource.</p>
       </div>
       <div id="enhanced-get">
         <h1>4.&#xA0; Enhanced GET</h1>
-        <div id="_general"><h2>4.1. General</h2><p id="_eb7fc4d0-87a7-445c-9f8b-b1a8dacbd397">This is a lightweight protocol which allows simple clients to
+        <div id="_general"><h2>4.1.&#xA0; General</h2><p id="_9f4a656d-e1a3-419a-a780-09f8b2edcf27">This is a lightweight protocol which allows simple clients to
 efficiently discover and download changes in the targeted resource.</p>
-<p id="_4d1da672-3bf9-4d8e-a89d-e20a001864d2">It has many similarities to WebDAV sync and for a server could be
+<p id="_3fc10955-34c1-46e0-a2cc-ccb5cb9b9188">It has many similarities to WebDAV sync and for a server could be
 implemented as an extension of the specification.</p>
-<p id="_d30ca695-3509-4b96-a413-a0121a8dc304">In this protocol the client MUST include the Prefer header field
+<p id="_7edf804c-a903-405a-b0a5-8f735d014d83">In this protocol the client MUST include the Prefer header field
 preference &#x201C;subscribe-enhanced-get&#x201D;. If a sync token is available it
 is passed as a Sync-Token header field.</p>
-<p id="_39821f57-cf76-432b-851e-5bc40115685c">The resource is treated as a set of individual events each of which
+<p id="_5c62fc67-56ff-4ebb-9558-dbc12e8e6604">The resource is treated as a set of individual events each of which
 may be updated or deleted separately. The client will first fetch
 the entire iCalendar file.  On subsequent requests it uses the Prefer
 header field and a Sync-Token header field to indicate that it wants a set
 of changes since the last fetch.</p>
-<p id="_5dfa2dc6-89e2-46cc-bfc0-fa3746d85edb">If no Sync-Token header field is supplied the server SHOULD
+<p id="_49bd31a8-673f-44fc-a714-d64c546fdb71">If no Sync-Token header field is supplied the server SHOULD
 respond with a full set of data. Otherwise, if the token is valid, it SHOULD return with a set of changed entities.</p>
-<p id="_b617d0d2-4e80-4050-9daf-f0d0fc201a30">In both cases the server should set the Preference-Applied header field and a new Sync-Token header field value.</p></div>
-        <div id="_deletions"><h2>4.2. Deletions</h2><p id="_570dc637-9473-485d-ac76-87ab7c506943">When an entity (VEVENT, VTODO or other valid top-level component) is
+<p id="_4e99747b-312c-4e05-bf5a-28a4c633f31d">In both cases the server should set the Preference-Applied header field and a new Sync-Token header field value.</p></div>
+        <div id="_deletions"><h2>4.2.&#xA0; Deletions</h2><p id="_0566c2e2-25fd-4b6a-97a8-b1d2248c3d3f">When an entity (VEVENT, VTODO or other valid top-level component) is
 deleted from the source data the server needs to be able to inform a
 client of the deletion.  This specification introduces a new value
 for the STATUS property of DELETED.</p>
-<p id="_c4d8561d-beee-4dd9-81a4-e030c51b52a2">On the first enhanced GET after the entity has been deleted a
+<p id="_d5041b9e-c8d0-487d-8557-91a292d479c5">On the first enhanced GET after the entity has been deleted a
 skeleton, but valid, entity will be returned with STATUS: DELETED.
 The receiving client is free to remove the entity or update it&#x2019;s
 STATUS property.</p>
-<p id="_cb5ab73f-97ca-4227-a292-6764990cbdb5">On subsequent fetches the entity will not be returned.</p></div>
-        <div id="_handling_of_invalid_sync_tokens"><h2>4.3. Handling of invalid sync tokens</h2><p id="_a3cad501-0a22-4609-97b5-694abdc25ff8">When a server receives an invalid token it MUST return a 409 status (Conflict).  The server MAY choose to return an error
+<p id="_53c5e14b-b96f-40d1-8ad1-cada344c8bbd">On subsequent fetches the entity will not be returned.</p></div>
+        <div id="_handling_of_invalid_sync_tokens"><h2>4.3.&#xA0; Handling of invalid sync tokens</h2><p id="_787f3b85-137f-44b1-80ec-d3c2fc6ee1ab">When a server receives an invalid token it MUST return a 409 status (Conflict).  The server MAY choose to return an error
 message in the body.</p>
-<p id="_d4813513-b077-4aa9-bf74-c25c7adf40ec">The client SHOULD respond to this error by restarting the interaction
+<p id="_36e0080a-f791-4232-90da-349857020425">The client SHOULD respond to this error by restarting the interaction
 from scratch, i.e. retrieve the full set of data then poll for
 updates.</p></div>
-        <div id="_paging_the_response"><h2>4.4. Paging the response</h2><p id="_b9d4f59f-4e2f-4ea8-b110-193e6103393e">A client may explicitly request a limit on the size of the response
+        <div id="_paging_the_response"><h2>4.4.&#xA0; Paging the response</h2><p id="_2849e655-24be-4cc8-985c-8b52872af1c8">A client may explicitly request a limit on the size of the response
 by specifying the Prefer header field preference &#x201C;limit=n&#x201D; where n is
 the number of components.</p>
-<p id="_18d32c8d-0aa1-4a79-8bb4-c91bb873518a">When a server receives a request specifying such a limit it SHOULD
+<p id="_81d5d243-8801-41c7-8b09-c3f5d915114f">When a server receives a request specifying such a limit it SHOULD
 limit the response to that number of components.  If the limit causes
 a truncation in the response the server should respond with a
 Preference-Applied header specifying the limit that was applied
 and return a sync token which may be used to retrieve the next batch of data.</p>
-<p id="_baa51a15-9c42-426f-b86d-f4b2ac89850b">This allows the client to immediately resubmit a
+<p id="_b30423c4-223c-4ad3-9b21-18b00bd90705">This allows the client to immediately resubmit a
 request for the next batch using the updated token.</p>
-<p id="_368efdb9-c5ba-45e2-ae2f-bd2d7f25bb15">A server MAY choose to limit the response size.  The behavior SHOULD
+<p id="_53f5dc60-aa03-4507-9a3d-d991b4374d85">A server MAY choose to limit the response size.  The behavior SHOULD
 be as if the client had provided a preference for that size -
 allowing the client to retrieve the full set of data in batches.</p></div>
-        <div id="_caching_of_responses"><h2>4.5. Caching of responses</h2><p id="_2659c681-d7ad-48cb-b08a-81f9e51b3d3c">To enable proper caching of responses the server SHOULD provide a
+        <div id="_caching_of_responses"><h2>4.5.&#xA0; Caching of responses</h2><p id="_4a7cd6ea-c502-4bbe-ad98-cfe6d1510df1">To enable proper caching of responses the server SHOULD provide a
 VARY header field in responses that names the Prefer and Sync-Token header fields
 along with any other that are appropriate.</p>
-<p id="_1f842072-1366-4eff-b4b8-54789c1b04ee">Clients should order the preferences as following so that
+<p id="_9dcb378c-95b2-43c1-8f79-1c0bf1ca30b2">Clients should order the preferences as following so that
 identical responses can be identified:</p>
-<ul id="_d5ff25d0-4009-4304-856b-d413518babaf">
+<ul id="_db7987b7-46c2-485f-8b1c-85469e8f36ba">
   <li>
-    <p id="_8a8cb0b2-fd61-4aab-afeb-4f7d88129931">subscribe-enhanced-get</p>
+    <p id="_8b98d188-a190-479e-afbf-2e9e05f7f3ec">subscribe-enhanced-get</p>
   </li>
   <li>
-    <p id="_dddd253d-b162-4af2-a31f-4b6588813ca5">limit</p>
+    <p id="_f4303097-c429-47c4-8cd8-b891706b85d8">limit</p>
   </li>
 </ul></div>
-        <div id="_examples"><h2>4.6. Examples</h2><div id="_3b0a6cdc-0abd-4256-bea2-ce5b88b88877" class="example"><p class="example-title">EXAMPLE  1</p><p id="_518ca43c-7179-4ce5-972e-bd35b962e249">This is an example of the initial request and response from a server
+        <div id="_examples"><h2>4.6.&#xA0; Examples</h2><div id="_2caf0371-6d99-449d-8661-eb76dc197a2d" class="example"><p class="example-title">EXAMPLE  1</p><p id="_9182d39e-0484-4b65-94f7-d7f0a1ad95de">This is an example of the initial request and response from a server
 that supports the enhanced GET method. Note the use of the Vary header so a caching proxy can key off the client&#x2019;s Sync-Token and preference.</p>
-<pre id="_56d49875-ee2f-4cbb-9efe-bfed762b63c1" class="prettyprint ">&#xA0;&#xA0;&#xA0; &gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; GET /events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br />&#xA0;&#xA0;&#xA0; Prefer: subscribe-enhanced-get<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 200 OK<br />&#xA0;&#xA0;&#xA0; Content-Length: xxxx<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br />&#xA0;&#xA0;&#xA0; Preference-Applied: subscribe-enhanced-get<br />&#xA0;&#xA0;&#xA0; Vary: Prefer, Sync-Token<br /><br />&#xA0;&#xA0;&#xA0; BEGIN:VCALENDAR:<br />&#xA0;&#xA0;&#xA0; ?&#xA0; /* full feed */<br />&#xA0;&#xA0;&#xA0; END:VCALENDAR</pre>
+<pre id="_64c0f08d-5edd-47d3-90a1-11ef06b0ae28" class="prettyprint ">&#xA0;&#xA0;&#xA0; &gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; GET /events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br />&#xA0;&#xA0;&#xA0; Prefer: subscribe-enhanced-get<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 200 OK<br />&#xA0;&#xA0;&#xA0; Content-Length: xxxx<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br />&#xA0;&#xA0;&#xA0; Preference-Applied: subscribe-enhanced-get<br />&#xA0;&#xA0;&#xA0; Vary: Prefer, Sync-Token<br /><br />&#xA0;&#xA0;&#xA0; BEGIN:VCALENDAR:<br />&#xA0;&#xA0;&#xA0; ?&#xA0; /* full feed */<br />&#xA0;&#xA0;&#xA0; END:VCALENDAR</pre>
 </div>
-<div id="_fe9518d1-8e10-4636-b826-8568e99dc953" class="example"><p class="example-title">EXAMPLE  2</p><p id="_4820868b-8df0-4a58-99aa-97f2d50813ab">This is an example of the subsequent request and response when no
+<div id="_44d8f86e-27b2-47fc-adb3-70b71401eaef" class="example"><p class="example-title">EXAMPLE  2</p><p id="_8b1d6a68-9339-4909-8cf8-a04b4e75bee6">This is an example of the subsequent request and response when no
 changes have occurred.</p>
-<pre id="_09b3012f-e8e4-4472-8ffa-94a3633b1ce7" class="prettyprint ">&#xA0;&#xA0;&#xA0; &gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; GET /events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br />&#xA0;&#xA0;&#xA0; Prefer: subscribe-enhanced-get<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 304 Not Modified<br />&#xA0;&#xA0;&#xA0; Content-Length: 0<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br />&#xA0;&#xA0;&#xA0; Preference-Applied: subscribe-enhanced-get<br />&#xA0;&#xA0;&#xA0; Vary: Prefer, Sync-Token</pre>
+<pre id="_f92c8735-91b2-4508-8419-81932a971a4d" class="prettyprint ">&#xA0;&#xA0;&#xA0; &gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; GET /events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br />&#xA0;&#xA0;&#xA0; Prefer: subscribe-enhanced-get<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 304 Not Modified<br />&#xA0;&#xA0;&#xA0; Content-Length: 0<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br />&#xA0;&#xA0;&#xA0; Preference-Applied: subscribe-enhanced-get<br />&#xA0;&#xA0;&#xA0; Vary: Prefer, Sync-Token</pre>
 </div>
-<div id="_a20ad3b7-6ef1-47a4-9ac3-86a3ef26efb7" class="example"><p class="example-title">EXAMPLE  3</p><p id="_4d577526-1505-42cf-8f2a-f975c3e5448a">This is an example of the subsequent request and response for
+<div id="_55fca07b-4f2e-4f82-b9dd-d8fc106eddac" class="example"><p class="example-title">EXAMPLE  3</p><p id="_db5a4926-1a70-4689-abde-40861506c6f9">This is an example of the subsequent request and response for
 an old or invalid token.</p>
-<pre id="_1239e40f-6ca0-4364-b206-64794823380d" class="prettyprint ">&gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; GET /events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br />&#xA0;&#xA0;&#xA0; Prefer: subscribe-enhanced-get<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 409 Conflict<br />&#xA0;&#xA0;&#xA0; Content-Length: xxxx<br />&#xA0;&#xA0;&#xA0; Preference-Applied: subscribe-enhanced-get</pre>
+<pre id="_16e9a5f1-d0f6-456c-8c94-1f77a2dc8f16" class="prettyprint ">&gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; GET /events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br />&#xA0;&#xA0;&#xA0; Prefer: subscribe-enhanced-get<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 409 Conflict<br />&#xA0;&#xA0;&#xA0; Content-Length: xxxx<br />&#xA0;&#xA0;&#xA0; Preference-Applied: subscribe-enhanced-get</pre>
 </div>
-<div id="_581b16a8-f16b-46d5-b1a7-81e91509222b" class="example"><p class="example-title">EXAMPLE  4</p><p id="_8768c946-7181-4e27-9a7c-7cfe2eeca60f">This is an example of the subsequent request and response when
+<div id="_9474c7ca-d3e8-4dd5-b9e8-586fe970b9f0" class="example"><p class="example-title">EXAMPLE  4</p><p id="_a670cff1-25d9-4ee9-832e-cf13696b2320">This is an example of the subsequent request and response when
 changes have occurred.</p>
-<pre id="_351e532e-8588-4f7c-b7b3-b54981a1e246" class="prettyprint ">&gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; GET /events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br />&#xA0;&#xA0;&#xA0; Prefer: subscribe-enhanced-get<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 200 OK<br />&#xA0;&#xA0;&#xA0; Content-Type: text/calendar<br />&#xA0;&#xA0;&#xA0; Vary: Prefer, Sync-Token<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,4567890"<br />&#xA0;&#xA0;&#xA0; Preference-Applied: subscribe-enhanced-get<br /><br />&#xA0;&#xA0;&#xA0; BEGIN:VCALENDAR:<br />&#xA0;&#xA0;&#xA0; ...&#xA0; only new/changed events<br />&#xA0;&#xA0;&#xA0; ...&#xA0; deleted events have STATUS:DELETED<br />&#xA0;&#xA0;&#xA0; END:VCALENDAR</pre>
+<pre id="_3270565f-c058-452e-a78e-1d2a2ceb7081" class="prettyprint ">&gt;&gt; Request &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; GET /events.ics HTTP/1.1<br />&#xA0;&#xA0;&#xA0; Host: example.com<br />&#xA0;&#xA0;&#xA0; Accept: text/calendar<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"<br />&#xA0;&#xA0;&#xA0; Prefer: subscribe-enhanced-get<br /><br />&#xA0;&#xA0;&#xA0; &gt;&gt; Response &lt;&lt;<br /><br />&#xA0;&#xA0;&#xA0; HTTP/1.1 200 OK<br />&#xA0;&#xA0;&#xA0; Content-Type: text/calendar<br />&#xA0;&#xA0;&#xA0; Vary: Prefer, Sync-Token<br />&#xA0;&#xA0;&#xA0; Sync-Token: "data:,4567890"<br />&#xA0;&#xA0;&#xA0; Preference-Applied: subscribe-enhanced-get<br /><br />&#xA0;&#xA0;&#xA0; BEGIN:VCALENDAR:<br />&#xA0;&#xA0;&#xA0; ...&#xA0; only new/changed events<br />&#xA0;&#xA0;&#xA0; ...&#xA0; deleted events have STATUS:DELETED<br />&#xA0;&#xA0;&#xA0; END:VCALENDAR</pre>
 </div></div>
       </div>
       <div id="_changes_to_the_icalendar_specifications">
         <h1>5.&#xA0; Changes to the iCalendar specifications</h1>
-        <p id="_72684f60-bf2e-4c4e-8ae8-e2d314076d7f">This specification updates <a href="#RFC5545">RFC 5545</a> to add the value DELETED to the
+        <p id="_1c89f45b-5298-4ce7-b214-16b7efbfeccc">This specification updates <a href="#RFC5545">RFC 5545</a> to add the value DELETED to the
 STATUS property.</p>
-        <div id="_redefined_status_property"><h2>5.1. Redefined Status property</h2><dl id="_e6d8211d-cf9c-468a-8018-b3eafc599135"><dt><p>Property name</p></dt><dd>
-    <p id="_ee2e7dee-450b-40a5-a445-781fc5ebc838">STATUS</p>
+        <div id="_redefined_status_property"><h2>5.1.&#xA0; Redefined Status property</h2><dl id="_4f9e9828-19b8-4015-a0c8-45d1c8aa4845"><dt><p>Property name</p></dt><dd>
+    <p id="_be3d2abe-b5ed-4423-b377-9d273d9a99cb">STATUS</p>
   </dd><dt><p>Purpose</p></dt><dd>
-    <p id="_9390ef2a-ee75-4cd5-a0d7-c928e7931354">This property defines the overall status or confirmation
+    <p id="_47ac25bf-a73f-49ae-a038-24b3d60d9515">This property defines the overall status or confirmation
 for the calendar component.</p>
   </dd><dt><p>Value Type</p></dt><dd>
-    <p id="_e49cf394-b509-4fe9-a526-4b101981639c">TEXT</p>
+    <p id="_4534480e-e597-4c34-a948-f6e895c1d659">TEXT</p>
   </dd><dt><p>Property Parameters</p></dt><dd>
-    <p id="_a9accc1d-596a-46a7-8b1e-6e14eaa7f2ad">IANA and non-standard property parameters can
+    <p id="_6b5bffcb-35a1-4353-a0c6-da34edadafdf">IANA and non-standard property parameters can
 be specified on this property.</p>
   </dd><dt><p>Conformance</p></dt><dd>
-    <p id="_4b60f75d-3869-40c5-b408-accb330ea9c2">This property can be specified once in &#x201C;VEVENT&#x201D;,
+    <p id="_eee9480b-56f1-4f5b-9432-8846f155b651">This property can be specified once in &#x201C;VEVENT&#x201D;,
 &#x201C;VTODO&#x201D;, or &#x201C;VJOURNAL&#x201D; calendar components.</p>
   </dd><dt><p>Description</p></dt><dd>
-    <p id="_71b40505-8f58-4c27-8439-c4a5703be43b">In a group-scheduled calendar component, the property
+    <p id="_83d508e6-eb54-4822-b10a-708155837d77">In a group-scheduled calendar component, the property
 is used by the &#x201C;Organizer&#x201D; to provide a confirmation of the event
 to the &#x201C;Attendees&#x201D;.  For example in a &#x201C;VEVENT&#x201D; calendar component,
 the &#x201C;Organizer&#x201D; can indicate that a meeting is tentative,
@@ -1209,81 +1106,81 @@ cancelled.  In a &#x201C;VJOURNAL&#x201D; calendar component, the &#x201C;Organi
 can indicate that a journal entry is draft, final, or has been
 cancelled or removed.</p>
   </dd><dt><p>Format Definition</p></dt><dd></dd></dl>
-<p id="_858d4efa-8f61-4d2c-896c-a229378e0f15">This property is defined by the following notation:</p>
-<pre id="_fbcbdbe2-63d2-43e9-a007-6f85627dd442" class="prettyprint ">status&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; = "STATUS" statparam ":" statvalue CRLF<br /><br />statparam&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; = *(";" other-param)<br /><br />statvalue&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; = (statvalue-event<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; /&#xA0; statvalue-todo<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; /&#xA0; statvalue-jour)<br /><br />statvalue-event = "TENTATIVE"&#xA0;&#xA0;&#xA0; ;Indicates event is tentative.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "CONFIRMED"&#xA0;&#xA0;&#xA0; ;Indicates event is definite.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "CANCELLED"&#xA0;&#xA0;&#xA0; ;Indicates event was cancelled.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "DELETED"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates event was deleted.<br />;Status values for a "VEVENT"<br /><br />statvalue-todo&#xA0; = "NEEDS-ACTION" ;Indicates to-do needs action.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "COMPLETED"&#xA0;&#xA0;&#xA0; ;Indicates to-do completed.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "IN-PROCESS"&#xA0;&#xA0; ;Indicates to-do in process of.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "CANCELLED"&#xA0;&#xA0;&#xA0; ;Indicates to-do was cancelled.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "DELETED"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates to-do was deleted.<br />;Status values for "VTODO".<br /><br />statvalue-jour&#xA0; = "DRAFT"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates journal is draft.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "FINAL"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates journal is final.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "CANCELLED"&#xA0;&#xA0;&#xA0; ;Indicates journal is removed.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "DELETED"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates journal was deleted.<br />;Status values for "VJOURNAL".</pre>
+<p id="_618654e0-84bb-4f5f-97e7-92f61f426c09">This property is defined by the following notation:</p>
+<pre id="_c8fdd70b-9bcd-4811-ab96-79375c8f4c07" class="prettyprint ">status&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; = "STATUS" statparam ":" statvalue CRLF<br /><br />statparam&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; = *(";" other-param)<br /><br />statvalue&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; = (statvalue-event<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; /&#xA0; statvalue-todo<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; /&#xA0; statvalue-jour)<br /><br />statvalue-event = "TENTATIVE"&#xA0;&#xA0;&#xA0; ;Indicates event is tentative.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "CONFIRMED"&#xA0;&#xA0;&#xA0; ;Indicates event is definite.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "CANCELLED"&#xA0;&#xA0;&#xA0; ;Indicates event was cancelled.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "DELETED"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates event was deleted.<br />;Status values for a "VEVENT"<br /><br />statvalue-todo&#xA0; = "NEEDS-ACTION" ;Indicates to-do needs action.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "COMPLETED"&#xA0;&#xA0;&#xA0; ;Indicates to-do completed.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "IN-PROCESS"&#xA0;&#xA0; ;Indicates to-do in process of.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "CANCELLED"&#xA0;&#xA0;&#xA0; ;Indicates to-do was cancelled.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "DELETED"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates to-do was deleted.<br />;Status values for "VTODO".<br /><br />statvalue-jour&#xA0; = "DRAFT"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates journal is draft.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "FINAL"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates journal is final.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "CANCELLED"&#xA0;&#xA0;&#xA0; ;Indicates journal is removed.<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; / "DELETED"&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ;Indicates journal was deleted.<br />;Status values for "VJOURNAL".</pre>
 
-<dl id="_b406165c-9862-48f0-8d79-84bd8c467484"><dt><p>Example</p></dt><dd></dd></dl>
-<div id="_cc93f2e7-a386-48ba-b183-819fc1d0a5f3" class="example"><p class="example-title">EXAMPLE  1</p><p id="_79e5e970-88f2-4863-aa30-526a471a484b">The following is an example of this property for a &#x201C;VEVENT&#x201D;
+<dl id="_8eff3052-8059-44c5-90dc-b1937a35b849"><dt><p>Example</p></dt><dd></dd></dl>
+<div id="_385cbfef-e1d9-49d6-a114-7ecc01a2c53e" class="example"><p class="example-title">EXAMPLE  1</p><p id="_8d0f1830-2f4e-4672-9550-854571a045de">The following is an example of this property for a &#x201C;VEVENT&#x201D;
 calendar component:</p>
-<pre id="_4f4c3af3-0651-4158-ab6e-8173c19cbf3f" class="prettyprint ">STATUS:TENTATIVE</pre>
+<pre id="_a8a58099-5cb0-4ccc-b487-626d9d01958d" class="prettyprint ">STATUS:TENTATIVE</pre>
 </div>
-<div id="_61369439-c167-4a54-94da-add925a8f650" class="example"><p class="example-title">EXAMPLE  2</p><p id="_d416ea1d-73e2-4dbf-997e-05db36a26152">The following is an example of this property for a &#x201C;VTODO&#x201D; calendar
+<div id="_b2ee2752-5305-42aa-816c-4bb96aae7db2" class="example"><p class="example-title">EXAMPLE  2</p><p id="_46e12592-b82a-4df8-86e6-8e5d344bf6b3">The following is an example of this property for a &#x201C;VTODO&#x201D; calendar
 component:</p>
-<pre id="_f315b388-9c5b-4370-b343-290bdf34d5ae" class="prettyprint ">STATUS:NEEDS-ACTION</pre>
+<pre id="_cef56abc-8cb6-47ef-bd1b-ee1c212215d9" class="prettyprint ">STATUS:NEEDS-ACTION</pre>
 </div>
-<div id="_77c16da6-c959-4c42-b58b-d14fe69ecb2d" class="example"><p class="example-title">EXAMPLE  3</p><p id="_7e88ef21-ad90-4080-81ec-646c4a9cbafe">The following is an example of this property for a &#x201C;VJOURNAL&#x201D;
+<div id="_d6c0d01e-959c-4955-a595-7223caff4e8c" class="example"><p class="example-title">EXAMPLE  3</p><p id="_9f1ebf9e-a35a-416d-8aa1-6515de071fa5">The following is an example of this property for a &#x201C;VJOURNAL&#x201D;
 calendar component:</p>
-<pre id="_c148a867-ffc9-4c27-9309-1763ee944912" class="prettyprint ">STATUS:DRAFT</pre>
+<pre id="_7d250fa3-058e-4c8b-9393-38ed33c7e979" class="prettyprint ">STATUS:DRAFT</pre>
 </div></div>
       </div>
       <div id="_header_field_sync_token">
         <h1>6.&#xA0; Header Field: Sync-Token</h1>
-        <p id="_06130103-b715-4c1a-b911-3fd50bf13a33">This specification defines a new header field Sync-Token for use by
+        <p id="_cf36c99b-af4e-4342-afd1-98cb31f92da8">This specification defines a new header field Sync-Token for use by
 the enhanced GET method.</p>
-        <pre id="_c319bef8-888c-42ac-8ac9-aa33743e78d1" class="prettyprint ">&#xA0;&#xA0;&#xA0; Accept = DQUOTE URI DQUOTE</pre>
-        <p id="_82b35f6d-9596-4d13-900e-e5277b116223">The value MUST be a URI. This will generally be a data URI
+        <pre id="_5cfdcb35-bea1-42a5-9e64-954475123d07" class="prettyprint ">&#xA0;&#xA0;&#xA0; Accept = DQUOTE URI DQUOTE</pre>
+        <p id="_25ce1773-d61d-455a-aab8-0e6ffccb4603">The value MUST be a URI. This will generally be a data URI
 representing an opaque token. Client MUST not attempt to interpret
 the data URI value.</p>
-        <div id="_6b154371-7b1e-40af-9b43-cf21223cbf66" class="example"><p class="example-title">EXAMPLE</p><p id="_112deea0-749d-40e5-bffa-b20c25612784">This is an example of the Sync-Token header field:</p>
-<pre id="_f0e6628a-735b-462f-85f5-10fb00667db1" class="prettyprint ">&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"</pre>
+        <div id="_00b9c48f-4ca6-4597-9b07-10cc93bde808" class="example"><p class="example-title">EXAMPLE</p><p id="_39ba2703-09f9-4416-ad10-c24f6aaa2cac">This is an example of the Sync-Token header field:</p>
+<pre id="_4047378a-1878-4170-bd42-660787b71826" class="prettyprint ">&#xA0;&#xA0;&#xA0; Sync-Token: "data:,1234567"</pre>
 </div>
       </div>
       <div id="_new_prefer_header_field_preferences">
         <h1>7.&#xA0; New Prefer header field preferences</h1>
-        <div id="preference-subscribe"><h2>7.1. Preference subscribe-enhanced-get</h2><p id="_98a07962-5594-491f-a18e-52117f1fad42">This indicates that the client expects the server to handle the GET
+        <div id="preference-subscribe"><h2>7.1.&#xA0; Preference subscribe-enhanced-get</h2><p id="_e9007a81-50ef-40f7-9475-91780b529267">This indicates that the client expects the server to handle the GET
 method according to the specifications for enhanced get.</p>
-<pre id="_a9158a14-8040-4544-b4eb-48817d2f1f9d" class="prettyprint ">&#xA0;&#xA0;&#xA0; pref-subscribe-enhanced-get = "subscribe-enhanced-get"</pre>
+<pre id="_741430bc-85ef-4c7f-a1e8-dd90d79c9944" class="prettyprint ">&#xA0;&#xA0;&#xA0; pref-subscribe-enhanced-get = "subscribe-enhanced-get"</pre>
 </div>
-        <div id="preference-limit"><h2>7.2. Preference limit</h2><p id="_d7641e30-78a9-415d-ad50-86239995a8af">This preference parameter provides a limit on the number of components returned for enhanced get.</p>
-<pre id="_dd58800e-2381-4b5c-8579-5633f120a4df" class="prettyprint ">&#xA0;&#xA0;&#xA0; pref-limit = "limit" BWS "=" BWS 1*DIGIT</pre>
+        <div id="preference-limit"><h2>7.2.&#xA0; Preference limit</h2><p id="_ad7a2779-c661-4d3e-b2b8-95db5d88b6c8">This preference parameter provides a limit on the number of components returned for enhanced get.</p>
+<pre id="_60fa24d3-0dec-49da-a47a-967f1e74102b" class="prettyprint ">&#xA0;&#xA0;&#xA0; pref-limit = "limit" BWS "=" BWS 1*DIGIT</pre>
 </div>
       </div>
       <div id="_link_relations">
         <h1>8.&#xA0; Link relations</h1>
-        <div id="_general_2"><h2>8.1. General</h2>
+        <div id="_general_2"><h2>8.1.&#xA0; General</h2>
 
-  <p id="_cd559ebe-18c3-4241-b46f-5fd71d6c21c8">This clause defines a number of new link relations required to
+  <p id="_5d2ac3b5-592e-4ea6-80e8-4bd09e5cdb36">This clause defines a number of new link relations required to
 facilitate subscription upgrades.</p>
 </div>
-        <div id="la-subscribe-caldav"><h2>8.2. subscribe-caldav</h2><p id="_0777d4fa-8600-436a-a721-db8f12ed3ca2">This specifies an access point which is a full implementation of
+        <div id="la-subscribe-caldav"><h2>8.2.&#xA0; subscribe-caldav</h2><p id="_10579313-310e-431b-87d4-06fd4f47a378">This specifies an access point which is a full implementation of
 caldav but requires no authentication.  The end point allows the full
 range of reports as defined by the CalDAV specification.</p>
-<p id="_ccfe4b08-df70-49a1-9d18-d73b6cfdd77e">The client MUST follow the specification to determine exactly what
+<p id="_8bf932fc-fda8-4bb0-911b-bf576ce7a136">The client MUST follow the specification to determine exactly what
 operations are allowed on the access point&#x2009;&#x2013;&#x2009;for example to determine
 if sync-report is supported.</p>
-<p id="_66b0417f-9191-4142-b496-e950a5c96d18">The URL MAY include some form of token to allow write access to the
+<p id="_1cd5a9b0-8284-42e8-95db-dc97d6fbfd19">The URL MAY include some form of token to allow write access to the
 targeted collection.  The client must check it&#x2019;s permissions to
 determine whether or not it has been granted write access.</p></div>
-        <div id="la-subscribe-caldav-auth"><h2>8.3. subscribe-caldav-auth</h2><p id="_c414f605-c587-4e66-898c-43ee20801385">This specifies an access point which is a full implementation of
+        <div id="la-subscribe-caldav-auth"><h2>8.3.&#xA0; subscribe-caldav-auth</h2><p id="_df7201b2-3a38-4e3c-967f-347aabaf08b9">This specifies an access point which is a full implementation of
 caldav and requires authentication.  This may allow read-write access
 to the resource.</p>
-<p id="_d4b9df7d-6db6-438a-b429-89f95e5583c5">The client MUST follow the specification to determine exactly what
+<p id="_abe1f2dd-181e-48ea-949a-b520c497c72b">The client MUST follow the specification to determine exactly what
 operations are allowed on the access point&#x2009;&#x2014;&#x2009;for example to determine
 if sync-report is supported.</p></div>
-        <div id="la-subscribe-webdav-sync"><h2>8.4. subscribe-webdav-sync</h2><p id="_1dba4271-f07b-417f-abac-22c38f693181">This specifies an access point which supports only webdav sync.</p>
-<p id="_217aa984-72cd-4f3b-b679-d2bf914d2ed7">This allows the client to issue a sync-report on the resource to
+        <div id="la-subscribe-webdav-sync"><h2>8.4.&#xA0; subscribe-webdav-sync</h2><p id="_d96a7d85-44ba-411e-8c9e-904f1e337633">This specifies an access point which supports only webdav sync.</p>
+<p id="_bd6dcaf1-f46e-4bde-bfac-79657f26f9ba">This allows the client to issue a sync-report on the resource to
 obtain updates.</p>
-<p id="_dd47a9ce-e36a-4feb-974a-c2dd6bbbd781">The client MUST follow that specification.</p></div>
-        <div id="la-subscribe-enhanced-get"><h2>8.5. subscribe-enhanced-get</h2><p id="_8a21a9c3-0752-45a3-b8f9-67262843219f">This specifies an access point which supports something new.</p>
-<p id="_b34ccb9c-d93d-48f0-ac09-a8ab19aacc7b">The client MUST follow that specification.</p></div>
+<p id="_cfe27917-41b0-4462-87a4-8af595fd7f33">The client MUST follow that specification.</p></div>
+        <div id="la-subscribe-enhanced-get"><h2>8.5.&#xA0; subscribe-enhanced-get</h2><p id="_ed54c1e0-1923-46db-869b-2a96be514da9">This specifies an access point which supports something new.</p>
+<p id="_4f18258d-554b-4627-b65b-d742d30985eb">The client MUST follow that specification.</p></div>
       </div>
       <div id="security">
         <h1>9.&#xA0; Security Considerations</h1>
-        <p id="_b7bac9a0-118b-4540-8382-c8eaa00c66b6">Applications using these properties need to be aware of the risks
+        <p id="_dc4e28f0-5c4b-4023-8e2d-e75b91120b4b">Applications using these properties need to be aware of the risks
 entailed in using the URIs provided as values.  See <a href="#RFC3986">RFC 3986</a> for a
 discussion of the security considerations relating to URIs.
 == Privacy Considerations</p>
-        <p id="_d3177b21-fb23-4f2c-ba3d-4faa4c453b3b">Properties with a &#x201C;URI&#x201D; value type can expose their users to privacy
+        <p id="_ff074390-d012-4f15-9417-8b4987df0a96">Properties with a &#x201C;URI&#x201D; value type can expose their users to privacy
 leaks as any network access of the URI data can be tracked.  Clients
 SHOULD NOT automatically download data referenced by the URI without
 explicit instruction from users.  This specification does not
@@ -1292,133 +1189,133 @@ introduce any additional privacy concerns beyond those described in
       </div>
       <div id="iana">
         <h1>10.&#xA0; IANA Considerations</h1>
-        <div id="_sync_token_http_header_field_registration"><h2>10.1. Sync-Token HTTP Header Field Registration</h2><p id="_c4545d46-0eca-4941-9a30-050009a7be81">This specification updates the &#x201C;Message Headers&#x201D; registry entry for &#x201C;Sync-Token&#x201D; in <a href="#RFC3864">[[RFC3864]], [RFC3864]</a> to refer to this document.</p>
-<div id="_eb0c7338-17b6-47aa-a451-f0c8203baa54" class="figure">
-  <pre id="_fac011ff-c457-4b71-b0fe-471a80e4bad3">Header Field Name: Sync-Token
+        <div id="_sync_token_http_header_field_registration"><h2>10.1.&#xA0; Sync-Token HTTP Header Field Registration</h2><p id="_bc0c70dd-8c7c-4f22-9fd2-740bf553c1c3">This specification updates the &#x201C;Message Headers&#x201D; registry entry for &#x201C;Sync-Token&#x201D; in <a href="#RFC3864">[[RFC3864]], [RFC3864]</a> to refer to this document.</p>
+<div id="_16b63132-983d-4409-99a0-2bc76c9334fb" class="figure">
+  <pre id="_4f1f35de-51b2-4994-a1dc-a861fda55b1d">Header Field Name: Sync-Token
 Protocol: http
 Status: standard
 Reference: &lt;this-document&gt;</pre>
 <p class="FigureTitle" style="text-align:center;">Figure 1</p></div></div>
-        <div id="_preference_registrations"><h2>10.2. Preference Registrations</h2><p id="_55b73e0d-945e-4c53-9e5d-aca66e3d4ce0">The following preferences have been added to the HTTP Preferences
+        <div id="_preference_registrations"><h2>10.2.&#xA0; Preference Registrations</h2><p id="_8245759f-2bec-47ff-b3c1-5110e59f6ef9">The following preferences have been added to the HTTP Preferences
 Registry defined in <a href="#RFC7240">RFC 7240</a></p>
-<dl id="_5870e604-05aa-4cc5-97f1-97062794fbe6"><dt><p>Preference</p></dt><dd>
-    <p id="_c409016d-2cbc-4a25-a734-4f2d4d0417ad">subscribe-enhanced-get</p>
+<dl id="_cdeac526-ded1-4d43-ba1f-f1064f360317"><dt><p>Preference</p></dt><dd>
+    <p id="_2db48204-6600-425d-b171-fd7ed898fb38">subscribe-enhanced-get</p>
   </dd><dt><p>Value</p></dt><dd>
-    <p id="_a775e4b1-33eb-4207-9320-cd0873158e02">None.</p>
+    <p id="_b13464a3-a07b-49a8-bd3b-a9a2d79d47b8">None.</p>
   </dd><dt><p>Description</p></dt><dd>
-    <p id="_e42a980e-c1ed-4f31-ab39-4f069f44d5be">Marks the interaction as enhanced get and provides the
+    <p id="_1621cbbf-1c34-407f-bdf3-5b253897e6d3">Marks the interaction as enhanced get and provides the
 optional sync-token and page size.</p>
   </dd><dt><p>Reference</p></dt><dd>
-    <p id="_9cd348ae-5c90-47af-a5e7-02d179427a7f">this document</p>
+    <p id="_977d937c-674f-4997-9a6e-cfeb85737614">this document</p>
   </dd><dt><p>Preference</p></dt><dd>
-    <p id="_de33f975-7198-46be-8153-c514bf8955a4">limit</p>
+    <p id="_af120bac-7094-4b57-96ee-a0ff7ac94d60">limit</p>
   </dd><dt><p>Value</p></dt><dd>
-    <p id="_63663418-c11c-4ede-8549-d289e33f17e8">An integer page size.</p>
+    <p id="_3fcd7413-be38-4b84-a421-93110bea8c22">An integer page size.</p>
   </dd><dt><p>Description</p></dt><dd>
-    <p id="_9494e7ce-1bf0-40d0-abc9-95edac01c188">Provide a limit on the number of components in the response.</p>
+    <p id="_18fe9a2d-1265-4f2f-9e68-6a3142670fe7">Provide a limit on the number of components in the response.</p>
   </dd><dt><p>Reference</p></dt><dd>
-    <p id="_d259c0f0-1129-4589-bca8-66bcdd922022">this document</p>
+    <p id="_23d37d89-7322-45f3-87dc-8582144ff1fa">this document</p>
   </dd></dl></div>
-        <div id="_link_relation_registrations"><h2>10.3. Link Relation Registrations</h2><p id="_0136f57a-5a15-43ae-9db3-76f7255d8567">This document defines the following new iCalendar properties to be
+        <div id="_link_relation_registrations"><h2>10.3.&#xA0; Link Relation Registrations</h2><p id="_c55d1e4d-03ad-4264-bf1e-a7a2ec1f9428">This document defines the following new iCalendar properties to be
 added to the registry defined in <a href="#RFC5545">RFC 5545, Section 8.2.3</a>:</p>
-<p class="TableTitle" style="text-align:center;">Table 1</p><table id="_b423a0ac-4085-4463-bbdf-ba156cf03672" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><thead><tr><th style="font-weight:bold;text-align:left;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;padding:0;" scope="col">Relation Name</th><th style="font-weight:bold;text-align:left;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;padding:0;" scope="col">Description</th><th style="font-weight:bold;text-align:left;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;padding:0;" scope="col">Reference</th></tr></thead><tbody><tr><td style="text-align:left;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;padding:0;">
-        <p id="_65eefa6b-5714-4046-84e1-ce90d7c08cce">subscribe-caldav</p>
+<p class="TableTitle" style="text-align:center;">Table 1</p><table id="_b38a959a-1ba6-4841-ab6b-7ad10d9cb96b" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><thead><tr><th style="font-weight:bold;text-align:left;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;padding:0;" scope="col">Relation Name</th><th style="font-weight:bold;text-align:left;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;padding:0;" scope="col">Description</th><th style="font-weight:bold;text-align:left;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;padding:0;" scope="col">Reference</th></tr></thead><tbody><tr><td style="text-align:left;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;padding:0;">
+        <p id="_4cc452f5-a946-450b-bcb4-c15a3a7771f8">subscribe-caldav</p>
       </td><td style="text-align:left;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;padding:0;">
-        <p id="_ea7efdfe-dc8d-4892-ad2e-91bebcbb2aaf">Current</p>
+        <p id="_b809a0cd-ae1f-4db0-a7d1-46cd9c2d69cc">Current</p>
       </td><td style="text-align:left;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;padding:0;">
-        <p id="_198a2347-ebc9-4777-9c99-5c002554cb7f">
+        <p id="_1fb2b673-ac7b-466d-82f3-28e4a509a5ca">
   <a href="#la-subscribe-caldav">Clause 8.2</a>
 </p>
       </td></tr><tr><td style="text-align:left;border-top:none;border-bottom:solid windowtext 1.0pt;padding:0;">
-        <p id="_ebd687fd-cff9-4358-9549-2695250adc41">subscribe-caldav_auth</p>
+        <p id="_45832840-7204-4166-924f-6c6592623aec">subscribe-caldav_auth</p>
       </td><td style="text-align:left;border-top:none;border-bottom:solid windowtext 1.0pt;padding:0;">
-        <p id="_ff55f6f8-5d70-47de-aab5-39eb680f2739">Current</p>
+        <p id="_330d90d8-6b34-404a-bc88-fc754c8d5cba">Current</p>
       </td><td style="text-align:left;border-top:none;border-bottom:solid windowtext 1.0pt;padding:0;">
-        <p id="_2fb5cfc5-18f5-4594-bef7-b062a1c18313">
+        <p id="_e3d52c55-a250-4b80-a713-d3929cb47e0d">
   <a href="#la-subscribe-caldav-auth">Clause 8.3</a>
 </p>
       </td></tr><tr><td style="text-align:left;border-top:none;border-bottom:solid windowtext 1.0pt;padding:0;">
-        <p id="_bd778538-1d6a-44f7-8761-e0e620500777">subscribe-webdav-sync</p>
+        <p id="_4494cfc0-62c5-4d28-bb7b-f4fdf5a1d996">subscribe-webdav-sync</p>
       </td><td style="text-align:left;border-top:none;border-bottom:solid windowtext 1.0pt;padding:0;">
-        <p id="_edf72926-70f7-4245-a816-12e2af9abd45">Current</p>
+        <p id="_4d4c37a3-00e4-40d6-9609-3acf45b66c3d">Current</p>
       </td><td style="text-align:left;border-top:none;border-bottom:solid windowtext 1.0pt;padding:0;">
-        <p id="_fffaea88-3cac-4952-b13d-c0cdd9213167">
+        <p id="_3cacb43a-c9c6-4197-a738-3329e189cba7">
   <a href="#la-subscribe-webdav-sync">Clause 8.4</a>
 </p>
       </td></tr><tr><td style="text-align:left;border-top:none;border-bottom:solid windowtext 1.5pt;padding:0;">
-        <p id="_a047b39b-f9c5-45fe-8eed-c3121ce86eda">subscribe-enhanced_get</p>
+        <p id="_8003372b-680f-4944-bfcc-698b51f4bcc4">subscribe-enhanced_get</p>
       </td><td style="text-align:left;border-top:none;border-bottom:solid windowtext 1.5pt;padding:0;">
-        <p id="_f25d4eb2-0e98-446d-a8ff-5aba385fc2fe">Current</p>
+        <p id="_db3c513d-7904-4566-abfb-65d537d001a1">Current</p>
       </td><td style="text-align:left;border-top:none;border-bottom:solid windowtext 1.5pt;padding:0;">
-        <p id="_edef7177-e775-4449-b006-a25e6c16b1d5">
+        <p id="_965b0965-0a70-4b6d-8ccf-2b991d482bc4">
   <a href="#la-subscribe-enhanced-get">Clause 8.5</a>
 </p>
       </td></tr></tbody></table></div>
       </div>
       <div id="acknowledgements">
         <h1>11.&#xA0; Acknowledgements</h1>
-        <p id="_27ac07bf-2907-450f-b67d-de6e2834991f">The author would also like to thank the members of the CalConnect
+        <p id="_f8dd5019-4496-4e09-b442-95a3580405ce">The author would also like to thank the members of the CalConnect
 Calendar Sharing technical committee and the following individuals
 for contributing their ideas and support:</p>
-        <p id="_41822290-9b39-4bfe-8626-490b0f3df652">Marten Gajda, Ken Murchison, Garry Shutler</p>
-        <p id="_d1cf3f71-ab17-4bb4-b6cd-242648a14a2e">The authors would also like to thank CalConnect, the Calendaring and
+        <p id="_a53733a9-6cad-4f76-ac4b-bbd9aa187730">Marten Gajda, Ken Murchison, Garry Shutler</p>
+        <p id="_2fb49e04-d68f-41a7-a4b3-3d8d491bdb0d">The authors would also like to thank CalConnect, the Calendaring and
 Scheduling Consortium, for advice with this specification.</p>
       </div>
       <br />
       <div id="appendix-a" class="Section3">
         <h1 class="Annex"><b>Appendix A</b><br />(informative) <br /><b>Open issues</b></h1>
-        <dl id="_05c25163-aaaf-4279-ba4b-38726baf9cd8">
+        <dl id="_d17c641c-ba89-4ec9-b2ab-d30fcb01d236">
           <dt>
             <p>Vary</p>
           </dt>
           <dd>
-    <p id="_d1b9a54e-fa18-44d4-ab9b-a61ea0dacfc0">Ensure we get that right.</p>
+    <p id="_368c5833-6898-4978-b949-2d0e4b1c4ce6">Ensure we get that right.</p>
   </dd>
         </dl>
       </div>
       <br />
       <div id="appendix-b" class="Section3">
         <h1 class="Annex"><b>Appendix B</b><br />(informative) <br /><b>Change log</b></h1>
-        <p id="_ad99f456-19ec-4b02-9a44-01d22c3f7a70">calext00 2019-06-05 MD</p>
-        <ul id="_8086677c-eaaf-4a2b-ae26-55be5084d5da">
+        <p id="_1b4e204d-92cf-4889-8c2f-8352e2cd5b0c">calext00 2019-06-05 MD</p>
+        <ul id="_76b9410e-0203-477f-a163-9aca4052efda">
   <li>
-    <p id="_36c65f4d-f6b9-4b97-b01f-662998d9ad3f">First calext version</p>
+    <p id="_1bd53ec8-d7b5-475a-9b6b-edc1e5690b66">First calext version</p>
   </li>
   <li>
-    <p id="_e164ce61-629a-4183-b39e-76817cd63a7a">Use Sync-Token header rather than parameter</p>
-  </li>
-</ul>
-        <p id="_08fd9428-7260-434a-ba7f-30f5b3b6f0c0">v04 2019-03-07 MD</p>
-        <ul id="_54a8010c-cefc-44db-ba1d-0602ae99d901">
-  <li>
-    <p id="_0f203123-1e14-4396-a7f5-2030be9a49f5">Reference to RFC 6538&#x2009;&#x2013;&#x2009;WebDAV sync and RFC 7240 Prefer</p>
-  </li>
-  <li>
-    <p id="_7cd819cf-28bd-4d40-bd32-bcbbc3b54646">Go back to HEAD</p>
-  </li>
-  <li>
-    <p id="_a77bbc3f-86ff-4983-84b0-617167c7154b">New Preference and parameters.</p>
-  </li>
-  <li>
-    <p id="_cece8643-523e-44f4-86cd-f46250222abe">Examples</p>
-  </li>
-  <li>
-    <p id="_c71d3575-efc3-491a-b34c-764b2cd2e86d">More text for extended get.  Talk about deletions.</p>
+    <p id="_70b84f52-5c7e-48cd-9b1f-e42f9c03bc4e">Use Sync-Token header rather than parameter</p>
   </li>
 </ul>
-        <p id="_4ccd0a90-6fe3-408a-a8fc-2cf1d43a9cfd">v01 2017-02-17 MD</p>
-        <ul id="_6c8b8f42-530a-4567-b4ab-bddd51ab0b2a">
+        <p id="_fb4d1191-9254-475f-a574-1bb4f52b0298">v04 2019-03-07 MD</p>
+        <ul id="_014bd441-e3f2-49e5-bde5-603131363b0f">
   <li>
-    <p id="_0b242e8d-258d-4655-854f-9e5b230a5226">Add text about OPTIONS</p>
+    <p id="_4b96fbb1-d232-4ff6-8037-8f158e475b67">Reference to RFC 6538&#x2009;&#x2013;&#x2009;WebDAV sync and RFC 7240 Prefer</p>
   </li>
   <li>
-    <p id="_6fdd9eaf-579c-4e86-9189-a57eeb3eb726">Add text abut read/write CalDAV</p>
+    <p id="_162e5334-a5ac-40fd-8f9b-d48aa01167e7">Go back to HEAD</p>
+  </li>
+  <li>
+    <p id="_e8968c08-3212-4081-8b01-ffcfe636fa81">New Preference and parameters.</p>
+  </li>
+  <li>
+    <p id="_d6b8f03c-5c9e-4fa6-8c6b-14731f4a581e">Examples</p>
+  </li>
+  <li>
+    <p id="_c50bb914-c38d-4d0d-9883-fe50e8adbec8">More text for extended get.  Talk about deletions.</p>
   </li>
 </ul>
-        <p id="_1ef1c699-6b8a-467b-bb21-3453c3a76da1">v00 2017-02-15 MD</p>
-        <ul id="_388c41d2-e79a-4276-b3eb-b9d465cd0041">
+        <p id="_8cc865e6-fdb7-4fc4-8506-6b4abe91aa13">v01 2017-02-17 MD</p>
+        <ul id="_87cfbfd4-4167-48eb-b2fe-7f0e57415de8">
   <li>
-    <p id="_0d0c25da-d27c-4fc9-b6fd-f0e6bfdcb477">First pass</p>
+    <p id="_b82c653a-0b62-4b13-ae2b-2f8c0e8df0ad">Add text about OPTIONS</p>
+  </li>
+  <li>
+    <p id="_1b237963-df8a-451d-b380-b6d5fdfee74b">Add text abut read/write CalDAV</p>
+  </li>
+</ul>
+        <p id="_72b06b61-35ef-4305-91db-bf7fbd55a86f">v00 2017-02-15 MD</p>
+        <ul id="_71bb3f2f-80e9-4155-b1b5-1e987a5574d2">
+  <li>
+    <p id="_872d8ea1-439b-424e-8106-d945c2e34b6d">First pass</p>
   </li>
 </ul>
       </div>
@@ -1432,7 +1329,7 @@ Scheduling Consortium, for advice with this specification.</p>
     asciimath2jax: { delimiters: [['(#(', ')#)']] }
  });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=AM_HTMLorMML" async="async"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>  <script>
     //TOC generation
       $('#toc').toc({
