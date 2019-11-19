@@ -2,11 +2,27 @@
 [bibliography]
 == Normative References
 
+* [[[I-D.ietf-calext-extensions,I-D.ietf-calext-extensions]]]
+* [[[RFC2119,RFC 2119]]]
+* [[[RFC2434,RFC 2434]]]
+* [[[RFC3688,RFC 3688]]]
+* [[[RFC3864,RFC 3864]]]
+* [[[RFC3986,RFC 3986]]]
+* [[[RFC4589,RFC 4589]]]
+* [[[RFC5545,RFC 5545]]]
+* [[[RFC5546,RFC 5546]]]
+* [[[RFC5988,RFC 5988]]]
+* [[[RFC6578,RFC 6578]]]
+* [[[RFC7240,RFC 7240]]]
+* [[[RFC7991,RFC 7991]]]
+* [[[RFC8174,RFC 8174]]]
+* [[[W3C.REC-xml-20060816,W3C REC-xml-20060816]]]
+
+////
 ++++
 include::../references/normative/*[]
 ++++
 
-////
 [bibliography]
 == Informative References
 
